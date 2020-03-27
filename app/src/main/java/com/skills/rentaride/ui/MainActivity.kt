@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.skills.rentaride.R
 import com.skills.rentaride.di.DaggerApiComponent
+import com.skills.rentaride.model.ProfileDTO
 import com.skills.rentaride.model.ResponseDTO
 import com.skills.rentaride.network.service.RentARideService
 import io.reactivex.Single
@@ -54,8 +55,12 @@ class MainActivity : AppCompatActivity() {
             val text = msisdnVar.text
             dto = rentARideService.getProfile(text.toString())
             val resp = dto.blockingGet().statusMessage
+            val data = dto.blockingGet().data
+            //Wahala Here
+            val prof = data?.get(0) as ProfileDTO
+            val nam = prof.fname
             // Showing the user input
-            Toast.makeText(this, resp, Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "$resp $nam", Toast.LENGTH_SHORT).show()
         }
     }
 
