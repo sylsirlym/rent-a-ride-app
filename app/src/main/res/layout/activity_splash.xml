@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".ui.SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:adjustViewBounds="true"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/imagef"
+        android:layout_width="match_parent"
+        android:layout_height="712dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bike" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/apimv_spalsh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/loader_layout"
+            layout="@layout/layout_loader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txt_bottomtext" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_bottomtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_54dp"
+            android:fontFamily="@font/gf_gilroy_medium"
+            android:padding="@dimen/_8dp"
+            android:text="@string/SCR_LBL_MAKING_YOUR_CONNECTION_SECURE"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sp"
+            android:gravity="center_horizontal" />
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

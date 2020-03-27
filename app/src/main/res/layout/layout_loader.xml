@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_above="@+id/txt_bottomtext"
+    android:layout_marginBottom="@dimen/_10dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/map_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:padding="32dp"
+        app:srcCompat="@drawable/ic_map" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewLoader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:srcCompat="@drawable/ic_loader" />
+</RelativeLayout>

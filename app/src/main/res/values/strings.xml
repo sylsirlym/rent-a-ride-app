@@ -1,0 +1,1473 @@
+<resources>
+    <string name="app_name">RentARide</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Stuff</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="WELCOME">Welcome to Rent A Ride!! Making Sure you have a secure connection.</string>
+
+    <string name="PLACEHOLDER_ENTER_MOBILE_NUMBER">Enter Mobile Number</string>
+    <string name="SCR_TITLE_ENTER_MOBILE_NUMBER">Enter mobile number</string>
+    <string name="SCR_TITLE_ACTIVATE_APP">Activate App</string>
+    <string name="SCR_LBL_WE_WILL_TEXT_YOU_A_CODE">We will text you a code to verify</string>>
+    <string name="SCR_LBL_SELECT_MARKET">Select Market</string>>
+    <string name="SCR_TITLE_MOBILE_NUMBER">Mobile number</string>
+    <string name="INPUT_TITLE_MOBILE_NUMBER_CAPS">MOBILE NUMBER</string>
+    <string name="SCR_LBL_WE_WILL_TEXT_YOU_CODE">We will text you a code to verify your mobile number.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="SCR_LBL_DASHBOARD_HEADING_VIEW_ALL_UNDER_LINE"><u>View All</u></string>
+
+    <string name="SCR_LBL_SHARE_SEND_TO">Send to</string>
+    <string name="SCR_LBL_NOTIFICATIONS">Notifications</string>
+    <string name="SCR_LBL_SHARE_APP">Share App</string>
+    <string name="SCR_LBL_INVITE_A_FRIENDS">Invite a friend</string>
+    <string name="SCR_LBL_CHANGE_LANGUAGE">Change Language</string>
+    <string name="SCR_LBL_LOGOUT">Log out</string>
+
+    <string name="ERR_MSG_FINGER_PRINT_FAILED">Fingerprint not recognised. Please try again</string>
+    <string name="INFO_MSG_FINGERPRINT_SUCCEED">Fingerprint Authentication succeeded.</string>
+    <string name="INFO_TITLE_ALERT">Alert</string>
+    <string name="SCR_LBL_OK">ok</string>
+    <string name="SCR_LBL_CANCEL">Cancel</string>
+    <string name="SCR_LBL_CONFIRM_FINGERPRINT">Confirm fingerprint</string>
+    <string name="BTN_CANCEL">Cancel</string>
+    <string name="BTN_USE_PIN">USE PIN</string>
+    <string name="SCR_LBL_PLACE_YOUR_FINGER_PRINT">Place your finger on the sensor \n to confirm</string>
+    <string name="SCR_LBL_HIDE">Hide</string>
+    <string name="SCR_LBL_SHOW">Show</string>
+    <string name="BTN_SHOW">Show</string>
+    <string name="INFO_MSG_FINGER_SENSOR_PERMISSION">Fingerprint authentication permission not enabled</string>
+    <string name="INFO_MSG_REGISTER_FINGER_PRINT">Register at least one fingerprint in Settings</string>
+    <string name="INFO_MSG_LOCK_SCREEN_SECURITY">Lock screen security not enabled in Settings</string>
+    <string name="SCR_LBL_MY_SELF">Myself</string>
+    <string name="SCR_TITLE_CONFIRM_PAYMENT">Confirm payment</string>
+    <string name="SCR_TITLE_CONFIRM_PROFILE">Confirm profile</string>// new string
+
+
+    //SMS and Email
+    <string name="SCR_LBL_SEND_MONEY_TEXT_EMAIL">Send money to anyone via text or email</string>
+    <string name="SCR_TITLE_LINK_HEADING">You\'re all set to share your link with everyone</string>
+    <!--not dynamic-->
+    <string name="SCR_LBL_CHOOSE_SOMEONE_SEND_EMAIL">Choose someone from your contacts,or send them an email, and they\'ll be able to get the money even if they don\'t have any  account</string>
+    <string name="SCR_LBL_LINK_HEADING_CONTENT">Choose how you\'d like to share GHS 4,567 and the money will be sent as soon as they claim it</string>
+    <!--not dynamic-->
+    <string name="SCR_LBL_LINK_BY_SENDING_THE_LINK_YOU_AGREE">By sending the link you agreee to send money to the recipient\'s choosen account</string>
+
+    //xpress
+    <string name="SCR_LBL_XPRESS_HEADING">Welcome to Xpress Cash</string>
+    <string name="SCR_LBL_XPRESS_CONTENT">This service allows you to withdraw money from an  ATM </string>
+    <string name="BTN_ATM">ATM</string>
+    <string name="SCR_LBL_ACTIVE_E_TOKENS">Active E-Tokens</string>
+    <string name="SCR_LBL_VIEW_ALL">VIEW ALL</string>
+    <string name="SCR_TITLE_YOU_HAVE_NO_ACTIVE_E_TOKENS">You have no active e-tokens</string>
+
+
+    <string name="WAR_TITLE_CONFIRM">Confirm</string>
+    <string name="INPUT_TITLE_ENTER_PIN_NUMBER">Enter pin number</string>
+    <string name="SCR_LBL_PAY_BILL">Pay Bill</string>
+    <string name="SCR_TITLE_VIEW_BALANCE">View Balance</string>
+
+    //privacy policy
+    <string name="BTN_DONE">Done</string>
+    <string name="BTN_CONFIRM_STANDING_ORDER">Confirm Standing Order</string>
+    <string name="SCR_LBL_SCROLL_TO_BOTTOM">Scroll to bottom</string>
+    <string name="BTN_DECLINE">Decline</string>
+
+    <string name="SCR_LBL_PRIVACY">Privacy Policy</string>
+    <string name="SCR_LBL_TITLE_HEADING__EXPRESS_CONDITIONS"> Xpress account</string>
+    <string name="BTN_ACCEPT">Accept</string>
+    <string name="SCR_LBL_ATM_NO_TOKEN_SUBTITLE_ONE">You don\'t have any money requests today!</string>
+    <string name="SCR_LBL_ATM_NO_TOKEN_SUBTITLE_TWO">Make a New Request</string>
+
+    <string name="BTN_OK">Ok</string>
+    <string name="BTN_YES">Yes</string>
+    <string name="BTN_UPDATE">Update</string>
+    <string name="BTN_CLOSE">Close</string>
+    <string name="BTN_NO">No</string>
+    <string name="BTN_SELECT_CURRENCY">Select Currency</string>
+    <string name="BTN_SELECT_PRODUCT">Select Product</string>
+    <string name="SCRL_LBL_MOBILE_MONEY_TRANSFER">Mobile money Transfer</string>
+    <string name="SCRL_LBL_Pay">Pay</string>
+    //TO DO ISSUE IS IN SHEET THIS DATA SAVE IN DIFFERRENCE NAME
+    <string name="SCR_LBL_PAYMERCHANT">Pay Merchant</string>
+
+    //TO DO
+    <string name="SCR_LBL_TRANSACT">Transact</string>
+
+
+    <!--Transact screen-->
+
+    <string name="SCR_LBL_BY_AIRTIME">Buy Airtime</string>
+    <string name="SCR_LBL_TRANSFER">Transfer</string>
+    <string name="SCR_LBL_TRANSFERED">TRANSFERED</string>
+    <string name="SCR_LBL_XPRESS_CASH">Xpress Cash</string>
+    <string name="BTN_VIEW_E_TOKEN">View e-token</string>
+    <string name="BTN_VIEW_VIRTUAL_CARD">View Virtual Card</string>
+    <string name="SCR_LBL_WITHDRAWN">WITHDRAWN</string>
+    <string name="SCR_LBL_XPRESS_CASH_POINT">Xpress Cash Point</string>
+    <string name="SCR_LBL_PAY_MERCHANT">Pay a Merchant</string>
+    <string name="SCR_TITLE_PAY_A_MERCHANT">Pay a Merchant</string>
+    <string name="SCR_LBL_PAYBILLS">Pay Bills</string>
+    <string name="SCR_LBL_SPLIT_PAYMENTS">Split Payments</string>
+    <string name="SCR_LBL_SPLIT_PAYMENT">Split Payment</string>
+    <string name="BTN_PAY_A_NEW_MERCHANT">Pay a New Merchant</string>
+
+
+    <!--Pay a merchant-->
+    <string name="SCR_TITLE_SCAN_QR">Scan QR</string>
+
+    <!--Pay a merchant Scan QR-->
+    <string name="SCR_TITLE_MANAGE_BENEFIRIES">Manage Beneficiaries</string>
+    <string name="SCR_TITLE_ACTIVITY_ENTER_AMOUNT_PAY_MERCHANT">EnterAmountPayAMerchantActivity</string>
+    <string name="SCR_LBL_SELECT_ACCOUNT">Select Account</string>
+    <string name="SCR_LBL_DEPOSIT_TO">DEPOSIT TO</string>
+    <string name="SCR_LBL_REQUEST_MONEY_FROM">REQUEST MONEY FROM</string>
+    <string name="VAL_MSG_SELECT_ACCOUNT">Select account</string>
+    <string name="SCR_LBL_ACCOUNT_SELECTED">Account Selected</string>
+    <string name="PLACEHOLDER_MERCHANT_NAME">Enter Merchant Name</string>
+    <string name="SCR_TITLE_ACTIVITY_REVIEW_AND_PAY_MERCHANT">ReviewAndPayPayAMerchantActivity</string>
+    <string name="PLACEHOLDER_SAVING_ACCOUNT">Savings account</string>
+
+    <!--Pay a merchant review and pay-->
+    <string name="SCR_LBL_NEW_NOTIFICATION">New notifications</string>
+
+    <!--Notification-->
+
+    <string name="SCR_LBL_PAST_NOTIFICATION">Past notifications</string>
+    <string name="SCR_TITLE_NOTIFICATIONS">Notifications</string>
+    <string name="SCR_LBL_SWITCH_OFF_NOTIFICATIONS">Switch off notifications</string>
+    <string name="SCR_LBL_SWITCH_ON_NOTIFICATIONS">Switch on notifications</string>
+    <string name="SCR_LBL_BUY_AIRTIME_MSG">Dear customer, we are processing your request. You will receive a response shortly.</string>
+    <string name="SCR_LBL_ADD_CARD_DESCRIPTION">Add a card and use it to transact on  mobile.</string>
+    <string name="SCR_LBL_ADD_CARD">Add a card</string>
+    <string name="BTN_ADD_A_CARD">Add a card</string>
+    <string name="SCR_LBL_CARD_ADDED">Card added</string>
+    <string name="SCR_LBL_ACCOUNT_ADDED">Account added</string>
+    <string name="SCR_LBL_ACCOUNT_REMOVED">Account Removed</string>
+    <string name="SCR_TITLE_MORE_SERVICE">More Services</string>
+    <!--More Service-->
+    <string name="SCR_LBL_MORE">More</string>
+    <string name="SCR_LBL_SECURITY_SETTING">Security Setting</string>
+    <string name="SCR_LBL_MANAGE_BENEFICIRIES">Manage Beneficiaries</string>
+    <string name="SCR_LBL_LOAN_AND_DEPOSITE">Loan and Deposit</string>
+    <string name="SCR_LBL_CHEQUE_SERVICES">Cheque Sevices</string>
+    <string name="SCR_LBL_FULL_STATEMENT">Full Statement</string>
+    <string name="SCR_LBL_LEGAL">Legal</string>
+    <string name="SCR_TITLE_CONTACT_US">Contact us</string>
+    <string name="SCR_LBL_CONTACT_US">Contact us</string>
+    <string name="SCR_TITLE_CARD_SERVICES">Card Services</string>
+
+    //for card Services
+    <string name="SCR_LBL_VIRTUAL_CARDS">Virtual Cards</string>
+    <string name="SCR_LBL_MANAGE_CARDS">Manage Cards</string>
+    <string name="SCR_TITLE_MANAGE_CARDS">Manage Virtual Cards</string>
+    <string name="SCR_LBL_LOCK_UNLOCK_CARD">Block/Unblock Card</string>
+    <string name="SCR_TITLE_LOCK_UNLOCK_CARD">Block/Unblock Card</string>
+    <string name="SCR_LBL_VIRTUAL_CARD_CONTENT">This service will allow you to request and manage your virtual cards </string>
+    <string name="SCR_LBL_LOAN_CATEGORY_NAME">Fixed interest Auto Loan</string>
+
+
+    //for loan and Deposit
+    <string name="INPUT_TITLE_RATE">rate</string>
+    <string name="SCR_LBL_NO_LOAN">You do not have a Loan</string>
+    <string name="SCR_LBL_OFFER"> loans offers you flexible repayment
+plans and options to access additional funds
+after repayment over time.</string>
+    <string name="SCR_LBL_NOTERM"> Term loan can guarantee the rate
+of your savings from a term within a time frame chosen by you</string>
+    <string name="SCR_LBL_REQUEST_CHEQUE">Request Cheque Book.</string>
+    <string name="BTN_CONFIRM_CHEQUE">Confirm Cheque</string>
+    <string name="SCR_LBL_CONFIRM_CHEQUE">Confirm Cheque</string>
+    <string name="BTN_STOP_CHEQUE">Stop Cheque</string>
+    <string name="BTN_STOP_CHEQUE_STOP_CHEQUE">Stop Cheque</string>
+    <string name="SCR_LBL_SELECT_ACCOUNT_TO_LINK_YOUR_CHEQUE">Please select the account you would like to link to your cheque</string>
+
+    <string name="SCR_LBL_SELECT_ACCOUNT_ACCOCIATED_WITH_YOUR_CHEQUE">Please select account associated with your cheque</string>
+    <string name="PLACEHOLDER_REASON_TO_REQUEST">Reason for request</string>
+    <string name="INFO_MSG_REQUEST_SENT">Request Sent</string>
+    <string name="BTN_REQUEST_CHEQUE">Request Cheque</string>
+    <string name="BTN_CONTINUE">Continue</string>
+
+    <string name="BTN_REQUEST">Request</string>
+    <string name="SCR_LBL_GENERATE_E_TOKEN">Generate e-token</string>
+    <string name="SCR_TITLE_ACTIVATE_YOUR_ACCOUNT">Activate your account</string>
+    <string name="SCR_TITLE_ACTIVE">active</string>
+    <string name="SCR_LBL_ENJOY_MOBILE_SERVICE">To be able to enjoy our mobile banking services, please use the following methods to activate your account</string>
+    <string name="BTN_USE__DEBIT_CARD">Use  Debit Card</string>
+    <string name="BTN_USE_INTERNET_BANKING_DETAILS">Use Internet Banking Details</string>
+    <string name="BTN_SAVE">Save</string>
+    <string name="SCR_LBL_ADD_A_NEW_AIRTIME_BENEFICIARY">Add a new airtime beneficiary</string>
+    <string name="SCR_TITLE_EDIT_AIRTIME_BENEFICIARY_DETAILS">Edit Airtime Beneficiary details</string>
+    <string name="VAL_MSG_PLEASE_ENTER_BENEFICIARY_MOBILE_NUMBER">Please enter beneficiary mobile number</string>
+
+    <!--<string name="SCR_LBL_BENEFICIARY_NAME_CAPITAL">Beneficiary Name</string>-->
+    <string name="VAL_MSG_PLEASE_ENTER_BENEFICIARY_ACCOUNT_NUMBER">Please enter beneficiary Account number</string>
+    <string name="VAL_MSG_PLEASE_ENTER_BENEFICIARY_EMAIL">Please enter beneficiary email</string>
+    <string name="INPUT_TITLE_BENEFICIARY_MOBILE_NUMBER">Beneficiary Mobile Number</string>
+    <string name="INPUT_TITLE_BENEFICIARY_ACCOUNT_NUMBER_CAP">Beneficiary Account Number</string>
+    <string name="SCR_TITLE_ADD_A_NEW__DOMESTIC_BENEFICIARY">Add a new  Domestic beneficiary</string>
+    <string name="SCR_TITLE_EDIT__DOMESTIC_BENEFICIARY">Edit a new  Domestic beneficiary</string>
+    <string name="PLACEHOLDER_BENEFICIARY_BANK_CAP">BENEFICIARY BANK</string>
+    <string name="PLACEHOLDER_BENEFICIARY_BANK">Beneficiary Bank</string>
+    <string name="PLACEHOLDER_SELECT_BANK">Select Bank</string>
+    <string name="VAL_MSG_SELECT_BANK">Please Select Bank</string>
+    <string name="INPUT_TITLE_BENEFICIARY_AC_NUMBER">Beneficiary A/C Number</string>
+    <string name="INPUT_TITLE_BENEFICIARY_AC_NUMBER_CAP">BENEFICIARY A/C NUMBER</string>
+    <string name="SCR_TITLE_ADD_A_NEW_LOCALBANK_BENEFICIARY">Add a new other local bank beneficiary</string>
+    <string name="SCR_TITLE_ADD_A_NEW__AFRICA_BENEFICIARY">Add a new  Africa beneficiary</string>
+    <string name="SCR_TITLE_EDIT__AFRICA_BENEFICIARY_DETAILS">Edit  Africa Beneficiary details</string>
+    <string name="SCR_TITLE_EDIT_VISA_DIRECT_BENEFICIARY_DETAILS">Edit Visa Direct Beneficiary details</string>
+    <string name="SCR_TITLE_EDIT_LOCAL_BANKS_BENEFICIARY_DETAILS">Edit Other Local banks Beneficiary details</string>
+    <string name="SCR_TITLE_EDIT_MOBILE_MONEY_BENEFICIARY_DETAILS">Edit Mobile Money Beneficiary details</string>
+    <string name="SCR_TITLE_EDIT_INTERNATIONAL_BENEFICIARY_DETAILS">Edit International Beneficiary details</string>
+    <string name="SCR_TITLE_EDIT_PAY_MERCHANT_BENEFICIARY_DETAILS">Edit Pay Merchant Beneficiary details</string>
+    <string name="SCR_TITLE_EDIT_XPRESS_AGENT_BENEFICIARY_DETAILS">Edit Xpress Agent Beneficiary details</string>
+    <string name="SCR_TITLE_EDIT_PAY_BILL_BENEFICIARY_DETAILS">Edit Pay Bill Beneficiary details</string>
+    <string name="SCR_TITLE_EDIT_CREDIT_CARD_REPAYMENT_BENEFICIARY_DETAILS">Edit Credit Card Repayment Beneficiary details</string>
+    <string name="SCR_TITLE_EDIT_PREPAID_CARD_TOPUP_BENEFICIARY_DETAILS">Edit Prepaid Card Topup Beneficiary details</string>
+    <string name="INPUT_TITLE_DESTINATION_COUNTRY_CAP">DESTINATION COUNTRY</string>
+
+    <string name="INPUT_TITLE_DESTINATION_COUNTRY">Destination Country</string>
+    <string name="INPUT_TITLE_MODE_OF_DELIVERY">Mode Of Delivery</string>
+    <string name="SCR_LBL_SELECT_MODE">Select Mode</string>
+    <string name="INPUT_TITLE_DESTINATION_VISA_CARD">Destination Visa card</string>
+    <string name="PLACEHOLDER_DESTINATION_VISA_CARD">DESTINATION VISA CARD</string>
+    <string name="PLACEHOLDER_TRANSFER_TO">Transfer To</string>
+    <string name="SCR_LBL_RECEIPT_TRANSFER_TO">Transfer to</string>
+    <string name="SCR_TITLE_ADD_A_NEW_MOBILE_MONEY_BENEFICIARY">Add a new Mobile Money beneficiary</string>
+    <string name="SCR_TITLE_ADD_INTERNATIONAL_BENEFICIARY_DETAILS">Add a new International beneficiary</string>
+    <string name="SCR_LBL_MOBILE_NETWORK">Select Mobile network</string>
+    <string name="SCR_LBL_FROM_ACCOUNT">From Account</string>
+
+    <string name="PLACEHOLDER_ENTER_BENEFICIARY_NAME">Enter Beneficiary Name</string>
+    <string name="PLACEHOLDER_ADD_NOTE_OR_HASHTAG">Add a note or #hashtag</string>
+    <string name="PLACEHOLDER_ENTER_AMOUNT">Enter amount</string>
+    <string name="SCR_TITLE_AIRTIME_BENEFICIRIES">Airtime Beneficiaries</string>
+    <string name="SCR_LBL_SAVED_BENEFICIARIES">Saved beneficiaries</string>
+    <string name="SCR_LBL_SAVED_BENEFICIARIES_CAPS">SAVED BENEFICIARIES</string>
+    <string name="SCR_LBL_YOU_HAVE_NO_RECENT_TRANSACTIONS">You have no recent transactions</string>
+
+    <string name="SCR_LBL_ADD_A_NEW_BENEFICIARY">Add a new beneficiary</string>
+    <string name="BTN_ADD_A_NEW_BENEFICIARY">Add A New Beneficiary</string>
+    <string name="SCR_LBL_TRANSACTION_COST">Transaction Fee</string>
+    <string name="SCR_LBL_TRANSACTION_FEE">Transaction fee</string>
+    <string name="SCR_LBL_YOU_HAVE_NO_SAVED_BENEFICIARY">You have no saved beneficiary</string>
+    <string name="SCR_LBL_YOU_HAVE_NO_SAVED_BENEFICIARIES">You have no saved beneficiaries</string>
+    <string name="SCR_LBL_SAVE_AS_BENEFICIARY">Save as beneficiary</string>
+    <string name="SCR_LBL_BENEFICIARY_SAVED">Beneficiary Saved</string>
+    <string name="SCR_LBL_BENEFICIARY_REMOVED">Beneficiary Removed</string>
+    <string name="SCR_LBL_SUCCESSFULLY">Successfully</string>
+    <string name="SCR_LBL_YOU_HAVE_SUCCESSFULLY_SAVED_A_NEW_BENEFICIARY">You\'ve successfully saved a new beneficiary.</string>
+    <string name="SCR_LBL_BUY_AIRTIME">Buy Airtime</string>
+    <string name="BTN_BUY_AIRTIME">Buy Airtime</string>
+    <string name="SCR_LBL_YOUR_PIN_WILL_BE_USED_TO">Your PIN will be used to log into  Mobile and authorize transactions.</string>
+    <string name="PLACEHOLDER_ENTER_PIN">Enter PIN</string>
+
+    <string name="PLACEHOLDER_ENTER_NEW_PIN">Enter New PIN</string>
+    <string name="PLACEHOLDER_REPEAT_PIN">Repeat PIN</string>
+    <string name="TAB_HOME">HOME</string>
+    <string name="TAB_TRANSACT">TRANSACT</string>
+    <string name="TAB_CARDS">CARDS</string>
+    <string name="TAB_HELP">HELP</string>
+    <string name="TAB_MORE">MORE</string>
+    <string name="SCR_LBL_DETAIL_VALIDATED">Details Validated</string>
+    <string name="SCR_LBL_YOUR_DETAILS_HAVE_BEEN_SUCCESSFULLY_VALIDATED_WE_WILL_CREATE_A_MOBILE_PROFILE_USING_XXXX_XXX">Your details have been successfully validated. We will create a mobile profile using XXXX XXX</string>
+    <string name="SCR_LBL_ENTER_CHARGED_AMOUNT_DETAIL_MESSAGE">To validate your request, we charged an amount to card account. Please check your statement and enter that exact amount in the format x.xx(example 0.01).</string>
+    <string name="BTN_CREATE_PROFILE">Create Profile</string>
+    <string name="INPUT_LBL_SCAN_CARD">Scan card</string>
+    <string name="SCR_INPUT_TITLE_CARD_NUMBER">CARD NUMBER</string>
+    <string name="SCR_LBL_TITLE_CARD_NUMBER">Card Number</string>
+    <string name="INPUT_TITLE_EXPIRY_DATE">Expiry Date</string>
+    <string name="PLACEHOLDER_CVV">cvv</string>
+    <string name="INPUT_TITLE_CVV">CVV</string>
+    <string name="INPUT_TITLE_CARD_CURRENCY">Card currency</string>
+    <string name="BTN_BLOCK_CARD">Block Card</string>
+
+    <string name="BTN_UNBLOCK_CARD">Unblock Card</string>
+    <string name="SCR_LBL_UNBLOCK">Unblock</string>
+    <string name="SCR_LBL_SELECT_ACCOUNT_TIED_TO_YOUR_CARD">Please select account tied to your card</string>
+    <string name="SCR_LBL_BLOCK_UNBLOCK_CARD_CONTENT">This service will allow you to block
+or unblock your  cards.</string>
+    <string name="PLACEHOLDER_ENTER_CHEQUE_NUMBER">Enter the cheque number</string>
+
+    <string name="PLACEHOLDER_ENTER_CHARGED_AMOUNT">Enter charged amount</string>
+    <string name="VAL_MSG_ENTER_CHARGED_AMOUNT">Enter charged amount</string>
+    <string name="PLACEHOLDER_REASON">Reason</string>
+    <string name="PLACEHOLDER_SELECT_MULTIPLE_BY_COMA">Select multiple by separating with comma</string>
+    <string name="INPUT_TITLE_TRANSFER_TYPE">TRANSFER TYPE</string>
+
+    <string name="SCR_LBL_BENEFICIARY_ACCOUNT_NO">BENEFICIARY ACCOUNT NO</string>
+    <string name="INPUT_TITLE_RECIPIENT_ACCOUNT">RECIPIENT ACCOUNT</string>
+    <string name="SCR_LBL_TAP_HERE_TO_ADD_NOTE">Tap here to add a note or #hashtag</string>
+    <string name="BTN_DELETE_BENEFICIARY">Delete Beneficiary</string>
+    <string name="PICKER_LBL_DELETE_BENEFICIARY">Delete Beneficiary</string>
+    <string name="WAR_MSG_DELETE_BENEFICIARY">This beneficiary will no longer be available
+        during transactions. Are you sure you want to continue?</string>
+    <string name="BTN_EDIT_DETAILS">Edit Details</string>
+    <string name="SCR_LBL_EDITED">Edited</string>
+    <string name="YOU_VE_BENEFICIAY_WAS_EDITED_SUCCESSFULLY">You\'ve benficiary was edited successfully.</string>
+    <string name="SCR_LBL_ENABLE__APP_TO_USE_YOUR_FINGER_PRINT_FOR_SECURE_AND_QUICK_ACCESS_TO_YOUR_ACCOUNTS">Enable  app to use your Finger Print for secure and quick access to your accounts</string>
+    <string name="BTN_NOT_NOW">Not Now</string>
+    <string name="SCR_LBL_SUGGEST_AN_AMOUNT">Suggest an amount</string>
+    <string name="INPUT_TITLE_ENTER_MOBILE_NUMBER">Mobile Number</string>
+    <string name="SCR_TITLE_ENABLE_FINGER_PRINT">Login with Finger Print</string>
+    <string name="BTN_ENABLE_FINGER_PRINT">Enable Finger Print</string>
+    <string name="INFO_MSG_THIS_ACCOUNT_WILL_BE_USED_TO_FUND_THE_VIRTUAL_CARD">This account will be used to fund the virtual card</string>
+    <string name="SCR_LBL_TYPE_OF_CARD">Type of Card</string>
+    <string name="SCR_LBL_SELECT_TYPE_OF_CARD">Select type of card</string>
+    <string name="SCR_LBL_SCHEME_TYPE">SCHEME TYPE</string>
+    <string name="VAL_MSG_SELECT_THE_SCHEME_TYPE">Select the scheme type</string>
+    <string name="INFO_MSG_THIS_TYPE_OF_CARD_IS_VALID_FOR_TIME_AND_CAN_BE_USED_FOR_SEVERAL_TRANSACTION">This type of card is valid for [TIME] and can be used for several transactions</string>
+    <string name="INFO_MSG_GIFT_CARD">Card to be shared with friends and family as gift and validity period is [TIME].</string>
+    <string name="INFO_MSG_SELF_CARD">Card for personally use, shopping, subscription and validity period is [TIME].</string>
+    <string name="INFO_MSG_THIS_MOBILE_NUMBER_WILL_BE_USED_TO_RECEIVE_THE_OTP">This mobile number will be used to receive the OTP</string>
+    <string name="SCR_LBL_SECURITY_SETTINGS">Security Settings</string>
+
+
+    // more/security settings
+    <string name="SCR_LBL_CHANGE_PIN">Change PIN</string>
+    <string name="SCR_TITLE_CHANGE_PIN">Change PIN</string>
+    <string name="SCR_LBL_RESET_PIN">Reset PIN</string>
+    <string name="SCR_LBL_ENABLE_FINGER_PRINT_ID">Enable Finger Print ID</string>
+    <string name="PLACEHOLDER_TERMINAL_ID">Enter Terminal Id</string>
+
+    <!--<string name="PLACEHOLDER_TERMINAL_ID">TERMINAL ID</string>-->
+    <string name="PLACEHOLDER_SELECT_PRODUCT">Select Product</string>
+    <string name="INPUT_TITLE_ENTER_EMAIL_ADDRESS">Enter email address</string>
+    <string name="SCR_TITLE_KENYA_AIRWAYS">Kenya airways</string>
+    <string name="SCR_LBL_BY_TAPPING_CONTINUE_YOU_ARE_ACCEPTING">By tapping \"Continue\", you are accepting</string>
+    <string name="SCR_LBL_BY_TAPPING_NEXT_YOU_ARE_ACCEPTING">By tapping \"Next\", you are accepting</string>
+    <string name="SCR_LBL_OUR">our &#160;</string>
+    <string name="SCR_LBL_TERMS_AMP_CONDITIONS"><![CDATA[Terms & Conditions]]></string>
+    <string name="SCR_LBL_AS_WELL_AS_OUR">&#160;as well as our&#160;</string>
+    <string name="SCR_LBL_PRIVACY_POLICY">Privacy Policy</string>
+    <string name="SCR_TITLE_PLEASE_SELECT_YOUR_COUNTRY">Select your country</string>
+    <string name="PLACEHOLDER_PLEASE_SELECT_YOUR_COUNTRY">Please select your country</string>
+    <string name="VAL_MSG_PLEASE_SELECT_YOUR_COUNTRY">Please select your country</string>
+    <string name="SCR_LBL_PLEASE_SELECT_BENEFICIARY_BANK">Please select beneficiary bank</string>
+    <string name="SCR_LBL_RECIEVE_THE_VERIFICATION_CODE_VIA">Recieve the verification code via:</string>
+    <string name="SCR_LBL_SMS">SMS</string>
+    <string name="SCR_LBL_RADIO_SMS">sms</string>
+    <string name="SCR_LBL_RADIO_VOICE_CALL">Voice call</string>
+    <string name="INPUT_TITLE_DESTINATION_A_C_NUMBER">Destination A/c Number</string>
+    <string name="INPUT_TITLE_DESTINATION_A_C_NUMBERCAP">DESTINATION A/C NUMBER</string>
+    <string name="SCR_LBL_SELECT_THE_REASON_FOR_TRANSFER">Select the reason for transfer</string>
+    <string name="SCR_INPUT_TITLE_PLEASE_ENTER_RECIPIENT_DETAILS_TO_CONTINUE">Please enter recipient details to continue</string>
+    <string name="INPUT_TITLE_DESTINATION_ACCOUNT_NUMBER">Destination Account Number</string>
+    <string name="SCR_INPUT_TITLE_FIRST_NAME">First Name</string>
+    <string name="SCR_INPUT_TITLE_LAST_NAME">Last Name</string>
+    <string name="SCR_INPUT_TITLE_MIDDLE_NAME">Middle Name</string>
+    <string name="INPUT_TITLE_ENTER_PASSPORT_NUMBER">Enter Passport Number</string>
+    <string name="INPUT_TITLE_ISSUE_DATE">Issue Date</string>
+    <string name="SCR_LBL_SELECT_A_SECURITY_QUESTION">Select a security question</string>
+    <string name="INPUT_TITLE_TYPE_YOUR_ANSWER">Type your answer</string>
+    <string name="SCR_LBL_ENTER_CURRENT_PIN_TO_CONTINUE">Please enter current PIN \n to continue</string>
+    <string name="SCR_LBL_FORGOT">Forgot?</string>
+    <string name="SCR_TITLE_FINGER_PRINT_ENABLED">Finger Print Enabled</string>
+    <string name="SCR_LBL_FINGERPRINT_HAS_BEEN_ENABLED__MOBILE_APP">Finger print has been enabled on  Mobile App</string>
+    <string name="BTN_SHOW_E_TOKEN">Show e-token</string>
+    <string name="SCR_LBL_EXPIRES_ON">Expires on</string>
+    <string name="SCR_LBL_SOURCE">SOURCE</string>
+    <string name="SCR_LBL_TRANSACTION_TYPE">TRANSACTION TYPE</string>
+    <string name="SCR_LBL_HOW_DO_I_GET_MY_CASH">How do I get my cash?</string>
+    <string name="SCR_TITLE_INTERNET_BANKING"> Online</string>
+    <string name="SCR_LBL_ACTIVATE_MOBILE_BANKING_USING_YOUR_INTERNET_BANKING_DETAILS">Activate mobile banking using your internet banking details</string>
+    <string name="INPUT_TITLE_USERNAME">Username</string>
+    <string name="INPUT_TITLE_PASSWORD">Password</string>
+    <string name="SCR_TITLE_BANK_WITH_">Bank with </string>
+    <string name="SCR_LBL_JOIIN_THE_DIGITAL_REVOLUTION_YOU_CAN_USE_THE_FOLLOWING_METHOD_TO_ONBOARD">Join the digital revolution. You can use the following methods to onboard.</string>
+    <string name="BTN_OPEN_AN_EXPRESS_ACCOUNT">Open an Xpress Account</string>
+    <string name="BTN_ATTACH_NON__CARD">Attach Non  Card</string>
+    <string name="BTN_MOBILE_MONEY_WALLET">Mobile Money Wallet</string>
+    <string name="SCR_TITLE_MOBILE_MONEY_WALLET">Mobile Money wallet</string>
+    <string name="SCR_LBL_AVAILABLE_BALANCE">Available balance</string>
+    <string name="SCR_LBL_TOP_UP">Top up</string>
+    <string name="SCR_LBL_UPDATE_OTP">Update OTP</string>
+    <string name="SCR_LBL_UPDATE_MOBILE_NO">Update Mobile no.</string>
+    <string name="SCR_LBL_BLOCKED">blocked</string>
+    <string name="SCR_LBL_BLOCK">Block</string>
+    <string name="SCR_LBL_YOUR_ACTIVITY">YOUR ACTIVITY</string>
+    <string name="PLACEHOLDER_EXCHANGE_RATE_USD">Exchange Rate</string>
+    <string name="SCR_TITLE_MY_ACCOUNTS">My Accounts</string>
+    <string name="SCR_LBL_SHARE_ACCOUNT_DETAILS">Share account details</string>
+    <string name="BTN_CONFIRM_AND_TRANSFER">Confirm and Transfer</string>
+
+    <string name="SCR_TITLE_CONFIRM_AND_TRANSFER">Confirm and Transfer</string>
+    <string name="SCR_TITLE_OTHER_LOCAL_BANKS">Other Local Banks</string>
+    <string name="SCR_LBL_RECENT_MERCHANTS">RECENT MERCHANTS</string>
+    <string name="SCR_TITLE_PAY_A_BILL">Pay a bill</string>
+    <string name="SCR_LBL_PAY_A_NEW_BILL">Pay a new bill</string>
+    <string name="SCR_LBL_SAVED_BILLS">SAVED BILLS</string>
+    <string name="PLACEHOLDER_SEARCH">Search</string>
+    <string name="PLACEHOLDER_SEARCH_CONTACT">Search contact</string>
+    <string name="SCR_LBL_WHAT_WAS_PAYMENT_FOR">What was this payment for?</string>
+    <string name="SCR_TITLE_PLEASE_SELECT_A_BILLER_MERCHANT">Please select a [BILLER] merchant</string>
+    <string name="PLACEHOLDER_WHAT_S_YOUR_D_O_B_DD_MM_YY">What’s your D.O.B? (DD/MM/YY)</string>
+    <string name="INPUT_TITLE_ENTER_HOME_ADDRESS">Enter home address</string>
+    <string name="INPUT_TITLE_ENTER_HOME_ADDRESS_WITH_MARK">Enter home address?</string>
+    <string name="SCR_TITLE_PERSONAL_INFO">Personal Info</string>
+    <string name="SCR_LBL_PLEASE_PROVIDE_US_WITH_YOUR_PERSONAL_INFORMATION_BELOW">Please provide us with your personal information below</string>
+    <string name="PLACEHOLDER_ENTER_YOUR_EMAIL_ADDRESS">Enter Your Email Address</string>
+    <string name="PLACEHOLDER_ENTER_YOUR_EMAIL_ADDRESS_CAMEL">Enter your email address</string>
+    <string name="INPUT_TITLE_ENTER_YOUR_EMAIL_ADDRESS">ENTER YOUR EMAIL ADDRESS</string>
+    <string name="SCR_LBL_PLEASE_SELECT_YOUR_GENDER">Please select your gender</string>
+    <string name="SCR_LBL_RADIO_OPTIONS_MALE">Male</string>
+    <string name="SCR_LBL_RADIO_OPTIONS_FEMALE">Female</string>
+    <string name="SCR_TITLE_PLEASE_ENTER_CURRENT_PIN_TO_CONTINUE">Please enter current PIN \n to continue</string>
+    <string name="SCR_LBL_CATEGORY">Category</string>
+    <string name="BTN_SHARE_RECEIPT">Share Payment Advice</string>
+    <string name="BTN_SHARE_PAYMENT_ADVICE_AS_TEXT">Share Payment Advice as Text</string>
+    <string name="BTN_SHARE_RECEIPT_AS_IMAGE">Share Payment Advice as Image</string>
+    <string name="BTN_SHARE_PAYMENT_ADVICE">Share Payment Advice</string>
+    <string name="BTN_TRANSFER_AGAIN">Transfer Again</string>
+    <string name="SCR_LBL_CHOOSE_HOW_THE_RECEIPIENT_WILL_RECEIVE_THE_MONEY">Choose how the recipient will receive the money</string>
+    <string name="PLACEHOLDER_SELECT_NO_OF_LEAVES">Select no. of leaves</string>
+    <string name="BTN_CONFIRM_AND_PAY">Confirm and Pay</string>
+    <string name="SCR_LBL_SCHEDULE_PAYMENT">Schedule Payment</string>
+    <string name="SCR_LBL_TOTAL_AMOUNT_TO_PAY">Total amount to Pay</string>
+    <string name="SCR_LBL_TOTAL_TO_PAY">Total to pay</string>
+    <string name="SCR_LBL_RECIPIENT_GETS">Recipient Gets</string>
+    <string name="SCR_LBL_YOUR_RECIPIENT_GETS">Your recipient gets</string>
+    <string name="SCR_LBL_DESTINATION">Destination</string>
+    <string name="BTN_CREATE_VIRTUAL_CARD">Create Virtual Card</string>
+    <string name="SCR_LBL_VALID_UNTIL">Valid Until</string>
+    <string name="BTN_WITHDRAW">Withdraw</string>
+    <string name="SCR_LBL_TRANSACTION_COST_INCLUDED">Transaction cost(included)</string>
+    <string name="SCR_LBL_SCAN_AGENT_QRCODE_HERE">Scan Agent QR Code here</string>
+    <string name="SCR_TITLE_SECURITY_QUESTIONS">Security questions</string>
+    <string name="SCR_LBL_SELECT_QUESTION_MESSAGE">Select 2 question below. These questions will help us verify your Identity should you forget your PIN</string>
+    <string name="SCR_LBL_QUESTION_1">Question 1:</string>
+    <string name="SCR_LBL_CHOOSE_YOUR_FIRST_QUESTION">Choose your first question</string>
+    <string name="SCR_LBL_QUESTION_2">Question 2:</string>
+    <string name="SCR_LBL_CHOOSE_YOUR_SECOND_QUESTION">Choose your second question</string>
+    <string name="SCR_LBL_SELECT_ALL_CARDS">Select all cards</string>
+    <string name="SCR_TITLE_WHERE_WOULD_YOU_LIKE_SEND_MONEY">Where would you like to send money?</string>
+    <string name="INPUT_TITLE_SEND_TO">SENDING TO</string>
+    <string name="BTN_REQUEST_MONEY">Request Money</string>
+    <string name="BTN_SELECT_CONTACT">Select Contact</string>
+    <string name="SCR_LBL_BUY_AIRTIME_FOR">Who would you like to buy airtime for?</string>
+    <string name="SCR_LBL_PLEASE_SELECT_CONTACT">Please select contact</string>
+    <string name="SCR_LBL_SELECT_CONTACT">Select contact</string>
+    <string name="SCR_LBL_SEND_MONEY_FOR">Who would you like to send money for?</string>
+    <string name="SCR_LBL_SEND_FRIENDS_ON_">Friends on  Mobile</string>
+    <string name="SCR_LBL_RECENTLY_SELECTED">RECENTLY SELECTED</string>
+    <string name="SCR_LBL_HOW_MUCH_WOULD_YOU_LIKE_TO_SEND_">How much would you like to send ?</string>
+    <string name="SCR_LBL_HOW_MUCH_WOULD_YOU_LIKE_TO_SEND">How much would you like to send to?</string>
+    <string name="INPUT_TITLE_YOU_SEND">You Send</string>
+    <string name="INPUT_TITLE_THEY_GET">They Get</string>
+    <string name="INPUT_TITLE_RECIPIENT_GET">Recipient Gets</string>
+    <string name="SCR_LBL_EXCHANGE_RATE">Exchange Rate</string>
+    <string name="SCR_LBL_TRANSFER_FEE">Transfer fee</string>
+    <string name="SCR_LBL_REGULATION_CHARGE">Regulation charge</string>
+    <string name="SCR_LBL_TAX">Tax</string>
+    <string name="SCR_LBL_SEND_SELECT_ACCOUNT">Send Select Account</string>
+    <string name="PLACEHOLDER_BENEFICIARY_CARD_NUMBER">Beneficiary Card Number</string>
+    <string name="VAL_MSG_BENEFICIARY_CARD_NUMBER">ENTER BENEFICIARY CARD NUMBER</string>
+    <string name="VAL_MSG_ENTER_BENEFICIARY_VISA_ALIAS">ENTER BENEFICIARY VISA ALIAS</string>
+    <string name="SCR_LBL_ACCOUNT_TYPE">Account Type</string>
+    <string name="PLACEHOLDER_ACCOUNT_TYPE">ACCOUNT TYPE</string>
+    <string name="INPUT_TITLE_ACCOUNT_TYPE">Account type</string>
+    <string name="SCR_LBL_ACCOUNT_NUMBER">Account Number</string>
+    <string name="PLACEHOLDER_ENTER_ACCOUNT_NUMBER">Enter Account Number</string>
+    <string name="VAL_MSG_PLEASE_ENTER_ACCOUNT_NUMBER">Please enter account number</string>
+    <string name="VAL_MSG_VALID_ACCOUNT_NUMBER">Please enter valid account number</string>
+    <string name="BTN_SHARE_PAYMENT_LINK">Share Payment Link</string>
+    <string name="SCR_LBL_YOUR_PROFILE_HAS_BEEN_CREATED_SUCCESSFULLY_PLEASE_CONTINUE_TO_THE_NEXT_PAGE_TO_SET_YOUR_PIN">Your profile has been created successfully. Please continue to the next page to set your PIN.</string>
+    <string name="SCR_LBL_CREATE_6_DIGIT_PIN">Create 6 digit PIN</string>
+
+    <string name="BTN_CREATE_6_DIGIT_PIN">Create 6 digit PIN</string>
+    <string name="SCR_LBL_TANSFER_TO">TRANSFERRED</string>
+    <string name="SCR_LBL_YOU_HAVE_SUCCESSFULLY_SENT">you have successfully sent</string>
+    <string name="SCR_LBL_YOU_HAVE_SUCCESSFUL_GENERATED_A_TOKEN_OF">You have successfully generated a token of</string>
+    <string name="SCR_LBL_A_TOTAL_AMOUNT_OF">A total amount of</string>
+    <string name="SCR_LBL_WAS_CHARGEED_FROM_YOUR_ACCOUNT">was charged from your account</string>
+    <string name="BTN_VIEW_RECEIPT">View Payment Advice</string>
+    <!--<string name="BTN_VIEW_RECEIPT">View Receipt</string>-->
+    <string name="SCR_LBL__DOMESTIC"> Domestic</string>
+    <string name="SCR_LBL_TRANSFER_TO__ACCOUNT">Transfer to  account</string>
+
+    <string name="SCR_LBL_CONTACTS_ON__MOBILE">Contacts On  Mobile</string>
+    <!--<string name="SCR_LBL_CONTACTS_ON__MOBILE">CONTACTS ON  MOBILE</string>-->
+    <string name="SCR_LBL_VISA_DIRECT">Visa Direct</string>
+    <string name="SCR_TITLE_VISA_DIRECT">Visa Direct</string>
+    <string name="SCR_LBL_WAITING_TO_AUTOMATICALLY_DETECT_THE_VERIFICATION_CODE_SENT_TO">Waiting to automatically detect the verification code sent to:</string>
+    <string name="SCR_LBL_RESENT_CODE_IN">Resend Code in :</string>
+    <string name="BTN_REQUEST_FOR_A_VIRTUAL_CARD">Request for a Virtual Card</string>
+    <string name="BTN_CREATE_A_VIRTUAL_CARD">Create a Virtual Card</string>
+    <string name="BTN_MANAGE_VIRTUAL_CARD">Manage Virtual Card</string>
+    <string name="SCR_LBL_WELCOME_TO__DESCRIPTION_MESSAGE">Hello, welcome to  Mobile the digital revolution app. Please let us know if you bank with us.</string>
+    <string name="SCR_LBL_WELCOME_TO_">Welcome to </string>
+    <string name="SCR_LBL_LETS_GET_STARTED">Let\'s get started</string>
+    <string name="BTN_YES_I_HAVE__ACCOUNT">Yes, I have an  account</string>
+    <string name="BTN_NO_I_AM_NEW_TO_">I\'m new to </string>
+    <string name="PLACEHOLDER_AGENT_CODE">Enter Agent Code</string>
+    <string name="PLACEHOLDER_AGENT_NAME">Enter Agent Name</string>
+    <string name="BTN_XPRESSCASH_AGENT_POINT">Xpress Agent Point</string>
+    <string name="WHATS_THE_NAME_OF_YOUR_FIRST_HIGH_SCHOOL">What\'s the name of your first high school?</string>
+    <string name="INFO_MSG_CHECKING_IF_YOU_HAVE_EXISTING_VIRTUAL_CARDS">Checking if you have existing virtual cards</string>
+    <string name="INFO_MSG_MAKING_SURE_THAT_VIRTUAL_CARD_LIST_IS_UPDATED">Making sure that virtual card list is updated</string>
+
+    <string name="SCR_LBL_E_TOKEN">E-token</string>
+    <string name="WAR_MSG_DELETE_RECENT_REQUEST_MONEY">will be cancelled and cannot be used. Are you sure you want to continue?</string>
+    <string name="SCR_TITLE_MY_PROFILE">MY PROFILES</string>
+    <string name="SCR_LBL_FIXED_INTEREST_AUTO_LOAN">Fixed interest Auto Loan</string>
+    <string name="SCR_LBL_MATURITY_DATE">Maturity date:</string>
+    <string name="INPUT_TITLE_LOAN_AMOUNT">Loan Amount</string>
+    <string name="SCR_INPUT_TITLE_REPAYMENT_ACCOUNT">REPAYMENT ACCOUNT</string>
+    <string name="INPUT_TITLE_TOTAL_AMOUNT_PAID">Total amount paid</string>
+    <string name="INPUT_TITLE_OUTSTANDING_BALANCE">outstanding balance</string>
+    <string name="INPUT_TITLE_NEXT_PAYMENT">next payment</string>
+    <string name="INPUT_TITLE_NEXT_PAYMENT_DATE">next payment Date</string>
+    <string name="SCR_LBL_SELF">Self</string>
+    <string name="SCR_LBL_XPRESS_ACCOUNT">Xpress Account</string>
+    <string name="SCR_LBL_CURRENT_ACCOUNT">Current Account</string>
+    <string name="PICKER_VALUE_ALWAYS_DISPLAY_BALANCE">Always display balance</string>
+    <string name="PICKER_VALUE_ALWAYS_HIDE_BALANCE">Hide balance</string>
+    <string name="PICKER_VALUE_SET_DEFAULT_ACCOUNT">Set default account</string>
+    <string name="SCR_LBL_SAVE_DEFAULT_AC">Set as default account</string>
+    <string name="PICKER_VALUE_REMOVE_DEFAULT_ACCOUNT">Remove default account</string>
+    <string name="SCR_LBL_TAKE_NEW_PHOTO">Take new photo</string>
+    <string name="BTN_TITLE_CHOOSE_AN_EXISTING_PHOTO">Choose an Existing Photo</string>
+    <string name="SCR_LBL_ADD_ANOTHER_PROFILE">Add another profile</string>
+    <string name="SCR_LBL_WELCOME_BACK">Welcome back,</string>
+    <string name="SCR_LBL_YOUR_ACCOUNTS">My Accounts</string>
+    <string name="SCR_LBL_MY_ACCOUNTS">My Accounts</string>
+    <string name="SCR_LBL_QUICK_TRANSACTION">Quick Transaction</string>
+    <string name="SCR_LBL_NO_NEW_REQUEST">No new requests</string>
+    <string name="SCR_LBL_NO_NEW_REQUEST_DESCRIPTION">You don’t have any money requests today!  Make a new request</string>
+    <string name="BTN_SCHEDULE_TRANSFER">Schedule Transfer</string>
+    <string name="SCR_LBL_INTERNATIONAL_TRANSFER">International Transfers</string>
+    <string name="SCR_TITLE_TRANSFER_BY_EMAIL_SMS">Transfer by Email or SMS</string>
+    <string name="SCR_LBL_TRANSFER_BY_EMAIL_SMS">Transfer by Email or SMS</string>
+    <string name="SCR_LBL_SUCCESSFUL">Successful</string>
+    <string name="SCR_LBL_TERMS_AND_CONDITIONS">Terms and Conditions</string>
+    <string name="SCR_LABEL_LOAN_STATUS">Loan Status</string>
+    <string name="SCR_LBL_TERM_DEPOSITS">Term Deposits</string>
+    <string name="BTN_LEARN_MORE">Learn More</string>
+    <string name="SCR_LBL_YOU_HAVE_NO_SUBSCRIPTION">You have no subscriptions</string>
+    <string name="SCR_LBL_TOTAL_U_PAY">Total you pay</string>
+    <string name="SCR_LBL_AMOUNT_TO_BE_DEBITED">Amount to be debited</string>
+    <string name="SCR_LBL_DESTINATION_COUNTRY">Destination Country</string>
+    <string name="SCR_LBL_DESTINATION_BANK_NAME">Destination bank name</string>
+    <string name="SCR_LBL_PHONE_NUMBER">Phone Number</string>
+    <string name="PLACEHOLDER_PHONE_NUMBER">Phone Number</string>
+    <string name="SCR_LBL_PHYSICAL_ADDRESS">Physical address</string>
+    <string name="PLACEHOLDER_PHYSICAL_ADDRESS">Physical Address</string>
+    <string name="SCR_LBL_BANK_NAME_SHARE_TEXT">Bank Name: </string>
+    <string name="INPUT_NEXT_REPAYMENT_PRINCIPAL">Next Repayment Principal</string>
+    <string name="INPUT_NEXT_REPAYMENT_INTEREST">Next Repayment Interest</string>
+
+    <string name="SCR_LBL_PIN_CHANGED">PIN Changed</string>
+
+    <string name="SCR_LBL_PIN_RESET">PIN Reset</string>
+    <string name="SCR_LBL_PIN_updated">PIN updated</string>
+    <string name="SCR_LBL_PIN_CHANGED_MESSAGE">Your PIN change request was updated successfully</string>
+
+    <string name="SCR_TITLE_RESET_PIN">Reset your PIN</string>
+    <string name="SCR_SUBTITLE_RESET_PIN">Please provide answer to question below for us to validate your identity</string>
+    <string name="SCR_TITLE_PLEASE_SELECT_A_REASON_WHY_YOU_ARE_BLOCKING_THIS_CARD">Please select a reason why you are blocking this card</string>
+    //CONTINUE
+    <string name="PLACEHOLDER_LBL_WHERE_DID_YOU_NOTICE_THIS">Where did you notice this?</string>
+    <string name="WAR_MSG_PLEASE_NOTE_IF_YOU_PROCEED">Please note If you proceed, this card can only be unblocked at the
+banking hall.</string>
+    <string name="SCR_LBL_MY_CARDS">My Cards</string>
+    <string name="SCR_LBL_CARD_BLOCKED">Card Blocked</string>
+    <string name="SCR_LBL_CARD_UNBLOCKED">Card Unblocked</string>
+    <string name="SCR_LBL_UNBLOCKED_CARD">Unblock card</string>
+    <string name="SCR_TITLE_CHEQUE_SERVICES">Cheque Services</string>
+    <string name="PLACEHOLDER_CHEQUE_DATE">Cheque Date</string>
+    <string name="SCR_TITLE_REQUEST_VIRTUAL_CARD">Request a Virtual Card</string>
+    <string name="VAL_MSG_SELECT_CARD_TYPE">Select Card Type</string>
+    <string name="VAL_MSG_SELECT_CARD_SCHEME">Select Card Scheme</string>
+    <string name="INPUT_TITLE_SELECT_CARD">Select Card</string>
+    <string name="VAL_MSG_SELECT_CARD">Select Card</string>
+    <string name="VAL_MSG_WHAT_ARE_YOU_REQUEST_MONEY_FOR">What are you requesting money for?</string>
+    <string name="SCR_LBL_PAST_90_DAYS">Past 90 days</string>
+    <string name="SCR_LBL_PAST_60_DAYS">Past 60 days</string>
+    <string name="SCR_LBL_PAST_30_DAYS">Past 30 days</string>
+    <string name="SCR_LBL_CHOOSE_A_DATE">CHOOSE A DATE</string>
+    <string name="SCR_LBL_FROM">FROM</string>
+    <string name="SCR_LBL_TO">TO</string>
+    <string name="SCR_TITLE_FILTER">Filter</string>
+    <string name="VAL_MSG_SELECT_DATES">Please select dates</string>
+    <string name="SCR_TITLE_LEGAL">Legals</string>
+
+    <!--Legal Tab-->
+    <string name="SCR_LBL_OUR_MISSION">Our Mission</string>
+
+    <!--Contact Us-->
+    <string name="SCR_LBL_OUR_VISION">Vision</string>
+    <string name="SCR_LBL_HEADING_TALK_TO_US_TODAY">Talk To us today</string>
+    <string name="SCR_LBL_EMAIL_US">Email Us</string>
+    <string name="SCR_LBL_OUR_WEBSITE">Our Website</string>
+    <string name="SCR_LBL_OUR_CONTACTS">Our Contacts</string>
+    <string name="SCR_LBL_OUR_PRODUCTS">Our Products</string>
+    <string name="SCR_LBL_PLEASE_PROVIDE_THE_DETAILS_BELOW_TO_REQUEST_A_STATEMENT">Please provide the details below\nto request a statement</string>
+    <string name="PLACEHOLDER_SELECT_START_DATE">Select start date</string>
+    <string name="PLACEHOLDER_SELECT_END_DATE">Select end date</string>
+    <string name="PICKER_TITLE_SELECT_CARD_CURRENCY">Select card currency</string>
+
+
+    <string name="PICKER_LBL_SELF">Self</string>
+    <string name="PICKER_LBL_TITLE_SELECT_ACCOUNT">Select account type</string>
+    <string name="PICKER_LBL_TITLE_TRANSFER_TYPE">Transfer type</string>
+    <string name="PICKER_LBL_SELF_SUB_TITLE">Transfer to my  account</string>
+    <string name="PICKER_LBL_OTHER_SUB_TITLE">Transfer to other accounts</string>
+    <string name="SCR_LBL_XPRESS_ACCOUNTS">Xpress accounts</string>
+    <string name="SCR_LBL_CURRENT_ACCOUNTS">Current accounts</string>
+    <string name="SCR_LBL_REVIEW_AND_BUY">Review and buy</string>
+    <string name="SCR_TITLE_REVIEW_AND_SEND">Review and Send</string>
+    <string name="SCR_TITLE_REVIEW_AND_REQUEST">Review and Request</string>
+    <string name="VAL_MSG_ENTER_NEW_NOTE_OR_HASHTAG">Enter Notes Or Hashtag</string>
+
+    <string name="VAL_MSG_ENTER_BENEFICIARY">Enter Beneficiary Name</string>
+    <string name="VAL_MSG_ENTER_DESTINATION_ACCOUNT">Enter Destination Account Number</string>
+    <string name="PLACEHOLDER_ENTER_DESTINATION_ACCOUNT_NUMBER">Enter Destination Account Number</string>
+    <string name="VAL_MSG_ENTER_SWIFT_CODE">Enter swift code</string>
+    <string name="VAL_MSG_ENTER_BANK_CODE">Enter bank code</string>
+    <string name="VAL_MSG_ENTER_CODE">Enter code</string>
+    <string name="VAL_MSG_ENTER_BANK_NAME">Enter bank name</string>
+    <string name="VAL_MSG_BANK_BRANCH">Enter bank branch</string>
+    <string name="VAL_MSG_BANK_ADDRESS">Enter bank address</string>
+    <string name="VAL_MSG_ENTER_DESTINATION">Enter destination account</string>
+
+    <string name="VAL_MSG_ENTER_EMAIL_ADDRESS">Enter valid email Address</string>
+    <string name="INPUT_TITLE_CARD_HOLDER">CARD HOLDER</string>
+
+    <string name="SCR_LBL_WELCOME_TO__MOBILE">Welcome to   mobile</string>
+
+    <string name="SCR_LBL_SIMPLE_AND_SECURE_WITH_QUICK_ACCESS">Simple and secure with quick access to your accounts instantly.</string>
+    <string name="VAL_MSG_ENTER_NO_OF_LEAVES">Please select no of leaves</string>
+
+    //Error
+    <string name="VAL_MSG_ENTER_REASON">Please enter the reason</string>
+    <string name="VAL_MSG_CHEQUE_DATE">Please enter cheque date</string>
+    <string name="VAL_MSG_PLEASE_ENTER_VALID_MOBILE_NUMBER">Please enter valid mobile number.</string>
+    <string name="VAL_MSG_PLEASE_ENTER_MOBILE_NUMBER">Please enter mobile number.</string>
+    <string name="SCR_LBL_HEADING_CALL_ME_WITH_THE_CODE">Call me with the code</string>
+
+    <string name="SCR_LBL_HEADING_RESEND_CODE">Resend Code</string>
+    <string name="VAL_MSG_SELECT_START_DATE">Please select valid start date.</string>
+    <string name="VAL_MSG_YOU_ARE_NOT_ALLOWED_TO_ENTER_YOUR_PHONE_NUMBER">You are not allowed to enter your phone number.</string>
+
+    <!--Error Messages-->
+    <string name="VAL_MSG_SELECT_END_DATE">Please select valid end date.</string>
+    <string name="VAL_MSG_PLEASE_ENTER_VALID_EMAIL_ADDRESS">Please enter valid email address.</string>
+    <string name="VAL_MSG_ENTER_YOUR_ANSWER">Please enter answer.</string>
+    <string name="VAL_MSG_ANSWER_FIRST_QUESTION">Answer your first question</string>
+    <string name="VAL_MSG_MSG_ERROR_SECOND_ANSWER">Answer your second question</string>
+    <string name="VAL_MSG_PLEASE_ENTER_TERMINAL_ID">Please enter terminal id.</string>
+    <string name="VAL_MSG_PLEASE_ENTER_MERCHANT_NAME">Please enter merchant name.</string>
+    <string name="VAL_MSG_ENTER_BENEFICIARY_NAME">Please enter beneficiary name.</string>
+    <string name="VAL_MSG_ENTER_PIN">Please enter valid PIN</string>
+    <string name="VAL_MSG_ENTER_PIN_AGAIN">Please enter PIN once again.</string>
+    <string name="VAL_MSG_ENTER_USERNAME">Please enter username.</string>
+    <string name="VAL_MSG_ENTER_PASSWORD">Please enter password.</string>
+    <string name="VAL_MSG_FIRST_NAME">Please enter first name.</string>
+    <string name="VAL_MSG_ENTER_MIDDLE_NAME">Please enter middle name.</string>
+    <string name="VAL_MSG_LAST_NAME">Please enter last name.</string>
+    <string name="VAL_MSG_DOB">Please select date of birth.</string>
+    <string name="VAL_MSG_ID_TYPE">Please select id type.</string>
+    <string name="VAL_MSG_ISSUE_DATE">Please select issue date.</string>
+    <string name="VAL_MSG_EXPIRY_DATE">Please select expiry date.</string>
+    <string name="VAL_MSG_PASSPORT_NUMBER">Please enter [ID_TYPE] number.</string>
+    <string name="VAL_MSG_HOME_ADDRESS">Please enter home address.</string>
+    <string name="VAL_MSG_ENTER_6_DIGIT_PIN">Please enter 6 digit PIN.</string>
+    <string name="VAL_MSG_ENTER_TRAVEL_PURPOSE">Please enter purpose of your travel.</string>
+    <string name="VAL_MSG_VALID_TRAVEL_START_DATE">Please select valid travelling start date.</string>
+    <string name="VAL_MSG_VALID_COMING_BACK_DATE">Please select valid coming back date.</string>
+    <string name="VAL_MSG_SELECT_FREQUENCY">Please select Frequency.</string>
+    <string name="VAL_MSG_PLEASE_SELECT_ACCOUNT">Please select account.</string>
+    <string name="VAL_MSG_SELECT_ACCOUNT_TYPE">Please select account type.</string>
+    <string name="VAL_MSG_MSG_SELECT_REASON">Please select a reason.</string>
+    <string name="VAL_MSG_MSG_SELECT_DATE_NOTICE">Please select date when you Notice.</string>
+    <string name="VAL_MSG_SELECT_NOTICE">Please select where you notice.</string>
+    <string name="VAL_MSG_PLEASE_ENTER_DESCRIPTIONS">Please enter discriptions.</string>
+    <string name="SCR_TITLE_SUCCESS_STATEMENT">Success!</string>
+
+    <!--Full Statement-->
+
+    <string name="SCR_LBL_MSG_FULL_STATEMENT_MESSAGE">Your full statement request has\nbeen received. You will receive an\nemail shortly.</string>
+    <string name="VAL_MSG_PLEASE_ENTER_VALID_EXPIRY">Please enter valid expiry date.</string>
+    <string name="VAL_MSG_PLEASE_ENTER_CVV_NUMBER">Please enter CVV number.</string>
+    <string name="INFO_MSG_MOBILE_NUMBER_PROVICED_MESSAGE_EXISTING_USER">Mobile number provided should be the same as the one used during account opening.</string>
+    //TO DO
+    <string name="INFO_MSG_MOBILE_NUMBER_PROVICED_MESSAGE_NEW_USER">An activation code SMS will be sent to verify this mobile number</string>
+    <string name="SCR_LBL_SCROLL_TO_ACCEPT">Scroll down to view</string>
+    <string name="NETWORK_ISSUE">Issue With Network</string>
+    <string name="SCR_TITLE_TOPUP_CARD">Top up Card</string>
+    <string name="BTN_TOPUP_CARD">Top up Card</string>
+
+    <!--top_up-->
+    <string name="SCR_TITLE_REVIEW_AND_TOP_UP">Review and Top up</string>
+    <string name="SCR_TITLE_PREPAID_CARD_TOPUP">Prepaid card Topup</string>
+    <string name="SCR_LBL_TOPUP_A_NEW_CARD">Top up a new card</string>
+    <string name="SCR_LBL_REPAYMENT_A_NEW_CARD">Add a new credit card</string>
+    <string name="SCR_LBL_SAVED_CARD">SAVED CARDS</string>
+    <string name="SCR_LBL_TRAVEL_DESTINATIONS">Travel Destinations</string>
+    <string name="SCR_LBL_TRAVEL_NOTIFICATION">Travel Notification</string>
+
+    <!--Travel Notification-->
+    <string name="SCR_LBL_CREATE_A_NEW_PIN">Create a new PIN</string>
+    <string name="SCR_LBL_PLEASE_GIVE_US_MORE_INFO_ABOUT_YOUR_TRIP">Please give us more info\nabout your trip</string>
+    <string name="PLACEHOLDER_WHEN_ARE_YOU_TRAVELLING">When are you travelling?</string>
+    <string name="INPUT_TITLE_WHERE_YOU_ARE_TRAVELING">Where are you travelling to?</string>
+    <string name="PLACEHOLDER_WHEN_ARE_YOU_COMING_BACK">When are you coming back?</string>
+    <string name="PLACEHOLDER_WHAT_S_THE_PURPOSE_OF_YOUR_TRAVEL">What\'s the purpose of your travel?</string>
+    <string name="THANKS_FOR_YOUR_TRAVEL_NOTICE_HAVE_A_SAFE_JOURNEY">Thanks for your travel notice. Have a\nsafe journey.</string>
+    <string name="SCR_LBL_SELECT_A_REASON">Select a reason</string>
+
+    <!--Card Services Block And unblock-->
+    <string name="PLACEHOLDER_LBL_WHEN_DID_YOU_NOTICE">When did you notice?</string>
+    <string name="PLACEHOLDER_FRAUD_DESCRIPTION">Fraud description</string>
+    <string name="PLACEHOLDER_DESCRIPTION">description</string>
+    <string name="INFO_MSG_BLOCK_MESSAGE">You will not be able to use this card once it is blocked. Are you sure want to continue?</string>
+    <string name="INFO_TITLE_BLOCK_CARD">Block Card</string>
+    <string name="INFO_TITLE_UNBLOCK_CARD_TITLE">Unblock Card</string>
+    <string name="INFO_MSG_UNBLOCK_MESSAGE">This will allow transaction processing from this card. Are you sure want to continue?</string>
+    <string name="SCR_TITLE_INTERNATIONAL_TRANSFER">International Transfers</string>
+
+    <string name="SCR_LBL_SELECT_ACCOUNT_CAP">SELECT ACCOUNT</string>
+    <string name="INPUT_TITLE_SELECT_ACCOUNT_CAP">SELECT ACCOUNT</string>
+    <string name="SCR_LBL_SELECT_ACCOUNT_CAP_WTIH_SIZE"><font size="11">SELECT ACCOUNT</font></string>
+    <string name="PLACEHOLDER_SELECT_PAY_VIA">Select Pay Via</string>
+    <string name="PICKER_LBL_SELECT_PAY_VIA">Select Pay Via</string>
+    <string name="SCR_LBL_SELECT_DATE">Select date</string>
+
+    <!--Schedule Transfer-->
+    <string name="VAL_MSG_NO_DATE_SELECTED">No date selected</string>
+    <string name="VAL_MSG_PLEASE_SELECT_DATE">Please select date</string>
+    <string name="VAL_MSG_PLEASE_SELECT_FREQUENCY">Please select frequency</string>
+    <string name="VAL_MSG_ENTER_CHEQUE_NUMBER">Please enter check number</string>
+
+    // Checque Service
+    <string name="VAL_MSG_ENTER_AMOUNT">Please enter amount</string>
+    <string name="VAL_MSG_SELECT_MULTIPLE_BY_COMMA">Select multiple by separating with comma</string>
+    <string name="SCR_LBL_MSG_REQUEST_SUCCESS">Your request for a Cheque Book has been submitted successfully</string>
+    <string name="VAL_MSG_ENTER_BENEFICIARY_NUMBER">Please enter beneficiary number.</string>
+
+    <string name="VAL_MSG_INVALID_CARD">Please Enter a Valid Card Number.</string>
+    <string name="VAL_MSG_ENTER_BENEFICIARY_AC_NUMBER">Please enter beneficiary a/c number.</string>
+    <string name="VAL_MSG_PLEASE_ENTER_DESTINATION_ACCOUNT_NUMBER">Please enter destination account number</string>
+    <string name="VAL_MSG_DEVICE_HAS_NO_FINGERPRINT">Device has no finger print sensor</string>
+    <string name="INFO_MSG_QR_INVALID_MESSAGE">Invalid QR code. Please try scanning the code again or try a different QR code</string>
+    <string name="VAL_MSG_THIS_QR_CODE_IS_NOT_SUPPORTED_BY_THIS_PROVIDER">The QR payment option you selected is not supported by this merchant . Please check the brand displayed on merchant’s QR and select a matching brand to pay</string>
+    <string name="SCR_LBL_TO_YOUR_VIRTUAL_CARD">to your virtual card</string>
+
+    <string name="VAL_MSG_PLEASE_SELECT_BENEFICIARY_BANK">Please select beneficiary bank</string>
+    <string name="VAL_MSG_PLEASE_SELECT_ACCOUNT_CURRENCY">Please select account currency</string>
+    <string name="SCR_LBL_SELECT_ACCOUNT_CURRENCY">Select account currency</string>
+    <string name="VAL_MSG_SELECT_DESTINATION_VISA">Select destination visa card</string>
+    <string name="SCR_LBL_CANCEL_E_TOKEN">Cancel e-token</string>
+    <string name="SCR_LBL_RECENT_ACTIVITY">Recent Activity</string>
+    <string name="WAR_MSG_ARE_YOU_SURE_YOU_WANT_TO_DELTE">Are you sure you want to delete this?</string>
+    <string name="WAR_MSG_ARE_DELETE_MY_PROFILE">Are you sure you want to delete this profile from device?</string>
+    <string name="PLACEHOLDER_ENTER_CARD_NUMBER">Enter Card Account Number</string>
+    <!--<string name="msg_error_enter_beneficiary_number">Please enter beneficiary number.</string>-->
+    <!--<string name="msg_error_enter_beneficiary_number">Please enter beneficiary number.</string>-->
+
+    <string name="PLACEHOLDER_CUSTOMER_NAME">Customer Name</string>
+    <string name="PLACEHOLDER_CUSTOMER_ID">Enter customer ID</string>
+
+    <string name="PLACEHOLDER_CUSTOMER_EMAIL_ADDRESS">Customer email address</string>
+    <string name="PLACEHOLDER_CARDS_LAST_4_DIGIT">Card\'s last 4 digit</string>
+    <string name="VAL_MSG_PLEASE_ENTER_CUSTOMER_ID">Please enter customer ID</string>
+
+    <string name="VAL_MSG_PLEASE_ENTER_CARD_NUMBER">Please enter valid card number</string>
+    <string name="VAL_MSG_PLEASE_ENTER_CUSTOMER_NAME">Please enter customer name</string>
+    <string name="VAL_MSG_PLEASE_ENTER_CUSTOMER_EMAIL">Please enter customer email</string>
+    <string name="VAL_MSG_PLEASE_ENTER_CUSTOMER_LAST_DIGIT">Please enter card\'s last 4 digit</string>
+    <string name="SCR_LBL_MSG_YOUR_E_TOKEN">Your e-token </string>
+    <string name="SCR_LBL_MSG_HAS_SUCCESSFULLY_BEEN_CANCELLED">has successfully been cancelled </string>
+    <string name="VAL_MSG_SELECT_QUESTION">Select Question</string>
+    <string name="SCR_TITLE_PAY">Pay</string>
+
+    <string name="SCR_LBL_TIME_TAKEN">This request will be processed now. it could take upto 72 hours to be credited to the beneficiary account.</string>
+    <string name="PLACEHOLDER_WHAT_IS_THIS_PAYMENT_FOR">What is this payment for?</string>
+
+    <string name="SCR_LBL_A_C">A/C</string>
+    <string name="SCR_LBL_PLEASE_SELECT_A">Please select a</string>
+    //TO DO
+    <string name="VAL_MSG_BILLER_CODE_NOT_FOUND">Biller code not found</string>
+    <!--continue-->
+    <string name="VAL_MSG_PLEASE_SELECT_PRODUCT">Please select product</string>
+    //TO DO
+    <string name="ERR_TITLE_ERROR">Error</string>
+    <string name="INFO_TITLE_SUCCESS">Success</string>
+    <string name="SRC_TITLE_REVIEW_AND_PAY">Review and pay</string>
+    <string name="VAL_MSG_PIN_CANT_BE_SEQUENTIAL_OR_REPETITIVE">Pin cannot be sequential or repetitive</string>
+    <string name="VAL_MSG_ENTER_PIN_SHOULD_BE_DIFERENT_FROM_CURRENT_PIN">Please enter PIN should be different from current PIN.</string>
+    <string name="VAL_MSG_PLEASE_ENTER_SAME_PIN">Please enter same PIN.</string>
+    <string name="VAL_MSG_FIRST_ENTER_BENEFICIARY_CARD_NUMBER">Firstly you enter beneficiary card number.</string>
+    <string name="VAL_MSG_FIRST_ENTER_BENEFICIARY_VISA_ALIAS">Firstly you enter beneficiary visa alias.</string>
+    <string name="VAL_MSG_FIRST_ENTER_BENEFICIARY_DETAILS">Firstly you enter beneficiary details.</string>
+    <string name="SCR_LBL_PLEASE_SELECT_DESTINATION_BANK">Please select destination bank.</string>
+    <string name="SCR_TITLE_REVIEW_AND_WITHDRAW">Review And Withdraw</string>
+    <string name="VAL_MSG_ERROR_YOUR_ENTER_AMOUNT_LESSTHANTO_LIMIT_AMOOUNT">Your enter amount should be less than to limit amount </string>
+    <string name="VAL_MSG_ENTER">Enter</string>
+    <string name="VAL_MSG_NUMBER">number</string>
+    <string name="ERR_MSG_FAILED_TO_LOAD">Failed to load</string>
+    <string name="INFO_MSG_FETCHING">Fetching...</string>
+    <string name="SCR_LBL_NAME">Name</string>
+    <string name="SCR_LBL__PAY"> Pay</string>
+    <string name="SCR_LBL_YEAR_2019">2019</string>
+    <string name="VAL_MSG_PLEASE_SELECT_TRANSFER_TO_ACCOUNT">Please select transfer account</string>
+    <string name="SCR_MESSAGE_JUST_GIVE_FEW_SECOND">Just a few more seconds</string>
+    <string name="ERR_TITLE_NO_INTERNET">Could not connect to the internet. Showing offline data.</string>
+    <string name="ERR_MSG_NO_INTERNET">Sorry we are unable to process your request at the moment, please try again.</string>
+    <string name="BTN_NO_INTERNET_OK">OK</string>
+    <string name="INFO_MSG_PLEASE_WAIT">Please wait..</string>
+    <string name="SCR_LBL_STANDING_ORDER">Standing order</string>
+    <string name="SCR_TITLE_STANDING_ORDER">Standing order</string>
+    <string name="SCR_LBL_DATE">Date</string>
+    <string name="SCR_LBL_REPEAT_TITLE">Repeat</string>
+    <string name="BTN_CANCEL_SCHEDULE">Cancel Schedule</string>
+    <string name="SCR_LBL_CHOOSE_APP">Choose an app</string>
+    <string name="PICKER_LBL_DAILY">Daily</string>
+    <string name="PICKER_LBL_WEEKLY">Weekly</string>
+    <string name="PICKER_LBL_MONTHLY">Monthly</string>
+    <string name="ERR_MSG_">OK</string>
+    <string name="SCR_LBL_ENTER_AMOUNT_TO_PAY">Enter amount to pay</string>
+
+    //Virtual card
+    <string name="BTN_PAY">Pay</string>
+    <string name="SCR_LBL_PREPAID_CARD_TOP_UP">Prepaid Card Top up</string>
+    <string name="SCR_LBL_CREDIT_CARD_REPAYMENT">Credit Card Repayment</string>
+    <string name="SCR_LBL_PAID">PAID</string>
+    <string name="SCR_LBL_MY_STANDING_ORDER">My STANDING ORDERS</string>
+    <string name="SCR_LBL_STOP_TRANSFERRING">Stop Transferring</string>
+    <string name="SCR_LBL_ON">On</string>
+    <string name="SCR_LBL_AFTER">after</string>
+    <string name="SCR_LBL_START_TRANSFERRING">Start Transferring</string>
+    <string name="INPUT_TITLE_START_TRANSFERRING">dd mmm yyyy</string>
+    <string name="VAL_MSG_SELECT_ACCOUNT_TO">Please Select Account To</string>
+    <string name="VAL_MSG_START_DATE">Please select start date</string>
+    <string name="VAL_MSG_END_DATE">Please select end date</string>
+    <string name="SCR_LBL_TOTAL_TO_BE_DEDUCTED">Total to be deducted</string>
+
+    <string name="SCR_LBL_FREQUENCY">Frequency</string>
+    <string name="SCR_LBL_DATE_OF_TRANSSACTION">Date of transaction</string>
+    <string name="SCR_LBL_EXPIRES_TODAY">Expires today</string>
+    <string name="SCR_LBL_EXPIRES_TOMORROW">Expires tomorrow</string>
+    <string name="SCR_LBL_EXPIRES_IN">Expires in</string>
+    <string name="SCR_LBL_EXPIRES">Expires in</string>
+    <string name="SCR_LBL_DAYS">DAYS</string>
+    <string name="PICKER_TITLE_SELECT_FREQUENCY">Select Frequency</string>
+
+    <string name="SCR_LBL_SELECT_FREQUENCY">Select Frequency</string>
+    <string name="SCR_TITLE_SPLIT_PAYMENTS">Split Payments</string>
+    <string name="SCR_LBL_EXPIRE_DATE">EXPIRY DATE:</string>
+    <string name="SCR_TITLE_REQUEST_MONEY">Request</string>
+    <string name="SCR_LBL_PLACE_STANDING_ORDER">Place a new standing order</string>
+    <string name="SCR_TYPE_SCHEDULED">SCHEDULED</string>
+    <string name="SCR_LBL_Enter_AFTER_Date">Enter after Date</string>
+
+    <string name="VAL_MSG_AFTER_DATE">Please select after date</string>
+    <string name="SCR_LBL_RADIO_ON">On</string>
+
+    <string name="SCR_LBL_RADIO_AFTER">After</string>
+    <string name="VAL_MSG_NETWORK_ERROR">NetworkError</string>
+    <string name="PICKER_DIALOG_DATEPICKERDIALOG">Date picker dialog</string>
+
+    <string name="VAL_MSG_PLEASE_ENTER_VALID_END_DATE">Please select valid end date.</string>
+    <string name="VAL_MSG_SELECT_AFTER_DATE">Please select valid after date.</string>
+    <string name="BTN_EDIT_SCHEDULE">Edit Schedule</string>
+
+    <string name="PLACEHOLDER_TRANSFER_FROM">TRANSFER FROM</string>
+    <string name="PICKER_TITLE_TRANSFER_To">Transfer To</string>
+    <string name="PLACEHOLDER_SCHEDULE_DATE">Schedule Date</string>
+    <string name="SCR_TITLE_TRANSFER_AMOUNT_CAP">TRANSFER AMOUNT</string>
+    <string name="BTN_SAVE_UPDATE">Save Updates</string>
+    <string name="SCR_LBL_SELECT_NETWORK_OPERATOR">Select network operator</string>
+    <string name="PICKER_TITLE_SELECT_NETWORK_OPERATOR">Select network operator</string>
+    <string name="SCR_LBL_SENT">Sent</string>
+    <!--CONTINUE-->
+    <string name="SCR_LBL_CREATED">CREATED</string>
+    <string name="SCR_LBL_EDIT_TRANSFER">Edit Transfer</string>
+    <string name="SCR_LBL_BENEFICIARY_NAME">Beneficiary Name</string>
+    <string name="INPUT_TITLE_BENEFICIARY_NAME">Beneficiary Name</string>
+    <string name="SCR_LBL_ACTIVE_REQUESTS">ACTIVE REQUESTS</string>
+    <string name="SCR_LBL_RECENT_SPLITS">Recent splits</string>
+
+    // SPLIT PAYMENT
+    <string name="SCR_LBL_ENTER_AMOUNT_TO_SPLIT">Enter amount to split</string>
+    <string name="BTN_SPLIT">Split</string>
+    <string name="BTN_INITIATE_NEW">Initiate New</string>
+    <string name="BTN_SELECT_CONTACTS">Select Contacts</string>
+    <string name="SCR_LBL_SELECT_ACCOUNT_TO_CREDIT">Select account to credit</string>
+    <string name="PLACEHOLDER_Add_A_NAME_FOR_THIS_SPLIT">Add a name for this split</string>
+    <string name="SCR_TITLE_CREDIT_AND_PAYMENT">Credit and Payment</string>
+    <string name="VAL_MSG_PLEASE_SELECT_PAYMENT_FOR">Please select payment for</string>
+    <string name="VAL_MSG_PLEASE_ADD_NAME_FOR_THIS_SPLIT">Please add a name for this split</string>
+    <string name="SCR_LBL_TRANSACTION_TYPE_TEXT_HEADING">Which type of transaction\nwould you like to schedule?</string>
+    <string name="SCR_TITLE_REVIEW_AND_SCHEDULE">Review and schedule</string>
+    <string name="SCR_TITLE_SCHEDULE_TRANSFER_DETAILS">Self scheduler</string>
+    <string name="SCR_TITLE_SPLIT">Split</string>
+    <string name="BTN_SELECTED_CONTINUE">Selected - Continue</string>
+    <string name="BTN_SPLIT_EQUALLY">Split Equally</string>
+    <string name="BTN_EXACT_AMOUNT">Exact Amount</string>
+    <string name="VAL_MSG_ALMOST_THERE_YOU_STILL_HAVE">Almost there…You still have</string>
+    <string name="VAL_MSG_TO_GO">to go!</string>
+    <string name="BTN_ADD_MORE_FRIENDS">Add More Friends</string>
+    <string name="PICKER_LBL_OTHER">Other</string>
+
+
+    <string name="SCR_LBL_POPUP_TITLE_SCHEDULE_TRANSFER_DELETE">Delete Transfer</string>
+    <string name="SCR_LBL_POPUP_TITLE_SCHEDULE_TRANSFER_MESSAGE">Are you sure you would like to delete your scheduled transfer?</string>
+    <string name="PLACEHOLDER_ENTER_ACCOUNT_NUMBER_CAPS">ENTER ACCOUNT NUMBER</string>
+    <string name="SCR_LBL_SEND_TO_NEW_BENEFICIARY">Send to a new beneficiary</string>
+
+
+    //BuyAirtime
+    <string name="VAL_MSG_SELECT_NETWORK_PROVIDER">Select network provider</string>
+    <string name="PLACEHOLDER_SELECT_NETWORK_PROVIDER">Select Network Provider</string>
+    <string name="SCR_LBL_ENTER_AMOUNT">Enter Amount</string>
+    <string name="SCR_LBL_WHO_WOULD_YOU_LIKE_TO_SPLIT_THE_MONEY_WITH">Who would you like to split money with?</string>
+
+    <string name="PLACEHOLDER_SEARCH_FOR_PEOPLE">Search for people</string>
+    <string name="PLACEHOLDER_ENTER_THEIR_NAME">Enter their name</string>
+    <string name="VAL_MSG_PLEASE_ENTER_THEIR_NAME">Please enter their name</string>
+    <string name="SCR_TITLE_BUY_AIRTIME">Buy Airtime</string>
+    <string name="VAL_MSG_PLEASE_SELECT_DESTINATION_COUNTRY">Please Select Destination Country</string>
+    <string name="VAL_MSG_SELECT_DESTINATION_COUNTRY">SELECT DESTINATION COUNTRY</string>
+    <string name="VAL_MSG_PLEASE_SELECT_PAY_VIA">Please Select Pay Via</string>
+    <string name="SCR_TITLE_GET_CASH">Get Cash</string>
+
+    <!--xpress Account-->
+    <string name="SCR_LBL_CASH_CODE_FOR">Your cash code for [AMOUNT] is</string>
+    <string name="SCR_LBL_EXPIRES_DATE_">Expiry Date </string>
+    <string name="SCR_LBL_IS">is</string>
+    <string name="SCR_LBL_TOKEN_MSG">Hi, [FIRST_NAME] generated an  Xpress Cash [REFRENCE_NO] of [CURRENCY_TYPE] [AMOUNT] for you. Visit your nearest  ATM or Xpress Point to cash the funds.</string>
+    <string name="SCR_LBL_HOW_GET_CASH_FIRST_POINT">Walk to any  branded ATM</string>
+
+    <string name="SCR_LBL_HOW_GET_CASH_SECOND_POINT">Select cardless withdrawal.</string>
+    <string name="SCR_LBL_HOW_GET_CASH_THIRD_POINT">Enter 8 digit token and 3 digit security code</string>
+    <string name="SCR_LBL_HOW_GET_CASH_FOURTH_POINT">Receive cash and transaction alerts</string>
+    <string name="BTN_SHARE_E_TOKEN">Share e-token</string>
+    <string name="BTN_DELETE_E_TOKEN">Delete e-token</string>
+    <string name="BTN_TYPE_MANUALLY">Type Manually</string>
+    <string name="VAL_MSG_ENTER_AGENT_CODE">Please enter agent code.</string>
+
+    <string name="VAL_MSG_ENTER_AGENT_CODE_SIX_DIGIT">Agent code should be 7 digit</string>
+    <string name="VAL_MSG_ENTER_AGENT_CODE_EIGHT_DIGIT">Agent code should be 8 digit</string>
+    <string name="VAL_MSG_ENTER_AGENT_NAME">Please enter agent name.</string>
+    <string name="VAL_MSG_AMOUNT_SHOULD_BE_ZERO">Amount should not be zero</string>
+    <string name="SCR_TITLE_ATM">ATM</string>
+    <string name="SCR_TITLE_REVIEW_AND_GENERATE">Review And Generate</string>
+    <string name="SCR_TITLE_GENERATE_E_TOKEN">Generate e-token</string>
+    <string name="VAL_MSG_AMOUNT_NOT_CORRECT">Amount is not Correct</string>
+    <string name="VAL_MSG_AMOUNT_RANGE">Amount should be multiplication of [MULTIFACTOR] and should be between [MIN] and [MAX]</string>
+    <string name="VAL_MSG_AMOUNT_RANGE_BETWEEN">Amount should be between [MIN] and [MAX]</string>
+
+    <string name="BTN_PAY_AGAIN">Pay Again</string>
+
+    <string name="VAL_MSG_CHOOSE_YOUR_FIRST_QUESTION">Choose your first question</string>
+    <string name="VAL_MSG_CHOOSE_YOUR_SECOND_QUESTIONS">Choose your second question</string>
+    <string name="SCR_TITLE_PIN">PIN</string>
+    <string name="SCR_LBL_SHARELINK_CHOOSE_HOW_WOULD_YOU_LIKE">Choose how you\'d like to share [AMOUNT] and the money will be sent as soon as they claim it</string>
+
+    // Transfer via Email Sms
+    <string name="SCR_LBL_SHARELINK_VERIFICATION_CODE">Share this unique code [verificationcode] with the recipient for validation.</string>
+    <string name="BTN_GET_STARTED">Get Started</string>
+    <string name="VAL_MSG_SELECT_CONTACT">Please select contact</string>
+    <string name="INFO_MSG_SPLIT_SUCCESSFULLY">Split Successfully</string>
+
+    <string name="INFO_MSG_YOUR_CARD_ADD_SUCCESSFULLY">Your card add successfully</string>
+    <string name="SCR_LBL_YOUR_CARD_ADD_SUCCESSFULLY">Your card add successfully</string>
+    <string name="SCR_LBL_UPDATE_OTP_NUMBER">Update OTP Number</string>
+    <string name="PLACEHOLDER_CURRENT_PHONE_NUMBER">Current phone number</string>
+    <string name="PLACEHOLDER_ENTER_NUMBER">Enter number</string>
+    <string name="INFO_TITLE_NUMBER_UPDATED">Number updated!</string>
+    <string name="INFO_MSG_YOUR_OTP_NUMBER_HAS_BEEN_SUCCESSFULLY_UPDATED">Your OTP number has been successfully updated</string>
+    <string name="INFO_TITLE_CLOSE_CARD">Close card</string>
+    <string name="INFO_TITLE_DELETE_CARD">Delete card</string>
+    <string name="INFO_MSG_CLOSE_CARD_MESSSAGE">You are about to delete this card from your virtual cards. Would you like to continue</string>
+    <string name="INFO_MSG_CLOSE_GIFT_CARD_MESSAGE">You are about to delete this card from your gift cards. Would you like to continue</string>
+    <string name="INFO_MSG_DELETE_CARD_MESSSAGE">You will not be able to use this card once its deleted. Are you sure you want to continue?</string>
+    <string name="SCR_TITLE_YOUR_CARD_HAS_A_BALANCE_OF">Your card has a balance of</string>
+    <string name="SCR_LBL_SELECT_AN_ACCOUNT_WHERE_THE_AMOUNT_SHOULD_BE_DISPOSITED">Select an account where the amount should be disposited</string>
+    <string name="SCR_LBL_CARD_REMOVED">Card Removed</string>
+    <string name="SCR_LBL_CARD_CLOSED">Card Closed</string>
+    <string name="SCR_LBL_ENTER_AN_AMOUNT">Enter an amount</string>
+    <string name="SCR_LBL_CID">CID</string>
+
+    <!--international transfer-->
+    <string name="SCR_LBL_SOURCE_ACCOUNT">Source Account</string>
+    <string name="INPUT_TITLE_SELECT_CURRENCY">SELECT CURRENCY</string>
+    <string name="SCR_LBL_CURRENCY">US Dollar USD</string>
+    <string name="SCR_LBL_PAY_VIA">PAY VIA</string>
+    <string name="INPUT_TITLE_ENTER_SWIFT_CODE">ENTER SWIFT CODE</string>
+    <string name="INPUT_TITLE_ENTER_CODE">Enter Code</string>
+    <string name="INPUT_TITLE_BANK_NAME">BANK NAME</string>
+    <string name="BTN_NEXT">Next</string>
+    <string name="INPUT_TITLE_DESTINATION_ACCOUNT">Destination Account</string>
+    <string name="INPUT_TITLE_EMAIL_ADDRESS">Email Address</string>
+    <string name="INPUT_TITLE_BENEFICIARY_EMAIL_ADDRESS">Beneficiary Email Address</string>
+    <string name="INPUT_TITLE_RESEDENTIAL_ADDRESS">Physical Address</string>
+    <string name="SCR_LBL_WHO_PAY">Who pays for the Charges ?</string>
+    <string name="SCR_LBL_DELIVER_WHEN">DELIVER WHEN ?</string>
+    <string name="PICKER_LBL_END_ON_DATE">End on date</string>
+    <string name="SCR_LBL_DESTINATION_ACCOUNT">Destination account</string>
+    <string name="SCR_TITLE_TRANSFER_AMOUNT">Transfer amount</string>
+    <string name="SCR_TITLE_HOW_MUCH_ARE_YOU_SENDING">How much are you sending</string>
+    <string name="PICKER_TITLE_END_TRANSFER">End transfer</string>
+
+    //Standing Order
+    <string name="INPUT_TITLE_END_TRANSFER">End transfer</string>
+    <string name="PICKER_LBL_END_ON_DATE_TXT">Select a specific date to stop transfer</string>
+    <string name="PICKER_LBL_AFTER">End after</string>
+    <string name="PICKER_LBL_AFTER_TXT">Selected number of transactions</string>
+    <string name="VAL_MSG_ENTER_AFTER_DATE">Please enter after date</string>
+
+    <string name="VAL_MSG_ENTER_NUM_OF_TRANSACTIONS">Please enter number of transactions.</string>
+    <string name="SCR_LBL_PLEASE_ENTER_SCHEDULE_DETAIL">Please enter schedule details to continue</string>
+    <string name="SCR_LBL_MOBILE_MONEY_WALLET">MobileMoneyWallet</string>
+    <string name="SCR_LBL_DOMESTIC">Domestic</string>
+    <string name="SCR_LBL_AFRICA">Africa</string>
+    <string name="SCR_LBL__OTHER_LOCALBAK">Otherlocalbanks</string>
+    <string name="SCR_LBL__INTERNATIONAL_TRANSFER">International Transfer</string>
+    <string name="SCR_TITLE_MOBILE_MONEY">Mobile Money</string>
+
+    //Transfer -Mobile Money
+    <string name="SCR_LBL_WHO_WOULD_YOU_LIKE_TO_SEND_MONEY_TO">Who would you like to send money to?</string>
+    <string name="SCR_LBL_POWERED_BY">POWERED BY</string>
+
+    // Africari
+    <string name="SCR_TITLE__AFRICA"> Africa</string>
+    <string name="SCR_LBL_SELECT__ACCOUNT">Select  Account</string>
+    <string name="SCR_TITLE_HOW_MUCH_WOULD_LIKE_TO_SEND_TO">How much would you like to send to</string>
+    <string name="VAL_MSG_PLEASE_SELECT_AT_LEAST_ONE_CARD">Please select at least one card</string>
+    <string name="VAL_MSG_SELECT_MODE_OF_DELIVERY">Select mode of delivery</string>
+    <string name="PICKER_TITLE_SELECT_MODE_OF_DELIVERY">Select mode of delivery</string>
+    <string name="VAL_MSG_ENTER_AMOUNT_SEND">Please enter send amount</string>
+    <string name="VAL_MSG_ENTER_AMOUNT_GET">Please enter get amount</string>
+    <string name="PLACEHOLDER_SELECT_ID_TYPE">Select Id Type</string>
+    <string name="VAL_MSG_SELECT_DESTINATION_BANK">Select beneficiary bank</string>
+    <string name="SCR_TITLE_SELECT_DESTINATION_BANK">Select destination bank</string>
+    <string name="VAL_MSG_PLEASE_SELECT_MOBILE_NETWORK">Please select Mobile Network</string>
+    <string name="PLACEHOLDER_MOBILE_ACCOUNT_NUMBER">Mobile Account Number</string>
+    <string name="PLACEHOLDER_SELECT_DESTINATION_COUNTRY">Select Destination Country</string>
+    <string name="INPUT_TITLE_SELECT_TRANSFER_CURRENCY">Select Transfer Currency</string>
+    <string name="VAL_MSG_SELECT_TRANSFER_CURRENCY">Please select Transfer Currency</string>
+    <string name="INPUT_TITLE_NETWORK_OPERATOR">Network operator</string>
+
+    <string name="SCR_LBL_NETWORK_OPERATOR">Network operator</string>
+    <string name="VAL_MSG_MOBILE_ACCOUNT_NUMBER">MOBILE ACCOUNT NUMBER</string>
+
+    <string name="SCR_LBL_NO_BANK_AVAILABLE">No Bank Available</string>
+    <string name="SCR_TITLE_CARD_AUTHORIZATION">Card Authorization</string>
+    ////
+    <string name="VAL_MSG_FIRST_SELECT_THE_THEY_GET_CURRENCY">Firstly you select the Recipient gets currency.</string>
+    <string name="VAL_MSG_FIRST_SELECT_SEND_CURRENCY">Firstly you select the They send currency.</string>
+    <string name="VAL_MSG_PLEASE_GRANT_CAMERA_PERMISSION">Please grant camera permission to use the QR Scanner</string>
+    <string name="VAL_MSG_PLEASE_ENTER_BOOKING_REFRENCE_NUMBER">Please enter your [MERCHANT_NAME] booking refference number below</string>
+
+    <string name="VAL_MSG_PLEASE_ENTER_REFRENCE_NUMBER">Please Enter Reference number</string>
+    <string name="VAL_MSG_SELECT_ATLEAST_ONE_RECIPIENT">Please select atlist one recipient</string>
+    <string name="SCR_LBL_AIRTIME">Airtime</string>
+
+    <string name="INPUT_TITLE_SEND_USING">Send Using</string>
+    <string name="SCR_LBL_SELECT_SEND_USING">Select Send Using</string>
+    <string name="VAL_MSG_SELECT_SEND_USING">Please select Send Using</string>
+    <string name="PICKER_TITLE_WHO_PAY_CHARGES">WHO PAYS CHARGES</string>
+    <string name="PICKER_TITLE_DELIVER_WHEN">DELIVER WHEN?</string>
+    <string name="PLACEHOLDER_BENEFICIARY_VISA_ALIAS">Beneficiary Visa Alias</string>
+
+    <string name="TAB_MAP_VIEW">Map view</string>
+    <string name="TAB_LIST_VIEW">List view</string>
+    <string name="SCR_LBL_LOCATE_US">Locate us</string>
+    <string name="SCR_LBL_SELECT_CATEGORY">Select category</string>
+    <string name="WAR_MSG_CALL_PHONE_PERMISSION_REQUIRED">Call Phone permission is required.</string>
+    <string name="INFO_MSG_PLEASE_GRANT_PERMISSION">Please grant permission</string>
+    <string name="SCR_TITLE_HELP">Help</string>
+
+    //HELP
+    <string name="SCR_LBL_HELLO">Hello</string>
+    <string name="SCR_LBL_HOW_CAN_WE_HELP_YOU_TODAY">How can we help you today?</string>
+    <string name="BTN_LETS_CHAT">Let\'s Chat</string>
+    <string name="PICKER_VALUE_Add_AN_XPRESS_ACCOUNT_HEAD">Add an Xpress Account</string>
+
+
+    <!--My Account-->
+    <string name="PICKER_VALUE_Add_AN_XPRESS_ACCOUNT_VALUE">Add an Xpress account to your profile</string>
+    <string name="PICKER_VALUE_Add_AN_EXISTING__HEAD">Add an Existing  Account</string>
+    <string name="PICKER_VALUE_Add_AN_EXISTING__VALUE">Add an Existing  account to your profile </string>
+    <string name="PICKER_VALUE_ADD_ATTACH_CARD_HEAD">Attach a Card</string>
+    <string name="PICKER_VALUE_ADD_ATTACH_CARD">Attach a card to your profile</string>
+    <string name="WAR_TITLE_REMOVE_ACCOUNT">Remove Account</string>
+    <string name="WAR_MSG_REMOVE_ACCOUNT">This account will not be available for transactions on the app.Are you sure you want to continue?</string>
+    <string name="PICKER_TITLE_WHAT_WOULD_YOU_LIKE_TO_DO">What would you like to do?</string>
+    <string name="PICKER_TITLE_RESET_YOUR_PIN">How would you like to reset your PIN?</string>
+    <string name="INFO_TITLE_OPEN_XPRESS_ACCOUNT">Open an Xpress Account</string>
+    <string name="INFO_MSG_OPEN_XPRESS_ACCOUNT">This will add an Xpress account to your profile. Are you sure you want to continue?</string>
+    <string name="SCR_LBL_PAY_MERCHANT_BENEFICIARIES">Pay Merchant Beneficiaries</string>
+
+    //Manage beneficiary
+    <string name="SCR_LBL_XPRESS_CASH_BENEFICIARIES">Xpress Agent Beneficiaries</string>
+    <string name="SCR_LBL_PAY_BILL_BENEFICIARIES">Pay bill Beneficiaries</string>
+    <string name="SCR_LBL_AIRTIME_BENEFICIRIES">Airtime Beneficiaries</string>
+    <string name="SCR_LBL__DOMESTIC_BENEFICIRIES"> Domestic Beneficiaries</string>
+    <string name="SCR_LBL_LOCAL_BANK_BENEFICIRIES">Local Bank Beneficiaries</string>
+    <string name="SCR_LBL__AFRICA_BENEFICIRIES"> Africa Beneficiaries</string>
+    <string name="SCR_LBL_VISA_DIRECT_BENEFICIRIES">Visa Direct Beneficiaries</string>
+    <string name="SCR_LBL_MOBILE_MONEY_BENEFICIRIES">Mobile Money Beneficiaries</string>
+    <string name="SCR_LBL_INTERNATIONAL_BENEFICIRIES">International Beneficiaries</string>
+    <string name="SCR_LBL_CREDIT_CARD_REPAYMENT_BENEFICIRIES">Credit Card Repayment Beneficiaries</string>
+    <string name="SCR_LBL_PREPAID_CARD_TOPUP_BENEFICIRIES">Prepaid Card Topup Beneficiaries</string>
+    <string name="SCR_LBL_SELECT_NETWORK">Select Network</string>
+    <string name="PLACEHOLDER_SELECT_NETWORK">Select Network</string>
+    <!--<string name="PLACEHOLDER_SELECT_NETWORK">SELECT NETWORK</string>-->
+    <string name="WAR_MSG_CAMERA_PERMISSION_TO_USE_THE_QR_SCANNER">Please grant camera permission to use the QR Scanner</string>
+    <string name="SCR_TITLE_ADD_A_NEW_VISADIRECT_BENEFICIARY">Add a new Visa Direct beneficiary</string>
+    <string name="SCR_TITLE_ADD_A_NEW_PAYMERCHANT_BENEFICIARY">Add a new Pay Merchant beneficiary</string>
+    <string name="SCR_TITLE_ADD_A_NEW_XPRESS_AGENT_POINT_BENEFICIARY">Add a new Xpress Agent Point beneficiary</string>
+    <string name="SCR_TITLE_ADD_A_NEW_PAY_BILL_BENEFICIARY">Add a new Pay bill beneficiary</string>
+    <string name="SCR_TITLE_ADD_A_NEW_CREDIT_CARD_REPAYMENT_BENEFICIARY">Add a new Credit Card Repayment beneficiary</string>
+    <string name="SCR_TITLE_ADD_A_NEW_PREPAID_CARD_TOPUP_BENEFICIARY">Add a new Prepaid Card Topup beneficiary</string>
+    <string name="BTN_ADD_ACCOUNT">Add Account</string>
+
+
+    <!--on boarding-->
+    <string name="SCR_LBL_MAKING_YOUR_CONNECTION_SECURE">Making sure your connection is secure!</string>
+    <string name="SCR_LBL_SELECT_YOUR_PREFERED_LANGUAGE">Select your preferred \nlanguage</string>
+    <string name="SCR_LBL_ENGLISH">English</string>
+    <string name="SCR_LBL_FRENCH">French</string>
+    <string name="SCR_LBL_SPANISH">Spanish</string>
+    <string name="SCR_LBL_PORTUGUESE">Portuguese</string>
+    <string name="SCR_TITLE_ADD_ACCOUNT">Add account</string>
+    <string name="SCR_TITLE_SELECT_ACCOUNT_TO_ADD">Select account to add</string>
+
+    <string name="SCR_LBL_VERIFY_ACCOUNT_HEAD">Verify your account</string>
+    <string name="SCR_LBL_VERIFY_ACCOUNT_MESSAGE">To be able to enjoy our mobile banking services ,please use the following mehods to activate your account.</string>
+    <string name="SCR_LBL_VERIFY_ACCOUNT_MESSAGE_DEBIT">Please use the following methods to activate your account.An activation code will be sent to the registered mobile number.</string>
+
+    <string name="SCR_LBL_RESEND_CODE">Resend Code in  00:</string>
+
+    <!--ONBOARDING-->
+    <string name="SCR_TITLE_IDENTIFICATION">Identification</string>
+    <string name="SCR_LBL_NATIONAL_ID_DETAILS">Next, please fill in your national identification details</string>
+    <string name="SCR_LBL_BY_TAPPING_CREATE_PROFILE_YOU_ARE_ACCEPTING">By tapping Create profile, you are accepting</string>
+    <string name="SCR_LBL_XPRESS_ACCOUNT_TERMS_AND_CONDITION">Xpress Accounts terrms &amp; Conditions.</string>
+    <string name="SCR_TITLE_6_DIGIT_PIN">Create 6 digit PIN</string>
+    <string name="SCR_LBL_YOUR_CARD_ENDING_WITH_CARDNUM_HAS_BEEN_BLOCKED_SUCCESSFULLLY">Your card ending with [cardnumber] has been blocked successfully</string>
+    <string name="SCR_LBL_YOUR_CARD_ENDING_WITH_CARDNUM_HAS_BEEN_UNBLOCKED_SUCCESSFULLY">Your card ending with [cardnumber] has been blocked successfully</string>
+    <string name="SCR_LBL_SUCCESS">Success</string>
+    <string name="SCR_LBL_YOUR_E_TOKEN_HAS_BEEN_DELETED">Your e-token has successfully deleted</string>
+    <string name="SCR_LBL_GET_DIRECTION">Get direction</string>
+    <string name="SCR_LBL_CALL">call</string>
+    <string name="SCR_LBL_SHARE">share</string>
+    <string name="PLACEHOLDER_YOUR_XPRESS_ACCOUNT_WILL_BE_OPENED_IN">Your XpressAccount will be opened in</string>
+    <string name="SCR_TITLE_ACTIVATE">Activate</string>
+
+    //locate us
+    <string name="BTN_USE_ECO_DEBIT_CARD">Use  Debit Card</string>
+    <string name="BTN_USE_INTERNET_BANKING">Use Internet Banking Details</string>
+    <string name="SCR_LBL_ACTIVATE_CARD">Activate your account</string>
+    <string name="SCR_TITLE_VERIFY_NUMBER">Verify number</string>
+
+    <string name="INPUT_TITLE_PASSPORT_NUMBER">PASSPORT NUMBER</string>
+    <string name="INPUT_TITLE_ID_NUMBER">ID NUMBER</string>
+    <string name="INPUT_NUMBER">Number</string>
+    <string name="INPUT_TITLE_ISSUE_DATE_CAPS">ISSUE DATE</string>
+    // new string
+    <string name="INPUT_TITLE_ISSUE_DATE_CAPS_EXPIRY_DATE_CAPS">EXPIRY DATE</string>
+    <string name="INPUT_TITLE_HOME_ADDRESS">What’s your home address</string>
+    <string name="SCR_TITLE_JOIN_">Join </string>
+
+    <string name="TAB_LOAN_AND_DEPOSIT">Loans and Deposit</string>
+    <string name="TAB_TERM_AND_DEPOSIT">Term Deposits</string>
+    <string name="SCR_LBL_SUBHEADING_MOBILE_MONEY_WALLET">Please enter your mobile network provider details below</string>
+    <string name="TAB_REQUEST">Request</string>
+    <string name="TAB_TRANSFER">Transfer</string>
+    <string name="SCR_TITLE_TRANSFER">Transfer</string>
+    <string name="SCR_LBL_REPLY">Reply</string>
+    <string name="SCR_LBL_MTN">MTN</string>
+    <string name="SCR_TITLE_ACCOUNT_VERIFICATION">Account verification</string>
+    <string name="SCR_LBL_PROVIDE_PHOTO_ID">Provide photo ID</string>
+
+    <string name="SCR_LBL_TEXTVIEW_TAKE_A_PICTURE_OF">Take a picture of your ID/Passport to check\n your information is correct</string>
+    <string name="BTN_TAKE_A_SELFIE_OF">Take a selfie of yourself using the front\n facing camera on your phone</string>
+    <string name="BTN_RETAKE">Retake</string>
+    <string name="BTN_TAKE_PICTURE">Take Picture</string>
+    <string name="SCR_LBL_TAKE_SELFIE">Take a Quick Selfie</string>
+    <string name="INPUT_TITLE_DATE_OF_BIRTH">DATE OF BIRTH</string>
+
+    <string name="SCR_LBL_MSG_DONT_LET_YOUR_FRIEND_MISS_OUT">Don’t let your friends miss out. Invite them today and get rewarded.</string>
+    <string name="SCR_LBL_LETS_SHARE__LOVE">Please share the  love</string>
+    <!--<string name="SCR_LBL_LETS_SHARE__LOVE">Let\'s share the  love</string>-->
+    <string name="BTN_INVITE_YOUR_FRIENDS">Invite Your Friends</string>
+    <string name="PICKER_TITLE_SELECT_VIA">Select Via</string>
+    <string name="INFO_TITLE_ALERT_ARE_YOU_SURE">Are you sure?</string>
+
+    <string name="INFO_MSG_LOGOUT_MESSAGE">Are you sure you want to Logout?</string>
+    <string name="INFO_BTN_ALERT_LOGOUT">Logout</string>
+    <string name="INFO_BTN_ALERT_CANCEL">Cancel</string>
+    <string name="VAL_MSG_PLEASE_ENTER_VALID_OTP">Please enter valid OTP.</string>
+    <string name="VAL_MSG_PLEASE_SELECT_COUNTRY">Please select Country</string>
+    <string name="INFO_MSG_COUNTRY_SHOULD_BE_SELECRED_FIRST">Country should be selected first</string>
+    <string name="VAL_MSG_PLEASE_SELECT_CARD_CURRENCY">Please select card currency</string>
+    <string name="VAL_MSG_PLEASE_SELECT_NETWORK_TYPE">Please select network type</string>
+    <string name="INPUT_TITLE_SELECT_COUNTRY">select Country</string>
+    <string name="SCR_LBL_MONTHS">Months</string>
+    <string name="SCR_LBL_AMOUNT">AMOUNT</string>
+    <string name="SCR_LBL_ACCOUNT_ALIAS">ACCOUNT ALIAS</string>
+    <string name="SCR_LBL_COUNTRY">Country</string>
+    <string name="SCR_LBL_CURRENCY_NAME">CURRENCY NAME</string>
+    <string name="VAL_MSG_PLEASE_TRY_AGAIN_TO_FETCH_NAME">Please try again to fetch neme</string>
+    <string name="VAL_MSG_CARD_NUMBER_SHOULD_BE_SIX_DIGIT">NUMBER SHOULD BE 7 DIGIT</string>
+    <string name="VAL_MSG_CARD_ALIAS_SHOULD_BE_SIX_DIGIT">ALIAS SHOULD BE 8 CHARACTER</string>
+    <string name="VAL_MSG_YOU_HAVE_EXCEED_THE_AMOUNT_LIMIT">You have exceed the amount limit.</string>
+    <string name="VAL_MSG_ENTER_VALID_CARD_NUMBER">Enter Valid Card Number.</string>
+    <string name="VAL_MSG_CARD_NUMBER_SHOULD_BE_19_OR_16_DIGIT">Card number should be 16 or 19 digit.</string>
+    <string name="VAL_MSG_PLEASE_ENTER_VALID_TERMINAL_ID">Please enter valid terminal id.</string>
+
+    //New String
+    <string name="BTN_CLICK_TO_VIEW_DETAILS">click to view details</string>
+    <string name="ERR_MSG_3D_SECURE_CARD_VALIDATION">Sorry, the card was not authorised.</string>
+    <string name="BTN_CLICK_TO_VIEW_BALANCE">Click To View Balance</string>
+    <string name="VAL_MSG_PLEASE_SELECT_ATLEAST_ONE_CATEGORY">Please select at least one category.</string>
+    <string name="BTN_CANCEL_SPLIT">Cancel Split</string>
+    <string name="PLACEHOLDER_ENTER_NUM_OF_TRANSACTIONS">Enter no. of Transactions</string>
+    <string name="BTN_DELETE_CARD">Delete card</string>
+    <string name="BTN_VIEW_CARD">View card</string>
+    <string name="SCR_LBL_SAVED_AS_CARD">Saved Card</string>
+    <string name="PLACEHOLDER_GETTING_THE_BANK_DETAILS">Getting The Bank Details</string>
+    <string name="PICKER_TITLE_BANK_DETAILS_SELECTION_CAMEL">Select Prefered Option</string>
+    <string name="PLACEHOLDER_SELECT_BENEFICIARY_BANK">Select Beneficiary Bank</string>
+    <string name="PLACEHOLDER_SELECT_DESTINATION_BANK">Select Destination Bank</string>
+    <string name="PLACEHOLDER_DESTINATION_BANK">Destination Bank</string>
+    <string name="PLACEHOLDER_BANK_BRANCH">Bank Branch</string>
+    <string name="PLACEHOLDER_BANK_ADDRESS">Bank Address</string>
+    <string name="PLACEHOLDER_BANK_NAME">Bank Name</string>
+    <string name="PLACEHOLDER_BANK_SWIFTCODE">BANK SWIFT CODE</string>
+    <string name="SCR_LBL_REQUEST_VALIDATION">Request Validation</string>
+    <string name="SCL_LBL_UPDATING_YOUR_PROFILE_DETIALS">Updating your profile details</string>
+    <string name="SCL_LBL_UPDATING_YOUR_BENEFICIARY_DETAILS">Updating your beneficiary details</string>
+    <string name="WAR_MSG_FINGER_PRINT_CHANGED">Fingerprint authentication is not available because your fingerprint enrolments data has changed. Please enter your mobile banking PIN to authenticate this transaction. To activate fingerprint authentication, go to the settings menu on the app.</string>
+    <string name="BTN_GO_TO_THE_SETTING">Go to settings</string>
+    <string name="PLACEHOLDER_BANK_CODE">Bank Code</string>
+    <string name="PLACEHOLDER_SWIFT_CODE">Swift Code</string>
+    <string name="VAL_SELECT_TRANSFER_CURRENCY">SELECT TRANSFER CURRENCY</string>
+    <string name="SCR_LBL_SELECT_DESTINATION_BANK">Select destination bank.</string>
+    <string name="SCR_TITLE_TRANSACTION_FAILED">Transaction failed</string>
+    <string name="SCR_LBL_TRANSACTION_FAIL">Transaction failed</string>
+    <string name="BTN_TRY_AGAIN">Try again</string>
+    <string name="SCR_LBL_ADDED_BY_YOU_ON">Added by you on</string>
+    <string name="SCR_LBL_ADDED_BY_YOU_ON_REPLCE">Added by [you] on</string>
+    <string name="SCR_LBL_PEOPLE_OWE_YOU">People owe you</string>
+    <string name="SCR_LBL_YOU_OWE">You owe</string>
+    <string name="SCR_LBL_DETAILS">Details</string>
+    <string name="ERR_TITLE_MSG_REQUEST_FAILED">Request Failed</string>
+    <string name="ERR_TITLE_MSG_FAILED">Failed</string>
+    <string name="ERR_TITLE_MSG_CONFIRMATION_FAILED">Confirmation Failed</string>
+    <string name="SCR_LBL_CLICK_TO_VIEW_BALANCE">Show my balance</string>
+    <string name="SCR_TITLE_SPLIT_DECLINED">Declined</string>
+    <string name="SCR_LBL_SPLIT_USED_OTHER_PAYMENT_MODE">Used other payment mode</string>
+    <string name="SCR_LBL_SEND_MONEY_NOW">Send Money Now</string>
+    <string name="BTN_SEND_MONEY">Send Money</string>
+    <string name="CAPTURED">Captured</string>
+    <string name="ERR_MSG_NO_DATA_AVAILABLE">No data Available</string>
+    <string name="ERR_MSG_PLEASE_TRY_AGAIN">Not able To fetch TerminalID Please Try Again!</string>
+    <string name="ERR_MSG_UPDATE_BALANCE">Error updating your balance</string>
+    <string name="SCR_LBL_INVITE_AND_GET_MONEY">Invite friends, get [CURRENCY] 10</string>
+    <string name="SCR_LBL_SIGN_UP_AND_GET_MONEY">Sign up a friend and you will both get [CURRENCY] 10</string>
+    <string name="SCR_LBL_SHARE_ECO_MOBILE">Share  Mobile</string>
+    <string name="SCR_LBL_SHARE_ECO_MOBILE_DESCRIPTION">Share the app and get [CURRENCY] 10</string>
+    <string name="SCR_LBL_SELECT_PAYMENT_OPTION">Select payment option</string>
+    <string name="SCR_LBL_MASTER_PASS">Masterpass</string>
+    <string name="SCR_LBL_PAY_WITH_MASTER_PASS">Pay with Masterpass</string>
+    <string name="SCR_LBL_VISA">Visa</string>
+    <string name="SCR_LBL_PAY_WITH_VISA">Pay with Visa</string>
+    <string name="SCR_LBL__APP_VERSION"> Version</string>
+    <string name="BTN_ADD_A_NEW_ACCOUNT">Add a new account</string>
+    <string name="SCR_LBL_INVITE_FRIEND_SEND_TEXT">Join [NAME] on the digital revolution app. Use the link below to accept invite the to  Mobile. Your referral code is [REFERRALCODE].</string>
+    <string name="PLACEHOLDER_SELECT_COUNTRY">Select Country</string>
+    <string name="PLACEHOLDER_SELECT_CURRENCY">Select Currency</string>
+    <string name="BTN_TRANSACT">Make a Transaction</string>
+    <string name="BTN_EDIT">Edit</string>
+    <string name="SCR_LBL_WHAT_CURRENCY_WOULD_YOU_LIKE_TO_USE_FOR_THE_TRANSFER">What currency would you like to use for the transfer?</string>
+    <string name="SCR_LBL_STATUS_PENDING">Pending</string>
+    <string name="BTN_SKIP">Skip</string>
+    <string name="BTN_PROCCED">proceed</string>
+    <string name="PLACEHOLDER_REFERAL_CODE">Enter Referral Code</string>
+    <string name="VAL_MSG_ENTER_REFERAL_CODE">Enter Referral Code</string>
+    <string name="BTN_TITLE_REWARD_FRIEND">Reward Your Friend</string>
+    <string name="BTN_BACK">Back</string>
+    <string name="INFO_MSG_YOU_HAVE_NO_ACTIVE_CARDS">You have no active cards.</string>
+    <string name="INFO_MSG_YOU_HAVE_NO_SAVED_CARDS">You have no saved cards.</string>
+    <string name="YOU_DONT_HAVE_ANY_ACTIVE_CARDS_ATTCHED_TO_YOUR_PROFILE">You don\'t have any active cards attched to your profile.</string>
+    <string name="ERR_MSG_NO_NUMBER_AVAILABLE_FOR_THIS_BRANCH">Sorry,No number is available of this branch.</string>
+    <string name="SCR_LBL_TODAY">Today</string>
+    <string name="SCR_LBL_YESTERDAY">Yesterday</string>
+    <string name="ERR_MSG_PROFILE_EXISTS">Profile already exists</string>
+    <string name="SCR_LBL_USING_MY__DEBIT_CARD">Using my  debit card</string>
+    <string name="SCR_LBL_USE_YOUR__DEBIT_CARD_TO_RESET_PIN">Use your  debit card to reset your PIN</string>
+    <string name="SCR_LBL_USE_MY_INTERNET_BANKING_DETAILS">Use my Internet banking details</string>
+    <string name="SCR_LBL_AUTHORIZE_PIN_RESET_BY_INTERNET_BANKING_DETAILS">Authorize the PIN reset by validating your internet banking details</string>
+    <string name="SCL_LBL_PREPARING_YOUR_VIRTUAL_CARD">Preparing your virtual card</string>
+    <string name="SCL_LBL_PREPARING_YOUR_VIRTUAL_CARD_MESSAGE">Preparing your virtual card, Don\'t close the app while processing</string>
+    <string name="SCL_LBL_CHECKING_ACCOUNT">Checking account</string>
+    <string name="SCL_LBL_CREATE_VIRTUAL_CARD">Create a virtual card</string>
+    <string name="SCL_LBL_DOING_TOP_UP_IN_CARD">Doing top up in card</string>
+    <string name="ERR_MSG_ACCOUNT_BALANCE_NOT_SUFFICIENT">Account balance not sufficient</string>
+    <string name="ERR_MSG_SORRY_YOU_CAN_NOT_ADD_THIS_CARD">Sorry, You can not add this card.</string>
+    <string name="VAL_MSG_ENTER_PHYSICAL_ADDRESS">Enter Physical Address</string>
+
+    <string name="INPUT_TITLE_PURPOSE_OF_TRANSFER">Purpose of Transfer</string>
+    <string name="VAL_MSG_ENTER_PURPOSE_OF_TRANSFER">Enter Purpose of Transfer</string>
+    <string name="SCL_LBL_BENEFICIARY_ACCOUNT">Beneficiary account</string>
+    <string name="SCL_LBL_TRANSFER_AMOUNT">Transfer amount</string>
+    <string name="SCL_LBL_PAYMENT_PURPOSE">Payment Purpose</string>
+    <string name="PLACEHOLDER_ENTER_CODE">Enter Code</string>
+    <string name="SCR_LBL_YOU_CARD_IS">Your card is</string>
+    <string name="VAL_MSG_LOCATIONS_ERROR">Location unavailable. Please try again later</string>
+    <!--<string name="PLACEHOLDER_SELECT_FROM_LIST_OF_BANKS">Select from list of Banks</string>-->
+    <!--<string name="PLACEHOLDER_ENTER_CODE">Invalid code Please tr</string>-->
+
+    <string name="VAL_MSG_ENTER_BENEFICIARY_ACCOUNT">Enter beneficiary account</string>
+    <string name="PLACEHOLDER_ENTER_BENEFICIARY_ACCOUNT">Enter beneficiary account</string>
+    <string name="SCR_LBL_BENEFICIARY">Beneficiary</string>
+    <string name="SCR_LBL_BRANCH_CODE">Branch Code</string>
+    <string name="SCR_LBL_SUBTITLE_SUCCESS">Success!</string>
+
+    <string name="BTN_ALLOW">ALLOW</string>
+    <string name="INFO_MSG_CONTACT_PERMISSION_DESCRIPTION">Please allow the Contact read permission from your settings to view  Contacts</string>
+    <string name="SCR_TITLE_SEND_BY_EMAIL_SMS">Send by text or email</string>
+    <string name="SCR_LBL_VIRTUAL_CARD_TOP_UP">Virtual Card TopUp</string>
+    <string name="SCR_LBL_deleted">DELETED!</string>
+    <string name="VAL_MSG_PLEASE_ENTER_OTHER_MOBILE_NUMBER">Please enter other mobile number.</string>
+
+    <string name="SCR_LBL_LINK_SHARE_MSG">[CUSTOMERNAME] has initiated a transfer of [AMOUNT] with the code [CODE].Click the link below to redeem.[link]</string>
+    <string name="WAR_MSG_THIS_CAN_ONLY_BE_REDEEM">This can only be redeemed in [COUNTRY].</string>
+    <string name="SCR_LBL_SELECT_THE_TRANSFER_REASON">Select the transfer reason</string>
+    <string name="SCR_LBL_SELECT_TRANSFER_REASON">Select transfer reason</string>
+    <string name="VAL_MSG_SELECT_TRANSFER_REASON">Please select transfer reason</string>
+    <string name="WAR_MSG_ARE_YOU_SURE_YOU_WANT_TO_DELTE_TRANSFER">Are you sure you want to delete this tansfer?</string>
+    <string name="VAL_MSG_PLEASE_ENTER_VALID_SWIFT_CODE">Please enter valid swift code.</string>
+
+    <string name="ERR_MSG_SHOWING_LAST_BALANCE">Showing last refreshed balance</string>
+
+    <string name="ERR_MSG_ERROR_UPDATING_BALANCE">Error updating balance</string>
+    <string name="ERR_MSG_ERROR_PASSPORT_NUMBER_OR">Please enter [passport] number </string>
+    <string name="SCR_LBL_SELECT_FROM_LIST_OF_BANKS">Select from list of Banks</string>
+    <string name="SCR_LBL_SHARE_APP_LINK">Hi, Download Eco bank mobile app [LINK]</string>
+    <string name="SCR_TITLE_SELECT_DIAL_CODE">Select dial code</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+    <string name="VAL_MSG_PLEASE_SELECT_TWO_CONTACT">Please select atleast 2 contacts.</string>
+    <string name="SCR_LBL_SHARE_LINK">Share link</string>
+    <string name="SCR_LBL_MONTHLY_PAYMENT">Monthly Payment</string>
+    <string name="SCR_LBL_RATE">Rate</string>
+    <string name="SCR_LBL_ACCOUNT">Account</string>
+
+    <string name="ERR_MSG_CONNECTION_WAS_REFUSED">A secure connection could not be established, please try again later.</string>
+    <string name="ERR_MSG_CONNECTION_WAS_REFUSED_1">Please check your internet connection or try again later</string>
+    <string name="INFO_TITLE_LOGOUT_MESSAGE_TITLE">Log out</string>
+    <string name="SCR_LBL_SENDER_NAME">Sender Name</string>
+    <string name="BTN_GOBACK">Go Back</string>
+    <string name="SCR_TITLE_BENEFICIARY_DETAILS">Beneficiary details</string>
+
+    <string name="SCR_TITLE_XPRESS_AGENT_POINT">Xpress Agent Point</string>
+    <string name="BTN_NEW_XPRESS_AGENT">New xpress agent</string>
+    <string name="BTN_CONFIRM_AND_SCHEDULE">Confirm and Schedule</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_1">Dear customer, we could not process your request at this time. Please try again in a few minutes.</string>
+
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_2">Dear customer, we could not process your request because your bank declined to authorize your request. Please contact your bank.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_3">Dear customer, we could not process your request because of a delayed response from your bank. Please try again.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_4">Dear customer, we could not process your request because your bank declined to authorize your request. Please contact your bank or use a different card.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_5">Dear customer, your bank declined your request due to insufficient credit on your card.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_6">Dear customer, we cannot process your request at this time. Please try again in a few minutes.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_7">Dear customer, we could not process your request with the card details provided. Please input the correct card details.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_8">Dear customer, we could not process your request because your bank declined to authorize your request. Please contact your bank or use a different card.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_9">Dear customer, we could not process your request because your bank declined to authorize your request.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_A">Dear customer, we cannot process your request at this time. Please try again in a few minutes.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_B">Dear customer, we could not process your request because your bank declined to authorize your request. Please contact your bank or use a different card.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_C">Dear customer, we cannot process your request at this time. Please try again in a few minutes.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_D">Dear customer, we cannot process your request at this time. Please try again in a few minutes.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_E">Dear customer, we could not process your request because your bank declined to authorize your request.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_F">Dear customer, we could not process your request because the authentication of your card failed. Please contact your bank.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_I">Dear customer, we could not process your request with the card details provided. Please input the correct card details.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_L">Dear customer, we cannot process your request at this time. Please try again in a few minutes.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_N">Dear customer, we could not process your request because the authentication of your card failed. Please contact your bank.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_P">Dear customer, we cannot process your request at this time. Please try again in a few minutes.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_R">Dear customer, we could not process your request because you have exceed the maximum attempts to complete this request</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_T">Dear customer, we could not process your request because of a card address verification failure.</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_U">Dear customer, we could not process your request because of a card security code failure</string>
+    <string name="ERR_MSG_MIGS_TXN_RESPONSE_CODE_V">Dear customer, we could not process your request because of a card address verification and security code failure</string>
+    <string name="ERR_MSG_MIGS_VPC_VERSTATUS_F">Your request was not successful. Please try again. If this persists, please contact us via our Webchat service.</string>
+
+    <string name="ERR_MSG_MIGS_VPC_VERSTATUS_N">The authentication of your card failed. Please try again or use a different card.</string>
+    <string name="ERR_MSG_MIGS_VPC_VERSTATUS_S">We could not validate your card. Please try again or contact the issuer of your card.</string>
+    <string name="ERR_MSG_MIGS_VPC_VERSTATUS_P">We did not receive a response from your card issuer. Please try again. If this persists, please use a different card.</string>
+    <string name="ERR_MSG_MIGS_VPC_VERSTATUS_I">We could not validate your card. Please try again</string>
+    <string name="ERR_MSG_MIGS_VPC_VERSTATUS_U">We could not validate your card. Please try again</string>
+    <string name="ERR_MSG_MIGS_VPC_VERSTATUS_T">We could not validate your card. Please try again</string>
+    <string name="ERR_MSG_MIGS_VPC_VERSTATUS_A">We could not process your request. Please try again</string>
+    <string name="ERR_MSG_MIGS_VPC_VERSTATUS_D">We could not process your request. Please try again</string>
+    <string name="ERR_MSG_MIGS_VPC_VERSTATUS_C">The service is not available for this card brand. Please try again with a different card.</string>
+    <string name="ERR_MSG_NO_APP_FOUND_OPEN_TO_LINK">No app found to open link.</string>
+    <string name="BTN_Add_AN_XPRESS_ACCOUNT">Add an Xpress Account</string>
+
+    <string name="SCR_LBL_CARD_BALANCE">Card balance</string>
+    <string name="BTN_WHATS_NEW_TITLE">Okay, Great!</string>
+    <string name="INFO_MSG_AN_UPDATE_JUST_DOWNLOADED">An update has just been downloaded.</string>
+    <string name="BTN_RESTART">RESTART</string>
+    <string name="SCR_LBL_NOTIFICATION">Notification</string>
+
+    <string name="SCR_TITLE_WHATS_NEW">What\'s New</string>
+
+    <string name="SCR_LBL_YOUR_APP_HAS_BEEN_UPDATED">Your app has been updated.</string>
+    <string name="SCR_LBL_FEATURE_1">Send money by text</string>
+    <string name="SCR_LBL_FEATURE_1_DESCRIPTION">Easy to receive funds via a link shared into an account</string>
+    <string name="SCR_LBL_FEATURE_2">Request money easily</string>
+    <string name="SCR_LBL_FEATURE_2_DESCRIPTION">Make it simple to ask for funds</string>
+    <string name="SCR_LBL_FEATURE_3">Create and share virtual cards</string>
+    <string name="SCR_LBL_FEATURE_3_DESCRIPTION">The convenience of a card, the security of not linking it to an account</string>
+    <string name="SCR_LBL_FEATURE_4">Split the bill fuss-free</string>
+    <string name="SCR_LBL_FEATURE_4_DESCRIPTION">Easy for everyone to pay their share</string>
+    <string name="SCR_LBL_FEATURE_5">Fingerprint and FaceID log on</string>
+    <string name="SCR_LBL_FEATURE_5_DESCRIPTION">Faster and no need to remember a PIN</string>
+    <string name="SCR_LBL_GIFTED_CARDS">Gifted Cards</string>
+    <string name="SCR_TITLE_VALIDATE_YOUR_PIN">Validate your PIN</string>
+    <string name="PLACEHOLDER_ENTER_CURRENT_PIN">Enter Current PIN</string>
+    <string name="INFO_TITLE_UPDATE_YOUR_PIN">Update current PIN</string>
+    <string name="INFO_MSG_UPDATE_YOUR_PIN">Please set a stronger Six digit PIN as you upgrade.</string>
+    <string name="INFO_MSG_ALREADY_ATTACH_ACCOUNT">No any active account found.</string>
+    <string name="WAR_FILL_FROM_FIRST_TO_FETCH_AMOUNT">Please fill form first to fetch amount</string>
+    <string name="SCR_LBL_PROCESSING">Processing</string>
+    <string name="SCR_LBL_IMPORTANT_NOTIFICATION">Important!</string>
+    <string name="SCR_LBL_THIS_IS_THE_CARD_NUMBER_ON_YOUR_CREDIT_CARD">This is the card number on your credit card.</string>
+    <string name="ERR_ADD_MAX_3_PROFILE">You can only add max 3 profile for same market.</string>
+    <string name="BTN_REMOVE_PHOTO">Remove Photo</string>
+    <string name="BTN_CREATE_A_GIFT_CARD">Create a Gift Card</string>
+    <string name="SCR_LBL_VIRTUAL_CARD">Virtual Card</string>
+    <string name="SCR_LBL_GIFT_CARD">Gift Card</string>
+    <string name="SCR_LBL_SAVING_ACCOUNT_NAME">Savings account</string>
+    <string name="VAL_MSG_PLEASE_SELECT_BRANCH">Please select branch</string>
+    <string name="PLACEHOLDER_SELECT_BRANCH_FOR_PICK_UP">Select branch for pick up</string>
+    <string name="SCR_LBL_SELECT_PICUP_BRANCH">Select pick up branch</string>
+
+    <string name="CHOOSE_AN_AMOUNT_FROM">Choose an amount from</string>
+
+    <string name="SCR_LBL_NO_NEW_RECEN_SPLIT">No new recent split</string>
+    <string name="SCR_LBL_NO_RECENT_SPLIT_DESCRIPTION">You don’t have any split today!  Make a new split</string>
+    <string name="SCR_LBL_YOUR_REFERRAL_CODE_IS">Your referral code is:</string>
+    <string name="SCR_LBL_YEAR">Year</string>
+    <string name="SCR_LBL_MONTH">Month</string>
+    <string name="SCR_TITLE_CREDITCARD_PAYMENT">Credit card payment</string>
+    <string name="SCR_LBL_VIRTUAL_CARD_TOPUP">Virtual Card Top up</string>
+
+
+    <string-array name="recipientarray">
+        <item>Direct to  account</item>
+        <item>Other Local banks</item>
+        <item>Mobile money Transfer</item>
+        <item> Xpress Account</item>
+        <item>Cash</item>
+    </string-array>
+</resources>
