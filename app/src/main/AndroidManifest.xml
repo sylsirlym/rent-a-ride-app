@@ -23,6 +23,9 @@
         <activity android:name=".ui.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 <!--    Permissions-->
     <uses-permission android:name="android.permission.INTERNET" />

@@ -1,13 +1,16 @@
 package com.skills.rentaride.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.StrictMode
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.Gson
 import com.skills.rentaride.R
 import com.skills.rentaride.di.DaggerApiComponent
 import com.skills.rentaride.model.ProfileDTO
@@ -19,6 +22,7 @@ import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
 
+    private val TAG = "MainActivity"
     // Get the countries service.
     @Inject
     lateinit var rentARideService: RentARideService
@@ -55,12 +59,33 @@ class MainActivity : AppCompatActivity() {
             val text = msisdnVar.text
             dto = rentARideService.getProfile(text.toString())
             val resp = dto.blockingGet().statusMessage
+            val code = dto.blockingGet().statusCode
             val data = dto.blockingGet().data
             //Wahala Here
-            val prof = data?.get(0) as ProfileDTO
-            val nam = prof.fname
-            // Showing the user input
-            Toast.makeText(this, "$resp $nam", Toast.LENGTH_SHORT).show()
+            Log.i(TAG, "Got here")
+            val prof = data?.get(0)
+
+//            Log.i(TAG, prof.toString())
+//            val gson = Gson()
+//            val profileDetails = gson.fromJson(prof.toString(), ProfileDTO::class.java)
+//            Log.i(TAG, profileDetails.fname)
+
+            if (code == 200){
+                try {
+                Log.i(TAG, "Inside here")
+                val intent = Intent(baseContext, HomeActivity::class.java)
+                Log.i(TAG, "Inside here 1")
+
+                intent.putExtra("profileDetails", prof.toString())
+                Log.i(TAG, "Inside here 2")
+
+                startActivity(intent)
+            } catch (e: Exception){
+                    Log.e(TAG,"Got Error"+e.message)
+                    Log.wtf(TAG,e)
+
+        }
+            }
         }
     }
 

@@ -7,6 +7,6 @@ import retrofit2.http.Path
 
 interface RentARideAPI {
 
-    @GET("https://e94be236.ngrok.io/mocks/profile/{msisdn}/pp.php")
+    @GET("https://c49a0d22.ngrok.io/mocks/profile/{msisdn}/pp.php")
     fun getProfile(@Path("msisdn") msisdn: String): Single<ResponseDTO>
 }
