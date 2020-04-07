@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:padding="32dp"
-        app:srcCompat="@drawable/ic_map" />
+        app:srcCompat="@drawable/ic_baseline_directions_bike_24" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imageViewLoader"

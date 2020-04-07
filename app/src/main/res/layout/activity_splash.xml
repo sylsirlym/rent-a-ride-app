@@ -27,6 +27,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txt_uptext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_54dp"
+            android:layout_marginBottom="612dp"
+            android:fontFamily="@font/gf_gilroy_bold"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_8dp"
+            android:text="@string/WELCOME"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sp" />
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/apimv_spalsh"
             android:layout_width="match_parent"
@@ -47,7 +62,7 @@
             android:layout_marginBottom="@dimen/_54dp"
             android:fontFamily="@font/gf_gilroy_medium"
             android:padding="@dimen/_8dp"
-            android:text="@string/SCR_LBL_MAKING_YOUR_CONNECTION_SECURE"
+            android:text="@string/SCR_LBL_MAKING_MAGIC"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="@dimen/_10sp"

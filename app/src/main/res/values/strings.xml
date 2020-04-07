@@ -9,7 +9,8 @@
 
     <string name="hello_first_fragment">Stuff</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="WELCOME">Welcome to Rent A Ride!! Making Sure you have a secure connection.</string>
+    <string name="WELCOME">Welcome to Rent A Ride!!</string>
+    <string name="SCR_LBL_MAIN_GIVE_US_YOUR_NUMBER">Give us your Mobile Number and leave the rest to us 😉</string>
 
     <string name="PLACEHOLDER_ENTER_MOBILE_NUMBER">Enter Mobile Number</string>
     <string name="SCR_TITLE_ENTER_MOBILE_NUMBER">Enter mobile number</string>
@@ -1134,7 +1135,7 @@ banking hall.</string>
 
 
     <!--on boarding-->
-    <string name="SCR_LBL_MAKING_YOUR_CONNECTION_SECURE">Making sure your connection is secure!</string>
+    <string name="SCR_LBL_MAKING_MAGIC">Making magic! Verifying if your connection is secure</string>
     <string name="SCR_LBL_SELECT_YOUR_PREFERED_LANGUAGE">Select your preferred \nlanguage</string>
     <string name="SCR_LBL_ENGLISH">English</string>
     <string name="SCR_LBL_FRENCH">French</string>

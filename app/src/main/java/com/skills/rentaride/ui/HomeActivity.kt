@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.google.gson.Gson
 import com.skills.rentaride.R
+import com.skills.rentaride.databinding.FragmentHomeBinding
 import com.skills.rentaride.model.ProfileDTO
 
 class HomeActivity : AppCompatActivity(){
@@ -14,9 +15,9 @@ class HomeActivity : AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_home)
-//        val binding: FragmentHomeBinding = DataBindingUtil.setContentView(
-//            this, R.layout.fragment_home)
+//        setContentView(R.layout.fragment_home)
+        val binding: FragmentHomeBinding = DataBindingUtil.setContentView(
+            this, R.layout.fragment_home)
 
         try {
             val profile = intent.getStringExtra("profileDetails")
@@ -24,7 +25,7 @@ class HomeActivity : AppCompatActivity(){
             val gson = Gson()
             val profileDetails = gson.fromJson(profile, ProfileDTO::class.java)
             Log.i(TAG, profileDetails.fname)
-//        binding.profile =profileDetails
+            binding.profile=profileDetails;
         } catch (e: Exception){
             Log.e(TAG,"Got Error"+e.message)
             Log.wtf(TAG,e)
