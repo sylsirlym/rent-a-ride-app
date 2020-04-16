@@ -1,6 +1,7 @@
 package com.skills.rentaride.ui
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
@@ -14,19 +15,33 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingUtil
+import com.google.gson.Gson
 import com.skills.rentaride.R
 import com.skills.rentaride.databinding.FragmentHomeBinding
+import com.skills.rentaride.model.ProfileDTO
 
 class HomeActivity : AppCompatActivity() {
-
+    private val TAG = "HomeActivity"
     private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_home)
         val binding: FragmentHomeBinding = DataBindingUtil.setContentView(
-            this, R.layout.nav_header_main)
+            this, R.layout.activity_home)
 
+        try {
+            val profile = intent.getStringExtra("profileDetails")
+            Log.i(TAG, profile)
+            val gson = Gson()
+            val profileDetails = gson.fromJson(profile, ProfileDTO::class.java)
+            Log.i(TAG, profileDetails.fname)
+            binding.profile=profileDetails;
+        } catch (e: Exception){
+            Log.e(TAG,"Got Error"+e.message)
+            Log.wtf(TAG,e)
+
+        }
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
