@@ -1,0 +1,1085 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 143654912 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2753), pid=6731, tid=0x00007f36cb5f5700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_212) (build 1.8.0_212-release-1586-b4-5784211)
+# Java VM: OpenJDK 64-Bit Server VM (25.212-b4-5784211 mixed mode linux-amd64 compressed oops)
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f36fc082000):  VMThread [stack: 0x00007f36cb4f6000,0x00007f36cb5f6000] [id=6743]
+
+Stack: [0x00007f36cb4f6000,0x00007f36cb5f6000],  sp=0x00007f36cb5f4470,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xa0b42d]  VMError::report_and_die()+0x15d
+V  [libjvm.so+0x4d48ca]  report_vm_out_of_memory(char const*, int, unsigned long, VMErrorType, char const*)+0x8a
+V  [libjvm.so+0x871e08]  os::pd_commit_memory(char*, unsigned long, unsigned long, bool)+0xd8
+V  [libjvm.so+0x8696df]  os::commit_memory(char*, unsigned long, unsigned long, bool)+0x1f
+V  [libjvm.so+0x8e36cb]  PSVirtualSpace::expand_by(unsigned long)+0x5b
+V  [libjvm.so+0x8e4320]  PSYoungGen::resize_generation(unsigned long, unsigned long)+0xb0
+V  [libjvm.so+0x8e463b]  PSYoungGen::resize(unsigned long, unsigned long)+0x1b
+V  [libjvm.so+0x8e0d4c]  PSScavenge::invoke_no_policy()+0xdac
+V  [libjvm.so+0x8da860]  PSParallelCompact::invoke(bool)+0x40
+V  [libjvm.so+0x461ac3]  CollectedHeap::collect_as_vm_thread(GCCause::Cause)+0x143
+V  [libjvm.so+0xa0c871]  VM_CollectForMetadataAllocation::doit()+0x141
+V  [libjvm.so+0xa113a7]  VM_Operation::evaluate()+0x47
+V  [libjvm.so+0xa0fda8]  VMThread::evaluate_operation(VM_Operation*)+0x218
+V  [libjvm.so+0xa10209]  VMThread::loop()+0x219
+V  [libjvm.so+0xa10652]  VMThread::run()+0x72
+V  [libjvm.so+0x86ef12]  java_start(Thread*)+0xf2
+
+VM_Operation (0x00007f36c8925440): CollectForMetadataAllocation, mode: safepoint, requested by thread 0x00007f3684009000
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f3680a61800 JavaThread "Cache worker for file hash cache (/home/sylvester/AndroidStudioProjects/RentARide/.gradle/6.1-rc-1/fileHashes)" [_thread_blocked, id=6772, stack(0x00007f369c7cf000,0x00007f369c8d0000)]
+  0x00007f3680a52800 JavaThread "Cache worker for checksums cache (/home/sylvester/AndroidStudioProjects/RentARide/.gradle/checksums)" [_thread_blocked, id=6771, stack(0x00007f369c8d0000,0x00007f369c9d1000)]
+  0x00007f368018c800 JavaThread "Cache worker for file hash cache (/home/sylvester/.gradle/caches/6.1-rc-1/fileHashes)" [_thread_blocked, id=6770, stack(0x00007f369cdfd000,0x00007f369cefe000)]
+  0x00007f368020d800 JavaThread "File lock request listener" [_thread_in_native, id=6769, stack(0x00007f369cefe000,0x00007f369cfff000)]
+  0x00007f3680204800 JavaThread "Cache worker for journal cache (/home/sylvester/.gradle/caches/journal-1)" [_thread_blocked, id=6768, stack(0x00007f36c802a000,0x00007f36c812b000)]
+  0x00007f3680012800 JavaThread "Thread-9" [_thread_blocked, id=6767, stack(0x00007f36c832b000,0x00007f36c842c000)]
+  0x00007f368000b000 JavaThread "Stdin handler" [_thread_blocked, id=6766, stack(0x00007f36c862c000,0x00007f36c872d000)]
+  0x00007f3680009000 JavaThread "Asynchronous log dispatcher for DefaultDaemonConnection: socket connection from /127.0.0.1:41729 to /127.0.0.1:55034" [_thread_blocked, id=6765, stack(0x00007f36c872d000,0x00007f36c882e000)]
+  0x00007f3684009000 JavaThread "Daemon worker" [_thread_blocked, id=6762, stack(0x00007f36c882e000,0x00007f36c892f000)]
+  0x00007f3684007000 JavaThread "Cancel handler" [_thread_blocked, id=6761, stack(0x00007f36c892f000,0x00007f36c8a30000)]
+  0x00007f3684004000 JavaThread "Handler for socket connection from /127.0.0.1:41729 to /127.0.0.1:55034" [_thread_in_native, id=6760, stack(0x00007f36c8a30000,0x00007f36c8b31000)]
+  0x00007f368c035800 JavaThread "Daemon" [_thread_blocked, id=6759, stack(0x00007f36c8b31000,0x00007f36c8c32000)]
+  0x00007f36fd36b800 JavaThread "Daemon periodic checks" [_thread_blocked, id=6758, stack(0x00007f36c8c32000,0x00007f36c8d33000)]
+  0x00007f36fc2bd000 JavaThread "Incoming local TCP Connector on port 41729" [_thread_in_native, id=6757, stack(0x00007f36c8d3a000,0x00007f36c8e3b000)]
+  0x00007f36fc30d000 JavaThread "Daemon health stats" [_thread_blocked, id=6753, stack(0x00007f36c903f000,0x00007f36c9140000)]
+  0x00007f36fc0d4000 JavaThread "Service Thread" daemon [_thread_blocked, id=6751, stack(0x00007f36ca1ed000,0x00007f36ca2ee000)]
+  0x00007f36fc0c9000 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=6750, stack(0x00007f36ca2ef000,0x00007f36ca3ef000)]
+  0x00007f36fc0c7000 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=6749, stack(0x00007f36ca3f0000,0x00007f36ca4f0000)]
+  0x00007f36fc0c5000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=6748, stack(0x00007f36ca4f1000,0x00007f36ca5f1000)]
+  0x00007f36fc0c2000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=6747, stack(0x00007f36ca5f2000,0x00007f36ca6f2000)]
+  0x00007f36fc0be000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=6746, stack(0x00007f36ca6f2000,0x00007f36ca7f3000)]
+  0x00007f36fc08e000 JavaThread "Finalizer" daemon [_thread_blocked, id=6745, stack(0x00007f36cb2f3000,0x00007f36cb3f4000)]
+  0x00007f36fc08b800 JavaThread "Reference Handler" daemon [_thread_blocked, id=6744, stack(0x00007f36cb3f4000,0x00007f36cb4f5000)]
+  0x00007f36fc00c000 JavaThread "main" [_thread_blocked, id=6734, stack(0x00007f3704810000,0x00007f3704910000)]
+
+Other Threads:
+=>0x00007f36fc082000 VMThread [stack: 0x00007f36cb4f6000,0x00007f36cb5f6000] [id=6743]
+  0x00007f36fc0d6800 WatcherThread [stack: 0x00007f36ca0ed000,0x00007f36ca1ed000] [id=6752]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007f36fc008520] Threads_lock - owner thread: 0x00007f36fc082000
+[0x00007f36fc008a20] Heap_lock - owner thread: 0x00007f3684009000
+
+heap address: 0x0000000080000000, size: 2048 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 130048K, used 5088K [0x00000000d5580000, 0x00000000dd980000, 0x0000000100000000)
+  eden space 124928K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000dcf80000)
+  from space 5120K, 99% used [0x00000000dcf80000,0x00000000dd478040,0x00000000dd480000)
+  to   space 5120K, 0% used [0x00000000dd480000,0x00000000dd480000,0x00000000dd980000)
+ ParOldGen       total 83456K, used 11528K [0x0000000080000000, 0x0000000085180000, 0x00000000d5580000)
+  object space 83456K, 13% used [0x0000000080000000,0x0000000080b423c8,0x0000000085180000)
+ Metaspace       used 20633K, capacity 21254K, committed 21296K, reserved 1067008K
+  class space    used 2902K, capacity 3087K, committed 3120K, reserved 1048576K
+
+Card table byte_map: [0x00007f3701c25000,0x00007f3702026000] byte_map_base: 0x00007f3701825000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f3703edb6e0
+ Begin Bits: [0x00007f36d0000000, 0x00007f36d2000000)
+ End Bits:   [0x00007f36d2000000, 0x00007f36d4000000)
+
+Polling page: 0x00007f3704932000
+
+CodeCache: size=245760Kb used=5942Kb max_used=5984Kb free=239817Kb
+ bounds [0x00007f36ed000000, 0x00007f36ed5e0000, 0x00007f36fc000000]
+ total_blobs=2098 nmethods=1683 adapters=329
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1.735 Thread 0x00007f36fc0c9000 1680       3       org.gradle.internal.service.DefaultServiceRegistry$FactoryMethodService::getParameterTypes (10 bytes)
+Event: 1.735 Thread 0x00007f36fc0c9000 nmethod 1680 0x00007f36ed5bd1d0 code [0x00007f36ed5bd340, 0x00007f36ed5bd570]
+Event: 1.739 Thread 0x00007f36fc0c5000 nmethod 1389 0x00007f36ed5bd650 code [0x00007f36ed5be2a0, 0x00007f36ed5c8f38]
+Event: 1.851 Thread 0x00007f36fc0c9000 1681       3       java.util.concurrent.locks.ReentrantLock$Sync::nonfairTryAcquire (67 bytes)
+Event: 1.870 Thread 0x00007f36fc0c9000 nmethod 1681 0x00007f36ed5b4990 code [0x00007f36ed5b4b40, 0x00007f36ed5b5268]
+Event: 1.890 Thread 0x00007f36fc0c9000 1682       3       sun.reflect.generics.repository.AbstractRepository::getReifier (8 bytes)
+Event: 1.891 Thread 0x00007f36fc0c9000 nmethod 1682 0x00007f36ed5b43d0 code [0x00007f36ed5b4540, 0x00007f36ed5b4830]
+Event: 1.891 Thread 0x00007f36fc0c9000 1683       1       sun.reflect.generics.repository.AbstractRepository::getTree (5 bytes)
+Event: 1.891 Thread 0x00007f36fc0c9000 nmethod 1683 0x00007f36ed595ad0 code [0x00007f36ed595c20, 0x00007f36ed595d30]
+Event: 1.908 Thread 0x00007f36fc0c9000 1685       3       java.lang.Class::isLocalClass (20 bytes)
+
+GC Heap History (9 events):
+Event: 0.452 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 36352K, used 31232K [0x00000000d5580000, 0x00000000d7e00000, 0x0000000100000000)
+  eden space 31232K, 100% used [0x00000000d5580000,0x00000000d7400000,0x00000000d7400000)
+  from space 5120K, 0% used [0x00000000d7900000,0x00000000d7900000,0x00000000d7e00000)
+  to   space 5120K, 0% used [0x00000000d7400000,0x00000000d7400000,0x00000000d7900000)
+ ParOldGen       total 83456K, used 0K [0x0000000080000000, 0x0000000085180000, 0x00000000d5580000)
+  object space 83456K, 0% used [0x0000000080000000,0x0000000080000000,0x0000000085180000)
+ Metaspace       used 6938K, capacity 7184K, committed 7424K, reserved 1056768K
+  class space    used 865K, capacity 968K, committed 1024K, reserved 1048576K
+Event: 0.457 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 36352K, used 4339K [0x00000000d5580000, 0x00000000d9c80000, 0x0000000100000000)
+  eden space 31232K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000d7400000)
+  from space 5120K, 84% used [0x00000000d7400000,0x00000000d783cf28,0x00000000d7900000)
+  to   space 5120K, 0% used [0x00000000d9780000,0x00000000d9780000,0x00000000d9c80000)
+ ParOldGen       total 83456K, used 8K [0x0000000080000000, 0x0000000085180000, 0x00000000d5580000)
+  object space 83456K, 0% used [0x0000000080000000,0x0000000080002000,0x0000000085180000)
+ Metaspace       used 6938K, capacity 7184K, committed 7424K, reserved 1056768K
+  class space    used 865K, capacity 968K, committed 1024K, reserved 1048576K
+}
+Event: 0.624 GC heap before
+{Heap before GC invocations=2 (full 0):
+ PSYoungGen      total 36352K, used 35571K [0x00000000d5580000, 0x00000000d9c80000, 0x0000000100000000)
+  eden space 31232K, 100% used [0x00000000d5580000,0x00000000d7400000,0x00000000d7400000)
+  from space 5120K, 84% used [0x00000000d7400000,0x00000000d783cf28,0x00000000d7900000)
+  to   space 5120K, 0% used [0x00000000d9780000,0x00000000d9780000,0x00000000d9c80000)
+ ParOldGen       total 83456K, used 8K [0x0000000080000000, 0x0000000085180000, 0x00000000d5580000)
+  object space 83456K, 0% used [0x0000000080000000,0x0000000080002000,0x0000000085180000)
+ Metaspace       used 7481K, capacity 7752K, committed 8064K, reserved 1056768K
+  class space    used 966K, capacity 1072K, committed 1152K, reserved 1048576K
+Event: 0.627 GC heap after
+Heap after GC invocations=2 (full 0):
+ PSYoungGen      total 67584K, used 3901K [0x00000000d5580000, 0x00000000d9c80000, 0x0000000100000000)
+  eden space 62464K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000d9280000)
+  from space 5120K, 76% used [0x00000000d9780000,0x00000000d9b4f780,0x00000000d9c80000)
+  to   space 5120K, 0% used [0x00000000d9280000,0x00000000d9280000,0x00000000d9780000)
+ ParOldGen       total 83456K, used 16K [0x0000000080000000, 0x0000000085180000, 0x00000000d5580000)
+  object space 83456K, 0% used [0x0000000080000000,0x0000000080004000,0x0000000085180000)
+ Metaspace       used 7481K, capacity 7752K, committed 8064K, reserved 1056768K
+  class space    used 966K, capacity 1072K, committed 1152K, reserved 1048576K
+}
+Event: 1.116 GC heap before
+{Heap before GC invocations=3 (full 0):
+ PSYoungGen      total 67584K, used 66365K [0x00000000d5580000, 0x00000000d9c80000, 0x0000000100000000)
+  eden space 62464K, 100% used [0x00000000d5580000,0x00000000d9280000,0x00000000d9280000)
+  from space 5120K, 76% used [0x00000000d9780000,0x00000000d9b4f780,0x00000000d9c80000)
+  to   space 5120K, 0% used [0x00000000d9280000,0x00000000d9280000,0x00000000d9780000)
+ ParOldGen       total 83456K, used 16K [0x0000000080000000, 0x0000000085180000, 0x00000000d5580000)
+  object space 83456K, 0% used [0x0000000080000000,0x0000000080004000,0x0000000085180000)
+ Metaspace       used 15151K, capacity 15498K, committed 15744K, reserved 1062912K
+  class space    used 2043K, capacity 2153K, committed 2176K, reserved 1048576K
+Event: 1.125 GC heap after
+Heap after GC invocations=3 (full 0):
+ PSYoungGen      total 67584K, used 5088K [0x00000000d5580000, 0x00000000dd980000, 0x0000000100000000)
+  eden space 62464K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000d9280000)
+  from space 5120K, 99% used [0x00000000d9280000,0x00000000d9778030,0x00000000d9780000)
+  to   space 5120K, 0% used [0x00000000dd480000,0x00000000dd480000,0x00000000dd980000)
+ ParOldGen       total 83456K, used 4561K [0x0000000080000000, 0x0000000085180000, 0x00000000d5580000)
+  object space 83456K, 5% used [0x0000000080000000,0x00000000804745f0,0x0000000085180000)
+ Metaspace       used 15151K, capacity 15498K, committed 15744K, reserved 1062912K
+  class space    used 2043K, capacity 2153K, committed 2176K, reserved 1048576K
+}
+Event: 1.715 GC heap before
+{Heap before GC invocations=4 (full 0):
+ PSYoungGen      total 67584K, used 67552K [0x00000000d5580000, 0x00000000dd980000, 0x0000000100000000)
+  eden space 62464K, 100% used [0x00000000d5580000,0x00000000d9280000,0x00000000d9280000)
+  from space 5120K, 99% used [0x00000000d9280000,0x00000000d9778030,0x00000000d9780000)
+  to   space 5120K, 0% used [0x00000000dd480000,0x00000000dd480000,0x00000000dd980000)
+ ParOldGen       total 83456K, used 4561K [0x0000000080000000, 0x0000000085180000, 0x00000000d5580000)
+  object space 83456K, 5% used [0x0000000080000000,0x00000000804745f0,0x0000000085180000)
+ Metaspace       used 20309K, capacity 21030K, committed 21248K, reserved 1067008K
+  class space    used 2853K, capacity 3055K, committed 3072K, reserved 1048576K
+Event: 1.724 GC heap after
+Heap after GC invocations=4 (full 0):
+ PSYoungGen      total 130048K, used 5104K [0x00000000d5580000, 0x00000000dd980000, 0x0000000100000000)
+  eden space 124928K, 0% used [0x00000000d5580000,0x00000000d5580000,0x00000000dcf80000)
+  from space 5120K, 99% used [0x00000000dd480000,0x00000000dd97c050,0x00000000dd980000)
+  to   space 5120K, 0% used [0x00000000dcf80000,0x00000000dcf80000,0x00000000dd480000)
+ ParOldGen       total 83456K, used 11059K [0x0000000080000000, 0x0000000085180000, 0x00000000d5580000)
+  object space 83456K, 13% used [0x0000000080000000,0x0000000080acce20,0x0000000085180000)
+ Metaspace       used 20309K, capacity 21030K, committed 21248K, reserved 1067008K
+  class space    used 2853K, capacity 3055K, committed 3072K, reserved 1048576K
+}
+Event: 1.912 GC heap before
+{Heap before GC invocations=5 (full 0):
+ PSYoungGen      total 130048K, used 11388K [0x00000000d5580000, 0x00000000dd980000, 0x0000000100000000)
+  eden space 124928K, 5% used [0x00000000d5580000,0x00000000d5ba3108,0x00000000dcf80000)
+  from space 5120K, 99% used [0x00000000dd480000,0x00000000dd97c050,0x00000000dd980000)
+  to   space 5120K, 0% used [0x00000000dcf80000,0x00000000dcf80000,0x00000000dd480000)
+ ParOldGen       total 83456K, used 11059K [0x0000000080000000, 0x0000000085180000, 0x00000000d5580000)
+  object space 83456K, 13% used [0x0000000080000000,0x0000000080acce20,0x0000000085180000)
+ Metaspace       used 20633K, capacity 21254K, committed 21296K, reserved 1067008K
+  class space    used 2902K, capacity 3087K, committed 3120K, reserved 1048576K
+
+Deoptimization events (10 events):
+Event: 1.179 Thread 0x00007f3684009000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f36ed2d2604 method=java.io.File.getName()Ljava/lang/String; @ 16
+Event: 1.309 Thread 0x00007f3684009000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f36ed42d9f4 method=java.util.HashMap.putVal(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object; @ 236
+Event: 1.615 Thread 0x00007f3684009000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f36ed4808b4 method=java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class; @ 38
+Event: 1.620 Thread 0x00007f3684009000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f36ed561654 method=java.lang.ClassLoader.getPackage(Ljava/lang/String;)Ljava/lang/Package; @ 47
+Event: 1.621 Thread 0x00007f3684009000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f36ed4808b4 method=java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class; @ 38
+Event: 1.622 Thread 0x00007f3684009000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f36ed4808b4 method=java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class; @ 38
+Event: 1.622 Thread 0x00007f3684009000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f36ed4808b4 method=java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class; @ 38
+Event: 1.623 Thread 0x00007f3684009000 Uncommon trap: reason=bimorphic action=maybe_recompile pc=0x00007f36ed561654 method=java.lang.ClassLoader.getPackage(Ljava/lang/String;)Ljava/lang/Package; @ 47
+Event: 1.623 Thread 0x00007f3684009000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f36ed5611fc method=java.net.URLClassLoader.getAndVerifyPackage(Ljava/lang/String;Ljava/util/jar/Manifest;Ljava/net/URL;)Ljava/lang/Package; @ 62
+Event: 1.888 Thread 0x00007f3684009000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f36ed46035c method=java.util.HashMap.hash(Ljava/lang/Object;)I @ 1
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 1.649 Thread 0x00007f3684009000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000d8c068e0) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/prims/jni.cpp, line 1614]
+Event: 1.650 Thread 0x00007f3684009000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000d8c149d0) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/prims/jni.cpp, line 1614]
+Event: 1.664 Thread 0x00007f3684009000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000d8d3f328) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/prims/jni.cpp, line 1614]
+Event: 1.664 Thread 0x00007f3684009000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000d8d434c8) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/prims/jni.cpp, line 1614]
+Event: 1.664 Thread 0x00007f3684009000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000d8d44e50) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/prims/jni.cpp, line 1614]
+Event: 1.665 Thread 0x00007f3684009000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000d8d46350) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/prims/jni.cpp, line 1614]
+Event: 1.665 Thread 0x00007f3684009000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000d8d47aa0) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/prims/jni.cpp, line 1614]
+Event: 1.665 Thread 0x00007f3684009000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000d8d490a0) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/prims/jni.cpp, line 1614]
+Event: 1.665 Thread 0x00007f3684009000 Exception <a 'java/lang/NoSuchMethodError': <clinit>> (0x00000000d8d4a540) thrown at [/buildbot/src/googleplex-android/openjdk/out/hotspot/src/share/vm/prims/jni.cpp, line 1614]
+Event: 1.885 Thread 0x00007f3684009000 Implicit null exception at 0x00007f36ed460135 to 0x00007f36ed46034d
+
+Events (10 events):
+Event: 1.903 loading class com/google/common/reflect/Types$ClassOwnership$1 done
+Event: 1.903 loading class com/google/common/reflect/Types$ClassOwnership$2
+Event: 1.903 loading class com/google/common/reflect/Types$ClassOwnership$2 done
+Event: 1.903 loading class com/google/common/reflect/Types$ClassOwnership$3
+Event: 1.903 loading class com/google/common/reflect/Types$ClassOwnership$3 done
+Event: 1.903 loading class com/google/common/reflect/Types$ClassOwnership$1LocalClass
+Event: 1.903 loading class com/google/common/reflect/Types$ClassOwnership$1LocalClass done
+Event: 1.908 loading class org/gradle/model/internal/type/ParameterizedTypeWrapper
+Event: 1.908 loading class org/gradle/model/internal/type/ParameterizedTypeWrapper done
+Event: 1.911 Executing VM operation: CollectForMetadataAllocation
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 103:02 14813613                          /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/bin/java
+00401000-00402000 r--p 00000000 103:02 14813613                          /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/bin/java
+00402000-00403000 rw-p 00001000 103:02 14813613                          /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/bin/java
+01e6a000-01e8b000 rw-p 00000000 00:00 0                                  [heap]
+80000000-85180000 rw-p 00000000 00:00 0 
+85180000-d5580000 ---p 00000000 00:00 0 
+d5580000-dd980000 rw-p 00000000 00:00 0 
+e6280000-100000000 ---p 00000000 00:00 0 
+100000000-10030c000 rw-p 00000000 00:00 0 
+10030c000-140000000 ---p 00000000 00:00 0 
+7f365bcc9000-7f365c000000 r--s 0448c000 103:02 7999617                   /home/sylvester/.gradle/caches/jars-3/4055bc05a9297c2678f36d43073e7907/android.jar
+7f365c000000-7f365c021000 rw-p 00000000 00:00 0 
+7f365c021000-7f3660000000 ---p 00000000 00:00 0 
+7f3660000000-7f3660021000 rw-p 00000000 00:00 0 
+7f3660021000-7f3664000000 ---p 00000000 00:00 0 
+7f3664000000-7f3664021000 rw-p 00000000 00:00 0 
+7f3664021000-7f3668000000 ---p 00000000 00:00 0 
+7f3668000000-7f3668021000 rw-p 00000000 00:00 0 
+7f3668021000-7f366c000000 ---p 00000000 00:00 0 
+7f366c000000-7f366c039000 rw-p 00000000 00:00 0 
+7f366c039000-7f3670000000 ---p 00000000 00:00 0 
+7f3670000000-7f3670021000 rw-p 00000000 00:00 0 
+7f3670021000-7f3674000000 ---p 00000000 00:00 0 
+7f3674000000-7f3674021000 rw-p 00000000 00:00 0 
+7f3674021000-7f3678000000 ---p 00000000 00:00 0 
+7f3678000000-7f3678021000 rw-p 00000000 00:00 0 
+7f3678021000-7f367c000000 ---p 00000000 00:00 0 
+7f367c000000-7f367c021000 rw-p 00000000 00:00 0 
+7f367c021000-7f3680000000 ---p 00000000 00:00 0 
+7f3680000000-7f3681384000 rw-p 00000000 00:00 0 
+7f3681384000-7f3684000000 ---p 00000000 00:00 0 
+7f3684000000-7f3684021000 rw-p 00000000 00:00 0 
+7f3684021000-7f3688000000 ---p 00000000 00:00 0 
+7f3688000000-7f3688021000 rw-p 00000000 00:00 0 
+7f3688021000-7f368c000000 ---p 00000000 00:00 0 
+7f368c000000-7f368c072000 rw-p 00000000 00:00 0 
+7f368c072000-7f3690000000 ---p 00000000 00:00 0 
+7f3690000000-7f3690021000 rw-p 00000000 00:00 0 
+7f3690021000-7f3694000000 ---p 00000000 00:00 0 
+7f3694000000-7f3694021000 rw-p 00000000 00:00 0 
+7f3694021000-7f3698000000 ---p 00000000 00:00 0 
+7f3698000000-7f3698021000 rw-p 00000000 00:00 0 
+7f3698021000-7f369c000000 ---p 00000000 00:00 0 
+7f369c06f000-7f369c326000 r--s 01c2b000 103:02 7864325                   /home/sylvester/.gradle/caches/jars-3/e22071f0f647bfca187dcad0e9b116ad/gradle-api-impldep-5.2.1-sp1.jar
+7f369c326000-7f369c4e6000 rw-p 00000000 00:00 0 
+7f369c4e6000-7f369c526000 ---p 00000000 00:00 0 
+7f369c7cf000-7f369c7d2000 ---p 00000000 00:00 0 
+7f369c7d2000-7f369c8d0000 rw-p 00000000 00:00 0 
+7f369c8d0000-7f369c8d3000 ---p 00000000 00:00 0 
+7f369c8d3000-7f369c9d1000 rw-p 00000000 00:00 0 
+7f369c9e8000-7f369ca1a000 r--s 0026d000 103:02 7999627                   /home/sylvester/.gradle/caches/jars-3/009a8bde4a19409138958d32735850a8/guava-27.1-jre.jar
+7f369ca1a000-7f369cb83000 r--s 00c5e000 103:02 7864323                   /home/sylvester/.gradle/caches/jars-3/e7cf29ee4e9099e5a486424dcaa09cdf/gradle-api-5.2.1-sp1.jar
+7f369cb83000-7f369cbfd000 r--s 01104000 103:02 14813607                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/lib/tools.jar
+7f369cbfd000-7f369cdfd000 rw-p 00000000 00:00 0 
+7f369cdfd000-7f369ce00000 ---p 00000000 00:00 0 
+7f369ce00000-7f369cefe000 rw-p 00000000 00:00 0 
+7f369cefe000-7f369cf01000 ---p 00000000 00:00 0 
+7f369cf01000-7f36a0000000 rw-p 00000000 00:00 0 
+7f36a0000000-7f36a0835000 rw-p 00000000 00:00 0 
+7f36a0835000-7f36a4000000 ---p 00000000 00:00 0 
+7f36a4000000-7f36a4021000 rw-p 00000000 00:00 0 
+7f36a4021000-7f36a8000000 ---p 00000000 00:00 0 
+7f36a8000000-7f36a9b2c000 rw-p 00000000 00:00 0 
+7f36a9b2c000-7f36ac000000 ---p 00000000 00:00 0 
+7f36ac000000-7f36ad3f4000 rw-p 00000000 00:00 0 
+7f36ad3f4000-7f36b0000000 ---p 00000000 00:00 0 
+7f36b0000000-7f36b0021000 rw-p 00000000 00:00 0 
+7f36b0021000-7f36b4000000 ---p 00000000 00:00 0 
+7f36b4000000-7f36b4dc3000 rw-p 00000000 00:00 0 
+7f36b4dc3000-7f36b8000000 ---p 00000000 00:00 0 
+7f36b8000000-7f36b8021000 rw-p 00000000 00:00 0 
+7f36b8021000-7f36bc000000 ---p 00000000 00:00 0 
+7f36bc000000-7f36bc021000 rw-p 00000000 00:00 0 
+7f36bc021000-7f36c0000000 ---p 00000000 00:00 0 
+7f36c0000000-7f36c02c3000 rw-p 00000000 00:00 0 
+7f36c02c3000-7f36c4000000 ---p 00000000 00:00 0 
+7f36c4000000-7f36c4021000 rw-p 00000000 00:00 0 
+7f36c4021000-7f36c8000000 ---p 00000000 00:00 0 
+7f36c8001000-7f36c802a000 r--s 0293d000 103:02 7999620                   /home/sylvester/.gradle/caches/jars-3/6f8c8f979dc37d7ccf25bc45cd884a30/sdk-tools.jar
+7f36c802a000-7f36c802d000 ---p 00000000 00:00 0 
+7f36c802d000-7f36c832b000 rw-p 00000000 00:00 0 
+7f36c832b000-7f36c832e000 ---p 00000000 00:00 0 
+7f36c832e000-7f36c862c000 rw-p 00000000 00:00 0 
+7f36c862c000-7f36c862f000 ---p 00000000 00:00 0 
+7f36c862f000-7f36c872d000 rw-p 00000000 00:00 0 
+7f36c872d000-7f36c8730000 ---p 00000000 00:00 0 
+7f36c8730000-7f36c882e000 rw-p 00000000 00:00 0 
+7f36c882e000-7f36c8831000 ---p 00000000 00:00 0 
+7f36c8831000-7f36c892f000 rw-p 00000000 00:00 0 
+7f36c892f000-7f36c8932000 ---p 00000000 00:00 0 
+7f36c8932000-7f36c8a30000 rw-p 00000000 00:00 0 
+7f36c8a30000-7f36c8a33000 ---p 00000000 00:00 0 
+7f36c8a33000-7f36c8b31000 rw-p 00000000 00:00 0 
+7f36c8b31000-7f36c8b34000 ---p 00000000 00:00 0 
+7f36c8b34000-7f36c8c32000 rw-p 00000000 00:00 0 
+7f36c8c32000-7f36c8c35000 ---p 00000000 00:00 0 
+7f36c8c35000-7f36c8d33000 rw-p 00000000 00:00 0 
+7f36c8d33000-7f36c8d3a000 r--s 00000000 103:02 5638978                   /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f36c8d3a000-7f36c8d3d000 ---p 00000000 00:00 0 
+7f36c8d3d000-7f36c8e3b000 rw-p 00000000 00:00 0 
+7f36c8e3b000-7f36c8e3f000 r--s 000a1000 103:02 14814974                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/jsse.jar
+7f36c8e3f000-7f36c903f000 rw-p 00000000 00:00 0 
+7f36c903f000-7f36c9042000 ---p 00000000 00:00 0 
+7f36c9042000-7f36c9140000 rw-p 00000000 00:00 0 
+7f36c9140000-7f36c9148000 r-xp 00000000 103:02 14813703                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libmanagement.so
+7f36c9148000-7f36c9149000 r--p 00007000 103:02 14813703                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libmanagement.so
+7f36c9149000-7f36c914a000 rw-p 00008000 103:02 14813703                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libmanagement.so
+7f36c914a000-7f36c914c000 r--s 00010000 103:02 8662659                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-tooling-api-builders-6.1.jar
+7f36c914c000-7f36c915b000 r--s 000fc000 103:02 8662662                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-instant-execution-6.1.jar
+7f36c915b000-7f36c915c000 r--s 00005000 103:02 8662680                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-build-profile-6.1.jar
+7f36c915c000-7f36c915e000 r--s 00003000 103:02 8662637                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-tooling-native-6.1.jar
+7f36c915e000-7f36c9162000 r--s 00017000 103:02 8662639                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-testing-native-6.1.jar
+7f36c9162000-7f36c9165000 r--s 00011000 103:02 8662753                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/junit-platform-commons-1.3.1.jar
+7f36c9165000-7f36c9166000 r--s 00001000 103:02 8662755                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/opentest4j-1.1.1.jar
+7f36c9166000-7f36c916a000 r--s 0001d000 103:02 8662752                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/junit-platform-engine-1.3.1.jar
+7f36c916a000-7f36c916b000 r--s 00000000 103:02 8662754                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/apiguardian-api-1.0.0.jar
+7f36c916b000-7f36c916e000 r--s 00015000 103:02 8662710                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/junit-platform-launcher-1.3.1.jar
+7f36c916e000-7f36c916f000 r--s 00003000 103:02 8662658                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-testing-junit-platform-6.1.jar
+7f36c916f000-7f36c9172000 r--s 0000f000 103:02 8662636                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-signing-6.1.jar
+7f36c9172000-7f36c9174000 r--s 0000a000 103:02 8662646                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-scala-6.1.jar
+7f36c9174000-7f36c9175000 r--s 00004000 103:02 8662679                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-resources-sftp-6.1.jar
+7f36c9175000-7f36c9180000 r--s 00074000 103:02 8662712                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/aws-java-sdk-kms-1.11.633.jar
+7f36c9180000-7f36c9182000 r--s 00005000 103:02 8662720                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/jmespath-java-1.11.633.jar
+7f36c9182000-7f36c9199000 r--s 000e1000 103:02 8662711                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/aws-java-sdk-s3-1.11.633.jar
+7f36c9199000-7f36c91a3000 r--s 00081000 103:02 8662751                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/ion-java-1.0.2.jar
+7f36c91a3000-7f36c91ba000 r--s 000d5000 103:02 8662713                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/aws-java-sdk-core-1.11.633.jar
+7f36c91ba000-7f36c91bc000 r--s 00004000 103:02 8662675                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-resources-s3-6.1.jar
+7f36c91bc000-7f36c91cc000 r--s 0008d000 103:02 8662724                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/joda-time-2.10.4.jar
+7f36c91cc000-7f36c91df000 r--s 00137000 103:02 8662721                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/jackson-databind-2.9.10.jar
+7f36c91df000-7f36c91e2000 r--s 0000e000 103:02 8662723                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/jackson-annotations-2.9.10.jar
+7f36c91e2000-7f36c91e6000 r--s 0004c000 103:02 8662722                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/jackson-core-2.9.10.jar
+7f36c91e6000-7f36c91e7000 r--s 00001000 103:02 8662703                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/google-http-client-jackson2-1.25.0.jar
+7f36c91e7000-7f36c91f1000 r--s 00056000 103:02 8662704                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/google-http-client-1.25.0.jar
+7f36c91f1000-7f36c91f4000 r--s 0000d000 103:02 8662702                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/google-oauth-client-1.25.0.jar
+7f36c91f4000-7f36c91f9000 r--s 0002d000 103:02 8662686                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/google-api-client-1.25.0.jar
+7f36c91f9000-7f36c91fd000 r--s 0001d000 103:02 8662685                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/google-api-services-storage-v1-rev136-1.25.0.jar
+7f36c91fd000-7f36c91ff000 r--s 00003000 103:02 8662676                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-resources-gcs-6.1.jar
+7f36c91ff000-7f36c9205000 r--s 00031000 103:02 8662648                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-platform-play-6.1.jar
+7f36c9205000-7f36c9217000 r--s 00078000 103:02 8662665                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-platform-native-6.1.jar
+7f36c9217000-7f36c921a000 r--s 0000d000 103:02 8662657                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-language-scala-6.1.jar
+7f36c921a000-7f36c9225000 r--s 00054000 103:02 8662640                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-language-native-6.1.jar
+7f36c9225000-7f36c922c000 r--s 00035000 103:02 8662699                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/simple-4.1.21.jar
+7f36c922c000-7f36c9239000 r--s 00125000 103:02 8662697                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/rhino-1.7.10.jar
+7f36c9239000-7f36c923d000 r--s 00012000 103:02 8662649                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-javascript-6.1.jar
+7f36c923d000-7f36c9240000 r--s 00011000 103:02 8662651                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-jacoco-6.1.jar
+7f36c9240000-7f36c9242000 r--s 00002000 103:02 8662644                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-ide-play-6.1.jar
+7f36c9242000-7f36c9244000 r--s 00011000 103:02 8662707                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/dd-plist-1.21.jar
+7f36c9244000-7f36c924b000 r--s 00035000 103:02 8662638                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-ide-native-6.1.jar
+7f36c924b000-7f36c9255000 r--s 00063000 103:02 8662645                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-ide-6.1.jar
+7f36c9255000-7f36c9257000 r--s 00007000 103:02 8662647                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-ear-6.1.jar
+7f36c9257000-7f36c925b000 r--s 0001b000 103:02 8662635                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-code-quality-6.1.jar
+7f36c925b000-7f36c925d000 r--s 0000b000 103:02 8662701                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/maven-plugin-api-3.0.4.jar
+7f36c925d000-7f36c9263000 r--s 0003f000 103:02 8662689                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/maven-compat-3.0.4.jar
+7f36c9263000-7f36c926b000 r--s 0003b000 103:02 8662652                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-build-init-6.1.jar
+7f36c926b000-7f36c926c000 r--s 00003000 103:02 8662677                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-build-cache-http-6.1.jar
+7f36c926c000-7f36c926e000 r--s 00009000 103:02 8662634                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-antlr-6.1.jar
+7f36c926e000-7f36c9272000 r--s 0001f000 103:02 8662653                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-kotlin-dsl-tooling-builders-6.1.jar
+7f36c9272000-7f36c9276000 r--s 00014000 103:02 8662650                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-ivy-6.1.jar
+7f36c9276000-7f36c9278000 r--s 0000b000 103:02 8662669                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-publish-6.1.jar
+7f36c9278000-7f36c927b000 r--s 0000c000 103:02 8662692                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/pmaven-groovy-0.8-20100325.jar
+7f36c927b000-7f36c927c000 r--s 00004000 103:02 8662691                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/pmaven-common-0.8-20100325.jar
+7f36c927c000-7f36c9280000 r--s 00021000 103:02 8662750                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/xbean-reflect-3.7.jar
+7f36c9280000-7f36c9287000 r--s 00032000 103:02 8662694                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/plexus-container-default-1.7.1.jar
+7f36c9287000-7f36c9288000 r--s 00008000 103:02 8662684                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/wagon-http-shared-3.0.0.jar
+7f36c9288000-7f36c9289000 r--s 00002000 103:02 8662683                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/wagon-http-3.0.0.jar
+7f36c9289000-7f36c928a000 r--s 00002000 103:02 8662693                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/wagon-file-3.0.0.jar
+7f36c928a000-7f36c928d000 r--s 0000a000 103:02 8662745                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/plexus-classworlds-2.5.1.jar
+7f36c928d000-7f36c928f000 r--s 0000c000 103:02 8662748                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/wagon-provider-api-3.0.0.jar
+7f36c928f000-7f36c9291000 r--s 00006000 103:02 8662695                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/aether-connector-wagon-1.13.1.jar
+7f36c9291000-7f36c9298000 r--s 00032000 103:02 8662643                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-maven-6.1.jar
+7f36c9298000-7f36c929a000 r--s 0000d000 103:02 8662642                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-plugin-development-6.1.jar
+7f36c929a000-7f36c92a0000 r--s 0003d000 103:02 8662706                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/snakeyaml-1.17.jar
+7f36c92a0000-7f36c92a2000 r--s 0000f000 103:02 8662735                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/jcommander-1.72.jar
+7f36c92a2000-7f36c92ab000 r--s 00089000 103:02 8662705                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/testng-6.3.1.jar
+7f36c92ab000-7f36c92ad000 r--s 00009000 103:02 8662733                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/hamcrest-core-1.3.jar
+7f36c92ad000-7f36c92b5000 r--s 00045000 103:02 8662708                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/junit-4.12.jar
+7f36c92b5000-7f36c92ba000 r--s 0005a000 103:02 8662709                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/bsh-2.0b6.jar
+7f36c92ba000-7f36c92be000 r--s 0001c000 103:02 8662660                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-testing-jvm-6.1.jar
+7f36c92be000-7f36c92c6000 r--s 00034000 103:02 8662667                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-testing-base-6.1.jar
+7f36c92c6000-7f36c92c8000 r--s 0000f000 103:02 8662656                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-language-groovy-6.1.jar
+7f36c92c8000-7f36c92d0000 r--s 00045000 103:02 8662661                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-language-java-6.1.jar
+7f36c92d0000-7f36c92d2000 r--s 00006000 103:02 8662663                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-language-jvm-6.1.jar
+7f36c92d2000-7f36c92d9000 r--s 00040000 103:02 8662666                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-diagnostics-6.1.jar
+7f36c92d9000-7f36c92dd000 r--s 0001b000 103:02 8662664                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-platform-jvm-6.1.jar
+7f36c92dd000-7f36c92e4000 r--s 00029000 103:02 8662670                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-platform-base-6.1.jar
+7f36c92e4000-7f36c92e6000 r--s 00006000 103:02 8662700                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/jatl-0.2.3.jar
+7f36c92e6000-7f36c92e8000 r--s 00010000 103:02 8662668                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-reporting-6.1.jar
+7f36c92e8000-7f36c92ef000 r--s 00042000 103:02 8662654                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-plugins-6.1.jar
+7f36c92ef000-7f36c92f4000 r--s 0002c000 103:02 8662641                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-kotlin-dsl-provider-plugins-6.1.jar
+7f36c92f4000-7f36c92f8000 r--s 00041000 103:02 8662718                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/jsch-0.1.55.jar
+7f36c92f8000-7f36c930c000 r--s 000c0000 103:02 8662725                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/bcpkix-jdk15on-1.61.jar
+7f36c930c000-7f36c9314000 r--s 00048000 103:02 8662696                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/bcpg-jdk15on-1.63.jar
+7f36c9314000-7f36c9316000 r--s 00010000 103:02 8662736                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/jzlib-1.1.3.jar
+7f36c9316000-7f36c933b000 r--s 00281000 103:02 8662682                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/org.eclipse.jgit-5.5.0.201909110433-r.jar
+7f36c933b000-7f36c933e000 r--s 0000c000 103:02 8662671                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-version-control-6.1.jar
+7f36c933e000-7f36c9341000 r--s 0000d000 103:02 8662673                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-composite-builds-6.1.jar
+7f36c9341000-7f36c9344000 r--s 0000c000 103:02 8662674                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-plugin-use-6.1.jar
+7f36c9344000-7f36c9346000 r--s 00006000 103:02 8662740                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/maven-repository-metadata-3.0.4.jar
+7f36c9346000-7f36c9348000 r--s 0000c000 103:02 8662728                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/maven-aether-provider-3.0.4.jar
+7f36c9348000-7f36c9349000 r--s 00003000 103:02 8662731                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/aether-spi-1.13.1.jar
+7f36c9349000-7f36c934c000 r--s 0001d000 103:02 8662729                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/aether-impl-1.13.1.jar
+7f36c934c000-7f36c9350000 r--s 0001c000 103:02 8662730                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/aether-util-1.13.1.jar
+7f36c9350000-7f36c9353000 r--s 00013000 103:02 8662732                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/aether-api-1.13.1.jar
+7f36c9353000-7f36c9355000 r--s 0000b000 103:02 8662737                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/maven-artifact-3.0.4.jar
+7f36c9355000-7f36c9359000 r--s 00021000 103:02 8662738                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/maven-model-builder-3.0.4.jar
+7f36c9359000-7f36c935b000 r--s 00026000 103:02 8662739                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/maven-model-3.0.4.jar
+7f36c935b000-7f36c935d000 r--s 0000a000 103:02 8662742                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/maven-settings-3.0.4.jar
+7f36c935d000-7f36c935f000 r--s 00002000 103:02 8662744                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/plexus-cipher-1.7.jar
+7f36c935f000-7f36c9360000 r--s 00006000 103:02 8662743                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/plexus-sec-dispatcher-1.3.jar
+7f36c9360000-7f36c9362000 r--s 00000000 103:02 8662746                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/plexus-component-annotations-1.5.5.jar
+7f36c9362000-7f36c9364000 r--s 0000d000 103:02 8662747                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/plexus-interpolation-1.14.jar
+7f36c9364000-7f36c9368000 r--s 0003c000 103:02 8662749                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/plexus-utils-3.1.0.jar
+7f36c9368000-7f36c936b000 r--s 00008000 103:02 8662741                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/maven-settings-builder-3.0.4.jar
+7f36c936b000-7f36c9377000 r--s 0007d000 103:02 8662690                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/maven-core-3.0.4.jar
+7f36c9377000-7f36c938c000 r--s 00116000 103:02 8662688                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/ivy-2.3.0.jar
+7f36c938c000-7f36c9391000 r--s 00036000 103:02 8662698                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gson-2.8.5.jar
+7f36c9391000-7f36c93f2000 r--s 0042a000 103:02 8662726                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/bcprov-jdk15on-1.63.jar
+7f36c93f2000-7f36c93f3000 r--s 00013000 103:02 8662687                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/asm-util-7.1.jar
+7f36c93f3000-7f36c942b000 r--s 001f6000 103:02 8662672                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-dependency-management-6.1.jar
+7f36c942b000-7f36c9444000 r--s 0013a000 103:02 8662717                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/xercesImpl-2.12.0.jar
+7f36c9444000-7f36c944a000 r--s 0005b000 103:02 8662715                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/jcifs-1.3.17.jar
+7f36c944a000-7f36c9451000 r--s 0004e000 103:02 8662727                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/commons-codec-1.13.jar
+7f36c9451000-7f36c9459000 r--s 00049000 103:02 8662734                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/httpcore-4.4.12.jar
+7f36c9459000-7f36c9470000 r-xp 00000000 103:02 9964225                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f36c9470000-7f36c966f000 ---p 00017000 103:02 9964225                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f36c966f000-7f36c9670000 r--p 00016000 103:02 9964225                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f36c9670000-7f36c9671000 rw-p 00017000 103:02 9964225                   /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f36c9671000-7f36c97ea000 r-xp 00000000 103:02 5376647                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f36c97ea000-7f36c99ea000 ---p 00179000 103:02 5376647                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f36c99ea000-7f36c99f4000 r--p 00179000 103:02 5376647                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f36c99f4000-7f36c99f6000 rw-p 00183000 103:02 5376647                   /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25
+7f36c99f6000-7f36c99fa000 rw-p 00000000 00:00 0 
+7f36c99fa000-7f36c99fb000 r--s 00000000 103:02 8658594                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-installation-beacon-6.1.jar
+7f36c99fb000-7f36c99fc000 r--s 00000000 103:02 8658589                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-runtime-api-info-6.1.jar
+7f36c99fc000-7f36c99fe000 r--s 0001d000 103:02 8662716                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/nekohtml-1.9.22.jar
+7f36c99fe000-7f36c9a0b000 r--s 000b1000 103:02 8662714                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/httpclient-4.5.10.jar
+7f36c9a0b000-7f36c9a0e000 r--s 0000e000 103:02 8662678                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-resources-http-6.1.jar
+7f36c9a0e000-7f36c9a13000 r--s 0001d000 103:02 8662681                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/plugins/gradle-workers-6.1.jar
+7f36c9a13000-7f36c9a19000 r-xp 00000000 103:02 7871676                   /home/sylvester/.gradle/native/31/linux-amd64/libnative-platform.so
+7f36c9a19000-7f36c9c18000 ---p 00006000 103:02 7871676                   /home/sylvester/.gradle/native/31/linux-amd64/libnative-platform.so
+7f36c9c18000-7f36c9c19000 rw-p 00005000 103:02 7871676                   /home/sylvester/.gradle/native/31/linux-amd64/libnative-platform.so
+7f36c9c19000-7f36c9c29000 r-xp 00000000 103:02 14814943                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libnio.so
+7f36c9c29000-7f36c9c2a000 ---p 00010000 103:02 14814943                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libnio.so
+7f36c9c2a000-7f36c9c2b000 r--p 00010000 103:02 14814943                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libnio.so
+7f36c9c2b000-7f36c9c2c000 rw-p 00011000 103:02 14814943                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libnio.so
+7f36c9c2c000-7f36c9c43000 r-xp 00000000 103:02 14813739                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libnet.so
+7f36c9c43000-7f36c9c44000 r--p 00016000 103:02 14813739                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libnet.so
+7f36c9c44000-7f36c9c45000 rw-p 00017000 103:02 14813739                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libnet.so
+7f36c9c45000-7f36c9c48000 r--s 00008000 103:02 8658591                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-build-events-6.1.jar
+7f36c9c48000-7f36c9c53000 r--s 00081000 103:02 8662603                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/trove4j-1.0.20181211.jar
+7f36c9c53000-7f36c9c6a000 r--s 00109000 103:02 8662612                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-daemon-embeddable-1.3.61.jar
+7f36c9c6a000-7f36c9c6c000 r--s 00009000 103:02 8662611                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-script-runtime-1.3.61.jar
+7f36c9c6c000-7f36c9ca6000 r--s 00283000 103:02 8662605                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-reflect-1.3.61.jar
+7f36c9ca6000-7f36c9eee000 r--s 022ac000 103:02 8658619                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-compiler-embeddable-1.3.61-patched-for-gradle-6.1.jar
+7f36c9eee000-7f36c9eef000 r--s 00000000 103:02 8658618                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-kotlin-dsl-tooling-models-6.1.jar
+7f36c9eef000-7f36c9ef0000 r--s 00007000 103:02 8658593                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-wrapper-6.1.jar
+7f36c9ef0000-7f36c9f00000 r--s 0004f000 103:02 8658592                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-tooling-api-6.1.jar
+7f36c9f00000-7f36c9f10000 r--s 0026b000 103:02 8662595                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlinx-metadata-jvm-0.1.0.jar
+7f36c9f10000-7f36c9f11000 r--s 00002000 103:02 8662594                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-sam-with-receiver-compiler-plugin-1.3.61.jar
+7f36c9f11000-7f36c9f18000 r--s 00042000 103:02 8662593                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-scripting-compiler-impl-embeddable-1.3.61.jar
+7f36c9f18000-7f36c9f1f000 r--s 00040000 103:02 8662592                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-scripting-compiler-embeddable-1.3.61.jar
+7f36c9f1f000-7f36c9f22000 r--s 00019000 103:02 8662591                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-scripting-jvm-host-embeddable-1.3.61.jar
+7f36c9f22000-7f36c9f25000 r--s 00027000 103:02 8662590                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-scripting-jvm-1.3.61.jar
+7f36c9f25000-7f36c9f2a000 r--s 00026000 103:02 8662589                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-scripting-common-1.3.61.jar
+7f36c9f2a000-7f36c9f2b000 r--s 00000000 103:02 8662606                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-stdlib-jdk7-1.3.61.jar
+7f36c9f2b000-7f36c9f2c000 r--s 00003000 103:02 8662587                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-stdlib-jdk8-1.3.61.jar
+7f36c9f2c000-7f36c9f49000 r--s 00176000 103:02 8658590                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-kotlin-dsl-6.1.jar
+7f36c9f49000-7f36c9f4b000 r--s 00005000 103:02 8658605                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-worker-processes-6.1.jar
+7f36c9f4b000-7f36c9f51000 r--s 0002d000 103:02 8658599                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-execution-6.1.jar
+7f36c9f51000-7f36c9f53000 r--s 00007000 103:02 8658598                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-model-groovy-6.1.jar
+7f36c9f53000-7f36c9f55000 r--s 00000000 103:02 8658607                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-jvm-services-6.1.jar
+7f36c9f55000-7f36c9f57000 r--s 00006000 103:02 8658601                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-build-cache-packaging-6.1.jar
+7f36c9f57000-7f36c9f5b000 r--s 0000e000 103:02 8658602                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-build-cache-6.1.jar
+7f36c9f5b000-7f36c9f5c000 r--s 00005000 103:02 8658622                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-docs-6.1.jar
+7f36c9f5c000-7f36c9f65000 r--s 0002d000 103:02 8662604                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/xml-apis-1.4.01.jar
+7f36c9f65000-7f36c9f71000 r--s 0008b000 103:02 8662596                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/commons-compress-1.19.jar
+7f36c9f71000-7f36c9f73000 r--s 00007000 103:02 8662583                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/asm-analysis-7.1.jar
+7f36c9f73000-7f36c9f75000 r--s 0000b000 103:02 8662584                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/asm-tree-7.1.jar
+7f36c9f75000-7f36c9f77000 r--s 00010000 103:02 8662582                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/asm-commons-7.1.jar
+7f36c9f77000-7f36c9f7c000 r--s 0001a000 103:02 8658616                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-snapshots-6.1.jar
+7f36c9f7c000-7f36c9f7e000 r--s 00003000 103:02 8662608                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/annotations-13.0.jar
+7f36c9f7e000-7f36c9f86000 r--s 00022000 103:02 8662614                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-stdlib-common-1.3.61.jar
+7f36c9f86000-7f36c9f9a000 r--s 00131000 103:02 8662607                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kotlin-stdlib-1.3.61.jar
+7f36c9f9a000-7f36c9fb3000 r--s 000de000 103:02 8658600                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-model-core-6.1.jar
+7f36c9fb3000-7f36c9fb8000 r--s 00016000 103:02 8658609                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-resources-6.1.jar
+7f36c9fb8000-7f36c9fbf000 r--s 00036000 103:02 8658604                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-persistent-cache-6.1.jar
+7f36c9fbf000-7f36c9fc1000 r--s 00006000 103:02 8658612                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-base-services-groovy-6.1.jar
+7f36c9fc1000-7f36c9fc2000 r--s 00000000 103:02 8662588                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/javax.inject-1.jar
+7f36c9fc2000-7f36c9fc7000 r--s 00021000 103:02 8658597                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-file-collections-6.1.jar
+7f36c9fc7000-7f36c9fc9000 r--s 00006000 103:02 8658608                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-process-services-6.1.jar
+7f36c9fc9000-7f36c9fcb000 r--s 00004000 103:02 8658625                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/log4j-over-slf4j-1.7.28.jar
+7f36c9fcb000-7f36c9fcd000 r--s 00000000 103:02 8658624                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/jul-to-slf4j-1.7.28.jar
+7f36c9fcd000-7f36c9fcf000 r--s 00003000 103:02 8658626                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/jcl-over-slf4j-1.7.28.jar
+7f36c9fcf000-7f36c9fd7000 r--s 00038000 103:02 8658606                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-logging-6.1.jar
+7f36c9fd7000-7f36c9fd9000 r--s 00006000 103:02 8658617                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-files-6.1.jar
+7f36c9fd9000-7f36c9fda000 r--s 00004000 103:02 8662615                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-freebsd-amd64-libcpp-0.19.jar
+7f36c9fda000-7f36c9fdb000 r--s 00004000 103:02 8662616                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-freebsd-amd64-libstdcpp-0.19.jar
+7f36c9fdb000-7f36c9fdd000 r--s 00004000 103:02 8662617                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-freebsd-i386-libcpp-0.19.jar
+7f36c9fdd000-7f36c9fde000 r--s 00004000 103:02 8662618                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-freebsd-i386-libstdcpp-0.19.jar
+7f36c9fde000-7f36c9fdf000 r--s 00002000 103:02 8662619                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-linux-aarch64-0.19.jar
+7f36c9fdf000-7f36c9fe0000 r--s 00002000 103:02 8662620                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-linux-amd64-0.19.jar
+7f36c9fe0000-7f36c9fe1000 r--s 00002000 103:02 8662621                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-linux-i386-0.19.jar
+7f36c9fe1000-7f36c9fe2000 r--s 00003000 103:02 8662622                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-osx-amd64-0.19.jar
+7f36c9fe2000-7f36c9fe3000 r--s 00011000 103:02 8662623                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-windows-amd64-0.19.jar
+7f36c9fe3000-7f36c9fe5000 r--s 00010000 103:02 8662624                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-windows-amd64-min-0.19.jar
+7f36c9fe5000-7f36c9fe6000 r--s 0000f000 103:02 8662625                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-windows-i386-0.19.jar
+7f36c9fe6000-7f36c9fe7000 r--s 0000f000 103:02 8662626                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-windows-i386-min-0.19.jar
+7f36c9fe7000-7f36c9fe8000 r--s 00001000 103:02 8662627                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-linux-aarch64-ncurses5-0.19.jar
+7f36c9fe8000-7f36c9fe9000 r--s 00002000 103:02 8662628                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-linux-aarch64-ncurses6-0.19.jar
+7f36c9fe9000-7f36c9feb000 r--s 00001000 103:02 8662629                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-linux-amd64-ncurses5-0.19.jar
+7f36c9feb000-7f36c9fec000 r--s 00001000 103:02 8662630                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-linux-amd64-ncurses6-0.19.jar
+7f36c9fec000-7f36c9fed000 r--s 00001000 103:02 8662631                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-linux-i386-ncurses5-0.19.jar
+7f36c9fed000-7f36c9fee000 r--s 00001000 103:02 8662632                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-linux-i386-ncurses6-0.19.jar
+7f36c9fee000-7f36c9ff3000 r--s 0001a000 103:02 8662601                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/native-platform-0.19.jar
+7f36c9ff3000-7f36c9ff7000 r--s 00043000 103:02 8662598                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/jansi-1.18.jar
+7f36c9ff7000-7f36c9ffa000 r--s 0000d000 103:02 8658611                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-native-6.1.jar
+7f36c9ffa000-7f36c9ffc000 r--s 0000c000 103:02 8662602                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/objenesis-2.6.jar
+7f36c9ffc000-7f36c9ffe000 r--s 00000000 103:02 8662610                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/minlog-1.2.jar
+7f36c9ffe000-7f36ca004000 r--s 0004d000 103:02 8662600                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/kryo-2.24.0.jar
+7f36ca004000-7f36ca00a000 r--s 0006d000 103:02 8662597                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/fastutil-8.3.0-min.jar
+7f36ca00a000-7f36ca011000 r--s 0002f000 103:02 8658610                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-messaging-6.1.jar
+7f36ca011000-7f36ca013000 r--s 00005000 103:02 8658615                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-cli-6.1.jar
+7f36ca013000-7f36ca015000 r--s 00003000 103:02 8658620                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-hashing-6.1.jar
+7f36ca015000-7f36ca017000 r--s 00003000 103:02 8662599                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/jsr305-3.0.2.jar
+7f36ca017000-7f36ca047000 r--s 0024c000 103:02 8659580                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/guava-27.1-android.jar
+7f36ca047000-7f36ca0c7000 r--s 00778000 103:02 8658623                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/groovy-all-1.3-2.5.8.jar
+7f36ca0c7000-7f36ca0cc000 r--s 00041000 103:02 8662576                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/commons-lang-2.6.jar
+7f36ca0cc000-7f36ca0ec000 r--s 00204000 103:02 8662586                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/ant-1.10.7.jar
+7f36ca0ec000-7f36ca0ed000 ---p 00000000 00:00 0 
+7f36ca0ed000-7f36ca1ed000 rw-p 00000000 00:00 0 
+7f36ca1ed000-7f36ca1f0000 ---p 00000000 00:00 0 
+7f36ca1f0000-7f36ca2ee000 rw-p 00000000 00:00 0 
+7f36ca2ee000-7f36ca2ef000 ---p 00000000 00:00 0 
+7f36ca2ef000-7f36ca2f2000 ---p 00000000 00:00 0 
+7f36ca2f2000-7f36ca3ef000 rw-p 00000000 00:00 0 
+7f36ca3ef000-7f36ca3f0000 ---p 00000000 00:00 0 
+7f36ca3f0000-7f36ca3f3000 ---p 00000000 00:00 0 
+7f36ca3f3000-7f36ca4f0000 rw-p 00000000 00:00 0 
+7f36ca4f0000-7f36ca4f1000 ---p 00000000 00:00 0 
+7f36ca4f1000-7f36ca4f4000 ---p 00000000 00:00 0 
+7f36ca4f4000-7f36ca5f1000 rw-p 00000000 00:00 0 
+7f36ca5f1000-7f36ca5f2000 ---p 00000000 00:00 0 
+7f36ca5f2000-7f36ca5f5000 ---p 00000000 00:00 0 
+7f36ca5f5000-7f36ca6f2000 rw-p 00000000 00:00 0 
+7f36ca6f2000-7f36ca6f5000 ---p 00000000 00:00 0 
+7f36ca6f5000-7f36ca7f3000 rw-p 00000000 00:00 0 
+7f36ca7f3000-7f36cb2f3000 r--p 00000000 103:02 5380727                   /usr/lib/locale/locale-archive
+7f36cb2f3000-7f36cb2f6000 ---p 00000000 00:00 0 
+7f36cb2f6000-7f36cb3f4000 rw-p 00000000 00:00 0 
+7f36cb3f4000-7f36cb3f7000 ---p 00000000 00:00 0 
+7f36cb3f7000-7f36cb4f5000 rw-p 00000000 00:00 0 
+7f36cb4f5000-7f36cb4f6000 ---p 00000000 00:00 0 
+7f36cb4f6000-7f36cc000000 rw-p 00000000 00:00 0 
+7f36cc000000-7f36cc021000 rw-p 00000000 00:00 0 
+7f36cc021000-7f36d0000000 ---p 00000000 00:00 0 
+7f36d0000000-7f36d4000000 rw-p 00000000 00:00 0 
+7f36d4000000-7f36d4021000 rw-p 00000000 00:00 0 
+7f36d4021000-7f36d8000000 ---p 00000000 00:00 0 
+7f36d8000000-7f36d8021000 rw-p 00000000 00:00 0 
+7f36d8021000-7f36dc000000 ---p 00000000 00:00 0 
+7f36dc000000-7f36dc022000 rw-p 00000000 00:00 0 
+7f36dc022000-7f36e0000000 ---p 00000000 00:00 0 
+7f36e0000000-7f36e0021000 rw-p 00000000 00:00 0 
+7f36e0021000-7f36e4000000 ---p 00000000 00:00 0 
+7f36e4000000-7f36e4021000 rw-p 00000000 00:00 0 
+7f36e4021000-7f36e8000000 ---p 00000000 00:00 0 
+7f36e8000000-7f36e8021000 rw-p 00000000 00:00 0 
+7f36e8021000-7f36ec000000 ---p 00000000 00:00 0 
+7f36ec000000-7f36ec001000 r--s 00003000 103:02 8658614                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-build-option-6.1.jar
+7f36ec001000-7f36ec03d000 r--s 0020c000 103:02 8658596                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-core-6.1.jar
+7f36ec03d000-7f36ec04c000 r--s 00045000 103:02 8658603                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-core-api-6.1.jar
+7f36ec04c000-7f36ed000000 rw-p 00000000 00:00 0 
+7f36ed000000-7f36ed5e0000 rwxp 00000000 00:00 0 
+7f36ed5e0000-7f36fc000000 ---p 00000000 00:00 0 
+7f36fc000000-7f36fd36d000 rw-p 00000000 00:00 0 
+7f36fd36d000-7f3700000000 ---p 00000000 00:00 0 
+7f3700000000-7f3700001000 r--s 00000000 103:02 8658621                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-pineapple-6.1.jar
+7f3700001000-7f370000e000 r--s 00064000 103:02 8658613                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-base-services-6.1.jar
+7f370000e000-7f370001b000 r--s 00067000 103:02 8658588                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-launcher-6.1.jar
+7f370001b000-7f37002ce000 rw-p 00000000 00:00 0 
+7f37002ce000-7f37004a1000 r--s 03cb1000 103:02 14814959                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/rt.jar
+7f37004a1000-7f3701172000 rw-p 00000000 00:00 0 
+7f3701172000-7f3701173000 ---p 00000000 00:00 0 
+7f3701173000-7f3701273000 rw-p 00000000 00:00 0 
+7f3701273000-7f3701274000 ---p 00000000 00:00 0 
+7f3701274000-7f3701374000 rw-p 00000000 00:00 0 
+7f3701374000-7f3701375000 ---p 00000000 00:00 0 
+7f3701375000-7f3701475000 rw-p 00000000 00:00 0 
+7f3701475000-7f3701476000 ---p 00000000 00:00 0 
+7f3701476000-7f3701576000 rw-p 00000000 00:00 0 
+7f3701576000-7f3701577000 ---p 00000000 00:00 0 
+7f3701577000-7f3701677000 rw-p 00000000 00:00 0 
+7f3701677000-7f3701678000 ---p 00000000 00:00 0 
+7f3701678000-7f3701778000 rw-p 00000000 00:00 0 
+7f3701778000-7f3701779000 ---p 00000000 00:00 0 
+7f3701779000-7f3701879000 rw-p 00000000 00:00 0 
+7f3701879000-7f370187a000 ---p 00000000 00:00 0 
+7f370187a000-7f37019a3000 rw-p 00000000 00:00 0 
+7f37019a3000-7f3701c25000 ---p 00000000 00:00 0 
+7f3701c25000-7f3701c4e000 rw-p 00000000 00:00 0 
+7f3701c4e000-7f3701ecf000 ---p 00000000 00:00 0 
+7f3701ecf000-7f3701f12000 rw-p 00000000 00:00 0 
+7f3701f12000-7f3702025000 ---p 00000000 00:00 0 
+7f3702025000-7f370203e000 rw-p 00000000 00:00 0 
+7f370203e000-7f37023e6000 ---p 00000000 00:00 0 
+7f37023e6000-7f37023f1000 r-xp 00000000 103:02 9966334                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f37023f1000-7f37025f0000 ---p 0000b000 103:02 9966334                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f37025f0000-7f37025f1000 r--p 0000a000 103:02 9966334                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f37025f1000-7f37025f2000 rw-p 0000b000 103:02 9966334                   /lib/x86_64-linux-gnu/libnss_files-2.27.so
+7f37025f2000-7f37025f8000 rw-p 00000000 00:00 0 
+7f37025f8000-7f370260f000 r-xp 00000000 103:02 9966328                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f370260f000-7f370280e000 ---p 00017000 103:02 9966328                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f370280e000-7f370280f000 r--p 00016000 103:02 9966328                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f370280f000-7f3702810000 rw-p 00017000 103:02 9966328                   /lib/x86_64-linux-gnu/libnsl-2.27.so
+7f3702810000-7f3702812000 rw-p 00000000 00:00 0 
+7f3702812000-7f370281d000 r-xp 00000000 103:02 9966345                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f370281d000-7f3702a1c000 ---p 0000b000 103:02 9966345                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f3702a1c000-7f3702a1d000 r--p 0000a000 103:02 9966345                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f3702a1d000-7f3702a1e000 rw-p 0000b000 103:02 9966345                   /lib/x86_64-linux-gnu/libnss_nis-2.27.so
+7f3702a1e000-7f3702a26000 r-xp 00000000 103:02 9966330                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f3702a26000-7f3702c26000 ---p 00008000 103:02 9966330                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f3702c26000-7f3702c27000 r--p 00008000 103:02 9966330                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f3702c27000-7f3702c28000 rw-p 00009000 103:02 9966330                   /lib/x86_64-linux-gnu/libnss_compat-2.27.so
+7f3702c28000-7f3702c2f000 r-xp 00000000 103:02 9966385                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f3702c2f000-7f3702e2e000 ---p 00007000 103:02 9966385                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f3702e2e000-7f3702e2f000 r--p 00006000 103:02 9966385                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f3702e2f000-7f3702e30000 rw-p 00007000 103:02 9966385                   /lib/x86_64-linux-gnu/librt-2.27.so
+7f3702e30000-7f3702fcd000 r-xp 00000000 103:02 9966307                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f3702fcd000-7f37031cc000 ---p 0019d000 103:02 9966307                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f37031cc000-7f37031cd000 r--p 0019c000 103:02 9966307                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f37031cd000-7f37031ce000 rw-p 0019d000 103:02 9966307                   /lib/x86_64-linux-gnu/libm-2.27.so
+7f37031ce000-7f3703df5000 r-xp 00000000 103:02 14814936                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/server/libjvm.so
+7f3703df5000-7f3703e9d000 r--p 00c26000 103:02 14814936                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/server/libjvm.so
+7f3703e9d000-7f3703ec6000 rw-p 00cce000 103:02 14814936                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/server/libjvm.so
+7f3703ec6000-7f3703f0a000 rw-p 00000000 00:00 0 
+7f3703f0a000-7f37040f1000 r-xp 00000000 103:02 9966244                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f37040f1000-7f37042f1000 ---p 001e7000 103:02 9966244                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f37042f1000-7f37042f5000 r--p 001e7000 103:02 9966244                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f37042f5000-7f37042f7000 rw-p 001eb000 103:02 9966244                   /lib/x86_64-linux-gnu/libc-2.27.so
+7f37042f7000-7f37042fb000 rw-p 00000000 00:00 0 
+7f37042fb000-7f37042fe000 r-xp 00000000 103:02 9966267                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f37042fe000-7f37044fd000 ---p 00003000 103:02 9966267                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f37044fd000-7f37044fe000 r--p 00002000 103:02 9966267                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f37044fe000-7f37044ff000 rw-p 00003000 103:02 9966267                   /lib/x86_64-linux-gnu/libdl-2.27.so
+7f37044ff000-7f3704519000 r-xp 00000000 103:02 9966377                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f3704519000-7f3704718000 ---p 0001a000 103:02 9966377                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f3704718000-7f3704719000 r--p 00019000 103:02 9966377                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f3704719000-7f370471a000 rw-p 0001a000 103:02 9966377                   /lib/x86_64-linux-gnu/libpthread-2.27.so
+7f370471a000-7f370471e000 rw-p 00000000 00:00 0 
+7f370471e000-7f3704745000 r-xp 00000000 103:02 9966216                   /lib/x86_64-linux-gnu/ld-2.27.so
+7f3704745000-7f3704747000 r--s 00009000 103:02 8658627                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/slf4j-api-1.7.28.jar
+7f3704747000-7f370474b000 r--s 00031000 103:02 8662549                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/commons-io-2.6.jar
+7f370474b000-7f37047bc000 rw-p 00000000 00:00 0 
+7f37047bc000-7f37047d7000 r-xp 00000000 103:02 14813702                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libzip.so
+7f37047d7000-7f37047d8000 r--p 0001a000 103:02 14813702                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libzip.so
+7f37047d8000-7f37047d9000 rw-p 0001b000 103:02 14813702                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libzip.so
+7f37047d9000-7f37047e1000 rw-s 00000000 103:02 11403484                  /tmp/hsperfdata_sylvester/6731
+7f37047e1000-7f370480c000 r-xp 00000000 103:02 14813776                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libjava.so
+7f370480c000-7f370480d000 r--p 0002a000 103:02 14813776                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libjava.so
+7f370480d000-7f370480f000 rw-p 0002b000 103:02 14813776                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libjava.so
+7f370480f000-7f3704810000 ---p 00000000 00:00 0 
+7f3704810000-7f3704813000 ---p 00000000 00:00 0 
+7f3704813000-7f3704912000 rw-p 00000000 00:00 0 
+7f3704912000-7f3704928000 r-xp 00000000 103:02 14813601                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/lib/amd64/jli/libjli.so
+7f3704928000-7f3704929000 r--p 00015000 103:02 14813601                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/lib/amd64/jli/libjli.so
+7f3704929000-7f370492a000 rw-p 00016000 103:02 14813601                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/lib/amd64/jli/libjli.so
+7f370492a000-7f370492c000 r--s 00000000 103:02 8662613                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/failureaccess-1.0.1.jar
+7f370492c000-7f370492e000 r--s 0001b000 103:02 8662585                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/asm-7.1.jar
+7f370492e000-7f370492f000 r--s 00004000 103:02 8662609                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/ant-launcher-1.10.7.jar
+7f370492f000-7f3704931000 r--s 00001000 103:02 8658595                   /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-bootstrap-6.1.jar
+7f3704931000-7f3704932000 rw-p 00000000 00:00 0 
+7f3704932000-7f3704933000 ---p 00000000 00:00 0 
+7f3704933000-7f3704940000 r-xp 00000000 103:02 14813698                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libverify.so
+7f3704940000-7f3704942000 r--p 0000c000 103:02 14813698                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libverify.so
+7f3704942000-7f3704943000 rw-p 0000e000 103:02 14813698                  /home/sylvester/.local/share/JetBrains/Toolbox/apps/AndroidStudio/ch-0/193.6137316/jre/jre/lib/amd64/libverify.so
+7f3704943000-7f3704945000 rw-p 00000000 00:00 0 
+7f3704945000-7f3704946000 r--p 00027000 103:02 9966216                   /lib/x86_64-linux-gnu/ld-2.27.so
+7f3704946000-7f3704947000 rw-p 00028000 103:02 9966216                   /lib/x86_64-linux-gnu/ld-2.27.so
+7f3704947000-7f3704948000 rw-p 00000000 00:00 0 
+7ffd16fd2000-7ffd16ff3000 rw-p 00000000 00:00 0                          [stack]
+7ffd16ff5000-7ffd16ff8000 r--p 00000000 00:00 0                          [vvar]
+7ffd16ff8000-7ffd16ffa000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Xmx2048m -Dfile.encoding=UTF-8 -Duser.country=US -Duser.language=en -Duser.variant 
+java_command: org.gradle.launcher.daemon.bootstrap.GradleDaemon 6.1-rc-1
+java_class_path (initial): /home/sylvester/.gradle/wrapper/dists/gradle-6.1-rc-1-all/2aeqb4no7j31slx5jbpydz8zu/gradle-6.1-rc-1/lib/gradle-launcher-6.1.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/usr/lib/jvm/java-11-oracle
+PATH=/opt/gradle/gradle-5.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/apache-maven-3.6.0/bin:/snap/bin:/usr/lib/jvm/java-11-oracle/bin:/usr/lib/jvm/java-11-oracle/db/bin
+USERNAME=sylvester
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xa0bf30], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xa0bf30], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x86d4c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x86d4c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x86d4c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x86d4c0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x86d390], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x86d580], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x86d580], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x86d580], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x86d580], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=18.04
+DISTRIB_CODENAME=bionic
+DISTRIB_DESCRIPTION="Ubuntu 18.04.4 LTS"
+
+uname:Linux 4.15.0-88-generic #88-Ubuntu SMP Tue Feb 11 20:11:34 UTC 2020 x86_64
+libc:glibc 2.27 NPTL 2.27 
+rlimit: STACK 8192k, CORE 0k, NPROC 30559, NOFILE 1048576, AS infinity
+load average:1.56 9.04 8.19
+
+/proc/meminfo:
+MemTotal:        7925408 kB
+MemFree:          107492 kB
+MemAvailable:      22164 kB
+Buffers:             816 kB
+Cached:           588992 kB
+SwapCached:        45524 kB
+Active:          6394520 kB
+Inactive:         962284 kB
+Active(anon):    6385928 kB
+Inactive(anon):   949568 kB
+Active(file):       8592 kB
+Inactive(file):    12716 kB
+Unevictable:          80 kB
+Mlocked:              80 kB
+SwapTotal:       2097148 kB
+SwapFree:              0 kB
+Dirty:                48 kB
+Writeback:             0 kB
+AnonPages:       6724120 kB
+Mapped:            90596 kB
+Shmem:            568008 kB
+Slab:             247172 kB
+SReclaimable:      88236 kB
+SUnreclaim:       158936 kB
+KernelStack:       22992 kB
+PageTables:       102448 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6059852 kB
+Committed_AS:   19872076 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      479100 kB
+DirectMap2M:     7665664 kB
+DirectMap1G:           0 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-7
+cpu_memory_nodes: 0
+active_processor_count: 8
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -2
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 7635402752
+memory_max_usage_in_bytes: 7676915712
+
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 142 stepping 10, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0xca
+cpu MHz		: 3116.013
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0xca
+cpu MHz		: 3110.505
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0xca
+cpu MHz		: 3147.311
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0xca
+cpu MHz		: 3132.623
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0xca
+cpu MHz		: 3136.225
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0xca
+cpu MHz		: 3062.621
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0xca
+cpu MHz		: 3133.288
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 142
+model name	: Intel(R) Core(TM) i7-8550U CPU @ 1.80GHz
+stepping	: 10
+microcode	: 0xca
+cpu MHz		: 3135.279
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single pti ssbd ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d
+bugs		: cpu_meltdown spectre_v1 spectre_v2 spec_store_bypass l1tf mds swapgs itlb_multihit
+bogomips	: 3984.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 7925408k(106648k free), swap 2097148k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.212-b4-5784211) for linux-amd64 JRE (1.8.0_212-release-1586-b4-5784211), built by "android-build" with gcc 4.8
+
+time: Thu Apr 16 18:10:40 2020
+timezone: EAT
+elapsed time: 2 seconds (0d 0h 0m 2s)
+

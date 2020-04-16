@@ -68,20 +68,6 @@
                             android:gravity="center_vertical"
                             android:orientation="horizontal">
 
-                            <!--                        <androidx.appcompat.widget.AppCompatImageView-->
-                            <!--                            android:id="@+id/img_profile_flag"-->
-                            <!--                            android:layout_width="@dimen/_26dp"-->
-                            <!--                            android:layout_height="@dimen/_18dp"-->
-                            <!--                            android:layout_gravity="center_vertical"-->
-                            <!--                            android:gravity="center_vertical"-->
-                            <!--                            />-->
-
-                            <!--                        <androidx.appcompat.widget.AppCompatImageView-->
-                            <!--                            android:layout_width="wrap_content"-->
-                            <!--                            android:layout_height="wrap_content"-->
-                            <!--                            android:layout_gravity="center_vertical"-->
-                            <!--                            android:gravity="center"-->
-                            <!--                            app:srcCompat="@drawable/ic_arrow_drop_down_black_24dp" />-->
 
                         </LinearLayout>
 
@@ -154,55 +140,6 @@
                         android:layout_height="wrap_content"
                         android:background="@color/white">
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="@dimen/_110dp"
-                            android:background="@color/colorPrimary" />
-
-<!--                        <RelativeLayout-->
-<!--                            android:id="@+id/my_account_layout"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="wrap_content"-->
-<!--                            android:paddingLeft="@dimen/_16dp"-->
-<!--                            android:paddingRight="@dimen/_16dp">-->
-
-<!--                            <androidx.appcompat.widget.AppCompatTextView-->
-<!--                                android:id="@+id/txt_your_account"-->
-<!--                                android:layout_width="wrap_content"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:layout_alignParentStart="true"-->
-<!--                                android:layout_alignParentLeft="true"-->
-<!--                                android:layout_centerVertical="true"-->
-<!--                                android:fontFamily="@font/gf_gilory_semibold"-->
-<!--                                android:text="@string/SCR_LBL_MY_ACCOUNTS"-->
-<!--                                android:textAllCaps="true"-->
-<!--                                android:textColor="@color/white"-->
-<!--                                android:textSize="@dimen/_11sp" />-->
-
-<!--                            <androidx.appcompat.widget.AppCompatTextView-->
-<!--                                android:id="@+id/txt_view_all"-->
-<!--                                android:layout_width="wrap_content"-->
-<!--                                android:layout_height="wrap_content"-->
-<!--                                android:layout_alignParentEnd="true"-->
-<!--                                android:layout_alignParentRight="true"-->
-<!--                                android:layout_centerVertical="true"-->
-<!--                                android:fontFamily="@font/gf_gilory_semibold"-->
-<!--                                android:paddingLeft="@dimen/_10dp"-->
-<!--                                android:paddingTop="@dimen/_4dp"-->
-<!--                                android:paddingBottom="@dimen/_10dp"-->
-<!--                                android:text="@string/SCR_LBL_DASHBOARD_HEADING_VIEW_ALL_UNDER_LINE"-->
-<!--                                android:textAllCaps="true"-->
-<!--                                android:textColor="@color/white"-->
-<!--                                android:textSize="@dimen/_10sp" />-->
-
-<!--                        </RelativeLayout>-->
-
-<!--                        <androidx.viewpager.widget.ViewPager-->
-<!--                            android:id="@+id/account_view_pager"-->
-<!--                            android:layout_width="match_parent"-->
-<!--                            android:layout_height="@dimen/_150dp"-->
-<!--                            android:layout_below="@+id/my_account_layout" />-->
-
                     </RelativeLayout>
 
                     <LinearLayout
@@ -225,7 +162,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/gf_gilory_semibold"
-                                android:text="@string/SCR_LBL_QUICK_TRANSACTION"
+                                android:text="@string/SCR_LBL_HOME_YOUR_RIDES"
                                 android:textAllCaps="true"
                                 android:textColor="@color/_0082BA"
                                 android:textSize="@dimen/_13sp" />
@@ -279,16 +216,6 @@
                             android:paddingBottom="@dimen/_16dp"
                             android:layout_height="wrap_content">
 
-                            <androidx.appcompat.widget.AppCompatTextView
-                                android:id="@+id/txt_your_activities"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/gf_gilory_semibold"
-                                android:text="@string/SCR_LBL_YOUR_ACTIVITY"
-                                android:textAllCaps="true"
-                                android:textColor="@color/_0082BA"
-                                android:textSize="@dimen/_13sp" />
-
                             <androidx.appcompat.widget.AppCompatImageView
                                 android:id="@+id/txt_recent_event_down"
                                 android:layout_width="wrap_content"
@@ -321,15 +248,7 @@
                         android:padding="@dimen/_16dp"
                         android:visibility="gone">
 
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:id="@+id/txt_get_started"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/gf_gilory_semibold"
-                            android:text="@string/BTN_GET_STARTED"
-                            android:textAllCaps="true"
-                            android:textColor="@color/_0082BA"
-                            android:textSize="@dimen/_13sp" />
+
 
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
@@ -373,25 +292,6 @@
                                     android:layout_toEndOf="@+id/img_invite_friend"
                                     android:layout_toRightOf="@+id/img_invite_friend"
                                     android:orientation="vertical">
-
-                                    <androidx.appcompat.widget.AppCompatTextView
-                                        android:id="@+id/txt_invite_friend_title"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/gf_gilroy_medium"
-                                        android:text="@string/SCR_LBL_INVITE_AND_GET_MONEY"
-                                        android:textColor="@color/black"
-                                        android:textSize="@dimen/_14sp" />
-
-                                    <androidx.appcompat.widget.AppCompatTextView
-                                        android:id="@+id/txt_invite_friend_message"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="@dimen/_4dp"
-                                        android:fontFamily="@font/gf_gilroy_medium"
-                                        android:text="@string/SCR_LBL_SIGN_UP_AND_GET_MONEY"
-                                        android:textColor="@color/_4A4A4A"
-                                        android:textSize="@dimen/_10sp" />
 
                                 </LinearLayout>
 
@@ -444,25 +344,6 @@
                                     android:layout_toEndOf="@+id/img_share"
                                     android:layout_toRightOf="@+id/img_share"
                                     android:orientation="vertical">
-
-                                    <androidx.appcompat.widget.AppCompatTextView
-                                        android:id="@+id/txt_share_app_title"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@font/gf_gilroy_medium"
-                                        android:text="@string/SCR_LBL_SHARE_ECO_MOBILE"
-                                        android:textColor="@color/black"
-                                        android:textSize="@dimen/_14sp" />
-
-                                    <androidx.appcompat.widget.AppCompatTextView
-                                        android:id="@+id/txt_share_app_message"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_marginTop="@dimen/_4dp"
-                                        android:fontFamily="@font/gf_gilroy_medium"
-                                        android:text="@string/SCR_LBL_SHARE_ECO_MOBILE_DESCRIPTION"
-                                        android:textColor="@color/_4A4A4A"
-                                        android:textSize="@dimen/_10sp" />
 
                                 </LinearLayout>
 

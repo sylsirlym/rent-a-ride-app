@@ -10,7 +10,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 @Module
 class ApiModule {
-    private val BASE_URL = "https://raw.githubusercontent.com"
+    private val BASE_URL = "https://rent-a-ride.herokuapp.com/v1/"
 
     @Provides
     fun provideCountiesApi(): RentARideAPI {

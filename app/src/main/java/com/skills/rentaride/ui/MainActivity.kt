@@ -8,12 +8,9 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.gson.Gson
 import com.skills.rentaride.R
 import com.skills.rentaride.di.DaggerApiComponent
-import com.skills.rentaride.model.ProfileDTO
 import com.skills.rentaride.model.ResponseDTO
 import com.skills.rentaride.network.service.RentARideService
 import io.reactivex.Single
@@ -65,12 +62,8 @@ class MainActivity : AppCompatActivity() {
             Log.i(TAG, "Got here")
             val prof = data?.get(0)
 
-//            Log.i(TAG, prof.toString())
-//            val gson = Gson()
-//            val profileDetails = gson.fromJson(prof.toString(), ProfileDTO::class.java)
-//            Log.i(TAG, profileDetails.fname)
 
-            if (code == 200){
+            if (code == 200 || code ==213){
                 try {
                 Log.i(TAG, "Inside here")
                 val intent = Intent(baseContext, HomeActivity::class.java)

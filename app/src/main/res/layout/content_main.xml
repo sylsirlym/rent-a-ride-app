@@ -59,7 +59,7 @@
             android:autofillHints="254XXXXXXXXX"
             android:backgroundTint="@color/white_transparent_min"
             android:ems="10"
-            android:hint="@string/INPUT_TITLE_ENTER_MOBILE_NUMBER"
+            android:hint="@string/PLACEHOLDER_ENTER_MOBILE_NUMBER"
             android:inputType="phone"
             app:layout_constraintBottom_toTopOf="@+id/nextButton"
             app:layout_constraintEnd_toEndOf="parent"

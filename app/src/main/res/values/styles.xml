@@ -5,6 +5,10 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <!--        <item name="colorControlActivated"></item>-->
+        <!--        <item name="colorControlHighlight"></item>-->
+        <!--        <item name="colorButtonNormal"></item>-->
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -16,7 +20,7 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-<!--    <style name="AppTheme" parent="Theme.MaterialComponents.*">-->
-<!--        &lt;!&ndash; Add attributes here &ndash;&gt;-->
-<!--    </style>-->
+    <!--    <style name="AppTheme" parent="Theme.MaterialComponents.*">-->
+    <!--        &lt;!&ndash; Add attributes here &ndash;&gt;-->
+    <!--    </style>-->
 </resources>
