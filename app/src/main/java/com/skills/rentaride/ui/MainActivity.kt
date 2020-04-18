@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
                 Log.i(TAG, "Inside here 1")
 
                 intent.putExtra("profileDetails", prof.toString())
-                Log.i(TAG, "Inside here 2")
+                Log.i(TAG, "About to call Home Activity")
 
                 startActivity(intent)
             } catch (e: Exception){

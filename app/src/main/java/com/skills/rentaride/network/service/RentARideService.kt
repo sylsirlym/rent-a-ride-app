@@ -25,4 +25,8 @@ class RentARideService {
     fun getProfile(msisdn: String): Single<ResponseDTO> {
         return api.getProfile(msisdn)
     }
+
+    fun getLendTransactionHistory(msisdn: String): Single<ResponseDTO> {
+        return api.getLendTransactionHistory(msisdn)
+    }
 }
