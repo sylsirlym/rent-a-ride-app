@@ -1,6 +1,7 @@
 package com.skills.rentaride.model
 
 import com.google.gson.annotations.SerializedName
+import io.reactivex.Single
 
 data class ResponseDTO (
     @SerializedName("statusCode")
@@ -9,6 +10,15 @@ data class ResponseDTO (
     val statusMessage: String,
     @SerializedName("data")
     val data: MutableList<Any>?
+)
+
+data class Responses (
+    @SerializedName("statusCode")
+    val statusCode: Int,
+    @SerializedName("statusMessage")
+    val statusMessage: String,
+    @SerializedName("data")
+    val data: Single<List<LendTransactionDTO>>?
 )
 
 data class ProfileDTO(
@@ -24,7 +34,7 @@ data class ProfileDTO(
     val fname: String
 )
 
-data class RentTransactionDTO(
+data class LendTransactionDTO(
     @SerializedName("lendTransactionStatusID")
     val lendTransactionStatusID: Int,
     @SerializedName("lendItemTypeName")

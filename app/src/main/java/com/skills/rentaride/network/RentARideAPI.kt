@@ -1,6 +1,7 @@
 package com.skills.rentaride.network
 
 import com.skills.rentaride.model.ResponseDTO
+import com.skills.rentaride.model.Responses
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path

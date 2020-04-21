@@ -4,6 +4,7 @@ import com.skills.rentaride.network.service.RentARideService
 import com.skills.rentaride.ui.HomeActivity
 import com.skills.rentaride.ui.MainActivity
 import dagger.Component
+import com.skills.rentaride.viewmodel.ListViewModel
 
 @Component(modules = [ApiModule::class])
 interface ApiComponent {
@@ -11,5 +12,6 @@ interface ApiComponent {
     fun inject(service: RentARideService)
     fun inject(mainActivity: MainActivity)
     fun inject(homeActivity: HomeActivity)
+    fun inject(viewModel: ListViewModel)
 
 }

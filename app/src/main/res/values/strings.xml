@@ -31,5 +31,8 @@
     <string name="hello_home_second">Hello HomeSecondFragment. Arg: %1$s</string>
     <string name="hello_gallery_second">Hello GallerySecondFragment. Arg: %1$s</string>
     <string name="hello_slideshow_second">Hello SlideshowSecondFragment. Arg: %1$s</string>
+    <string name="item_type">item_type</string>
+    <string name="serial_number">serial_number</string>
+    <string name="error_while_processing">Error while processing</string>
 
 </resources>
