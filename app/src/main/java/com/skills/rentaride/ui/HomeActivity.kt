@@ -50,18 +50,21 @@ class HomeActivity : AppCompatActivity(){
             Log.i(TAG, profileDetails.fname)
             binding.profile=profileDetails;
 
+            Log.i(TAG, "Before View Model")
             viewModel = ViewModelProviders.of(this).get(ListViewModel::class.java)
             viewModel.refresh(profileDetails.msisdn)
 
+            Log.i(TAG, "Before apply")
             transact_grid_view.apply {
                 layoutManager = LinearLayoutManager(context)
                 adapter = lendHistoryListAdapter
             }
-
+            Log.i(TAG, "Before setOnRefreshListener")
             swiperefresh.setOnRefreshListener {
                 swiperefresh.isRefreshing = false
                 viewModel.refresh(profileDetails.msisdn)
             }
+            Log.i(TAG, "Before observeViewModel")
 
             this.observeViewModel()
 

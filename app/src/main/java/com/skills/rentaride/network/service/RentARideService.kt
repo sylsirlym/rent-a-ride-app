@@ -23,7 +23,7 @@ class RentARideService {
     }
 
     /**
-     * This function implements the service and gets the countries.
+     * This function implements the service and gets the user profile.
      */
     fun getProfile(msisdn: String): Single<ResponseDTO> {
         return api.getProfile(msisdn)
