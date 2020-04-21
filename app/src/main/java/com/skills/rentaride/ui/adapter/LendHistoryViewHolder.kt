@@ -21,7 +21,7 @@ class LendHistoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
     private val progressDrawable = getProgressDrawable(view.context)
 
 
-    fun bind(lendTransactionDTO: LendTransactionDTO) {
+    fun bindItems(lendTransactionDTO: LendTransactionDTO) {
         itemType.text = lendTransactionDTO.lendItemTypeName
         serialNumber.text = lendTransactionDTO.serialNumber
 //        imageView.loadImage(country.flag,progressDrawable)

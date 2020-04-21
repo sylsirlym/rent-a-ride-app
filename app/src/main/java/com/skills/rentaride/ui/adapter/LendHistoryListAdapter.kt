@@ -5,7 +5,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.skills.rentaride.R
 import com.skills.rentaride.model.LendTransactionDTO
-import kotlinx.android.synthetic.main.item_history.view.*
 
 class LendHistoryListAdapter (var lendTransactionHistory: ArrayList<LendTransactionDTO>) : RecyclerView.Adapter<LendHistoryViewHolder>() {
 
@@ -19,7 +18,7 @@ class LendHistoryListAdapter (var lendTransactionHistory: ArrayList<LendTransact
     override fun getItemCount(): Int =  lendTransactionHistory.size
 
     override fun onBindViewHolder(holder: LendHistoryViewHolder, position: Int) {
-        holder.bind(lendTransactionHistory[position])
+        holder.bindItems(lendTransactionHistory[position])
     }
 
     fun updateLendTransactionHistory(newTransactions: List<LendTransactionDTO>){
