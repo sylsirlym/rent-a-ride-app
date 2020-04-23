@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.skills.rentaride.R
+import com.skills.rentaride.RegisterActivity
 import com.skills.rentaride.di.DaggerApiComponent
 import com.skills.rentaride.model.ResponseDTO
 import com.skills.rentaride.network.service.RentARideService
@@ -78,6 +79,21 @@ class MainActivity : AppCompatActivity() {
                     Log.wtf(TAG,e)
 
         }
+            } else {
+                try {
+                    Log.i(TAG, "Use is not registered")
+                    val intent = Intent(baseContext, RegisterActivity::class.java)
+                    Log.i(TAG, "Inside here 1")
+
+                    intent.putExtra("msisdn", text.toString())
+                    Log.i(TAG, "About to call Register Activity")
+
+                    startActivity(intent)
+                } catch (e: Exception){
+                    Log.e(TAG,"Got Error"+e.message)
+                    Log.wtf(TAG,e)
+
+                }
             }
         }
     }

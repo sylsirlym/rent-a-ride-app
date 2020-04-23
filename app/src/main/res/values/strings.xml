@@ -34,5 +34,15 @@
     <string name="item_type">item_type</string>
     <string name="serial_number">serial_number</string>
     <string name="error_while_processing">Error while processing</string>
+    <string name="LBL_FIRST_NAME">First Name</string>
+    <string name="LBL_OTHER_NAMES">Other Names</string>
+    <string name="LBL_ENTER_EMAIL">Email Address</string>
+    <string name="LBL_ID_NUMBER">ID Number</string>
+    <string name="LBL_ID_TYPE">ID Type</string>
+    <string name="LBL_MALE">Male</string>
+    <string name="LBL_FEMALE">Female</string>
+    <string name="LBL_GENDER">Gender</string>
+    <string name="LBL_REGISTER">Register</string>
+    <string name="LBL_DOB">Date Of Birth</string>
 
 </resources>

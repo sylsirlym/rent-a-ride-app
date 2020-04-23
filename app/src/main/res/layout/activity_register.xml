@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="@dimen/_30dp"
+    tools:context=".RegisterActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/round_layout">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sp"
+            android:layout_marginStart="@dimen/_10sp"
+            android:layout_marginEnd="@dimen/_10sp"
+            android:textColorHint="@color/colorPrimary"
+            app:startIconDrawable="@drawable/ic_baseline_perm_identity_24"
+            app:startIconContentDescription="icon"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/LBL_FIRST_NAME"
+                android:ems="20"
+                android:inputType="text"
+                android:textSize="@dimen/_15sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sp"
+            android:layout_marginStart="@dimen/_10sp"
+            android:layout_marginEnd="@dimen/_10sp"
+            android:textColorHint="@color/colorPrimary"
+            app:startIconDrawable="@drawable/ic_baseline_perm_identity_24"
+            app:startIconContentDescription="icon"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/LBL_OTHER_NAMES"
+                android:ems="20"
+                android:inputType="text"
+                android:textSize="@dimen/_15sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sp"
+            android:layout_marginStart="@dimen/_10sp"
+            android:layout_marginEnd="@dimen/_10sp"
+            android:textColorHint="@color/colorPrimary"
+            app:startIconDrawable="@drawable/ic_baseline_email_24"
+            app:startIconContentDescription="icon"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/LBL_ENTER_EMAIL"
+                android:ems="20"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/_15sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sp"
+            android:layout_marginStart="@dimen/_10sp"
+            android:layout_marginEnd="@dimen/_10sp"
+            android:textColorHint="@color/colorPrimary"
+            app:startIconDrawable="@drawable/ic_id_card_36"
+            app:startIconContentDescription="icon"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/idType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/LBL_ID_TYPE"
+            android:inputType="none"
+            android:background="@color/white_transparent_min"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/msisdn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sp"
+            android:layout_marginStart="@dimen/_10sp"
+            android:layout_marginEnd="@dimen/_10sp"
+            android:textColorHint="@color/colorPrimary"
+            app:startIconDrawable="@drawable/ic_id_card_36"
+            app:startIconContentDescription="icon"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/LBL_ID_NUMBER"
+                android:ems="20"
+                android:inputType="number"
+                android:textSize="@dimen/_15sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dateL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sp"
+            android:layout_marginStart="@dimen/_10sp"
+            android:layout_marginEnd="@dimen/_10sp"
+            android:textColorHint="@color/colorPrimary"
+            app:startIconDrawable="@drawable/ic_calender"
+            app:startIconContentDescription="icon"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/LBL_DOB"
+                android:ems="20"
+                android:inputType="date"
+                android:textSize="@dimen/_15sp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/_10sp"
+            android:layout_marginStart="@dimen/_10sp"
+            android:layout_marginEnd="@dimen/_10sp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/LBL_GENDER"
+                android:textSize="@dimen/_20sp"
+                android:textColor="@color/colorPrimary"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/LBL_MALE"
+                android:textSize="@dimen/_20sp"
+                android:textColor="@color/colorPrimary"
+                android:buttonTint="@color/colorPrimary"
+                android:layout_marginStart="@dimen/_20sp"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/LBL_FEMALE"
+                android:textSize="@dimen/_20sp"
+                android:textColor="@color/colorPrimary"
+                android:buttonTint="@color/colorPrimary"
+                android:layout_marginStart="@dimen/_20sp">
+            </RadioButton>
+        </RadioGroup>
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:layout_marginTop="@dimen/_40dp"
+            android:layout_marginBottom="@dimen/_40dp"
+            android:text="@string/LBL_REGISTER"
+            android:layout_marginStart="@dimen/_20sp"
+            android:layout_marginEnd="@dimen/_20sp"
+            />
+
+        <EditText
+            android:id="@+id/editTextDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date" />
+
+    </LinearLayout>
+</LinearLayout>
