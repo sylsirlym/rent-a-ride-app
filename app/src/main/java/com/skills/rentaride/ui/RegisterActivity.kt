@@ -1,4 +1,4 @@
-package com.skills.rentaride
+package com.skills.rentaride.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -7,7 +7,7 @@ import android.widget.AutoCompleteTextView
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.datepicker.MaterialDatePicker
-import com.google.android.material.textfield.TextInputLayout
+import com.skills.rentaride.R
 import java.util.*
 
 

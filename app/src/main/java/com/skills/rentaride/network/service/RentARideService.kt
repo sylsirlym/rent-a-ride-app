@@ -1,13 +1,13 @@
 package com.skills.rentaride.network.service
 
 
+import android.content.Context
+import android.net.ConnectivityManager
+import android.net.NetworkInfo
 import android.util.Log
 import com.skills.rentaride.di.DaggerApiComponent
-import com.skills.rentaride.model.LendTransactionDTO
 import com.skills.rentaride.model.ResponseDTO
-import com.skills.rentaride.model.Responses
 import com.skills.rentaride.network.RentARideAPI
-import io.reactivex.Observable
 import io.reactivex.Single
 import javax.inject.Inject
 
@@ -35,5 +35,12 @@ class RentARideService {
         Log.i(TAG, "Inside getLendTransactionHistory"+responseDTO.blockingGet().statusMessage)
         Log.i(TAG, "Inside getLendTransactionHistory"+responseDTO.blockingGet().data.toString())
         return responseDTO
+    }
+
+    fun isNetworkAvailable(context: Context) : Boolean {
+        Log.i(TAG, "Inside isNetworkAvailable ##################################################################")
+        val cm = context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+        val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
+        return activeNetwork?.isConnectedOrConnecting == true;
     }
 }
