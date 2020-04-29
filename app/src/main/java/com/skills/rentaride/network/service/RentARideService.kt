@@ -7,8 +7,11 @@ import android.net.NetworkInfo
 import android.util.Log
 import com.skills.rentaride.di.DaggerApiComponent
 import com.skills.rentaride.model.ResponseDTO
+import com.skills.rentaride.model.UserDTO
 import com.skills.rentaride.network.RentARideAPI
 import io.reactivex.Single
+import okhttp3.RequestBody
+import retrofit2.Call
 import javax.inject.Inject
 
 
@@ -35,6 +38,11 @@ class RentARideService {
         Log.i(TAG, "Inside getLendTransactionHistory"+responseDTO.blockingGet().statusMessage)
         Log.i(TAG, "Inside getLendTransactionHistory"+responseDTO.blockingGet().data.toString())
         return responseDTO
+    }
+
+    fun createProfile(requestBody: RequestBody): Call<ResponseDTO> {
+        Log.i(TAG, "Inside createProfile ############################################# $requestBody")
+        return api.createUser(requestBody)
     }
 
     fun isNetworkAvailable(context: Context) : Boolean {

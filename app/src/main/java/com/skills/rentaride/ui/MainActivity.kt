@@ -14,6 +14,8 @@ import com.skills.rentaride.di.DaggerApiComponent
 import com.skills.rentaride.model.ResponseDTO
 import com.skills.rentaride.network.service.RentARideService
 import io.reactivex.Single
+import java.util.regex.Matcher
+import java.util.regex.Pattern
 import javax.inject.Inject
 
 
@@ -43,18 +45,15 @@ class MainActivity : AppCompatActivity() {
         val msisdnVar = findViewById<EditText>(R.id.editMsisdn)
         val nextBut = findViewById<Button>(R.id.nextButton)
 
-        //Update the Hint
-        msisdnVar.setOnClickListener{
-            msisdnVar.setHint("254XXXXXXXXX")
-        }
-
         // Setting On Click Listener
         nextBut.setOnClickListener {
-
+            val text = msisdnVar.text.toString()
+            if (!isValidMsisdn(text)) {
+                msisdnVar.error = "Invalid Mobile Number"
+            } else{
             val dto : Single<ResponseDTO>
             // Getting the user input
-            val text = msisdnVar.text
-            dto = rentARideService.getProfile(text.toString())
+            dto = rentARideService.getProfile("254$text")
             val resp = dto.blockingGet().statusMessage
             val code = dto.blockingGet().statusCode
             val data = dto.blockingGet().data
@@ -95,6 +94,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -112,4 +112,12 @@ class MainActivity : AppCompatActivity() {
             else -> super.onOptionsItemSelected(item)
         }
     }
+
+    private fun isValidMsisdn(msisdn: String): Boolean {
+        val MSISDN_REGEX = ("^[0-9]{9}?\$")
+        val pattern: Pattern = Pattern.compile(MSISDN_REGEX)
+        val matcher: Matcher = pattern.matcher(msisdn)
+        return matcher.matches()
+    }
+
 }

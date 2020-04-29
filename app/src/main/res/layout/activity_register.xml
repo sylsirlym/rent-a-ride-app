@@ -19,7 +19,6 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/fname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sp"
@@ -31,6 +30,7 @@
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <EditText
+                android:id="@+id/fname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/LBL_FIRST_NAME"
@@ -40,7 +40,6 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/lname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sp"
@@ -52,6 +51,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <EditText
+                android:id="@+id/lname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/LBL_OTHER_NAMES"
@@ -61,7 +61,6 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sp"
@@ -73,6 +72,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <EditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/LBL_ENTER_EMAIL"
@@ -105,7 +105,6 @@
     </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/msisdn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/_10sp"
@@ -117,6 +116,7 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <EditText
+                android:id="@+id/idNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/LBL_ID_NUMBER"
@@ -141,6 +141,7 @@
                 android:id="@+id/date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:focusable="false"
                 android:hint="@string/LBL_DOB"
                 android:ems="20"
                 android:inputType="date"
@@ -190,13 +191,5 @@
             android:layout_marginStart="@dimen/_20sp"
             android:layout_marginEnd="@dimen/_20sp"
             />
-
-        <EditText
-            android:id="@+id/editTextDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date" />
-
     </LinearLayout>
 </LinearLayout>

@@ -1,71 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/backg"
+    android:backgroundTint="#90A9A9A9"
+    android:backgroundTintMode="src_over"
+    android:gravity="center"
     app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_uptext"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="@dimen/_54dp"
-        android:layout_marginBottom="612dp"
-        android:fontFamily="@font/gf_gilroy_bold"
-        android:gravity="center_horizontal"
-        android:padding="@dimen/_54dp"
-        android:text="@string/SCR_LBL_MAIN_GIVE_US_YOUR_NUMBER"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="@dimen/_10sp"
-        tools:ignore="MissingConstraints" />
-    <Button
-        android:id="@+id/nextButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="61dp"
-        android:text="@string/BTN_NEXT"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/input_layout_msisdn" />
+        android:orientation="vertical"
+        android:background="@drawable/round_layout">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/input_layout_msisdn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="100dp">
-
-        <EditText
-            android:id="@+id/editMsisdn"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="25dp"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="90dp"
-            android:layout_marginEnd="25dp"
-            android:layout_marginRight="25dp"
-            android:layout_marginBottom="440dp"
-            android:autofillHints="254XXXXXXXXX"
-            android:backgroundTint="@color/white_transparent_min"
-            android:ems="10"
-            android:hint="@string/PLACEHOLDER_ENTER_MOBILE_NUMBER"
-            android:inputType="phone"
-            app:layout_constraintBottom_toTopOf="@+id/nextButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginTop="@dimen/_10sp"
+            android:layout_marginStart="@dimen/_10sp"
+            android:layout_marginEnd="@dimen/_10sp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/txt_uptext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/SCR_LBL_MAIN_GIVE_US_YOUR_NUMBER"
+                android:textSize="@dimen/_20sp"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                android:textStyle="bold" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sp"
+            android:textColorHint="@color/colorPrimary"
+            app:startIconDrawable="@drawable/ic_baseline_account_box_24"
+            app:startIconContentDescription="icon"
+            app:prefixText="+254 "
+            app:prefixTextColor="@color/colorPrimary"
+            app:helperTextEnabled="true"
+            app:helperText="+2547XXXXXXXX"
+            app:helperTextTextColor="@color/colorPrimary"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <EditText
+                android:id="@+id/editMsisdn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/PLACEHOLDER_ENTER_MOBILE_NUMBER"
+                android:ems="20"
+                android:inputType="phone"
+                android:textSize="@dimen/_15sp"
+                android:textColor="@color/colorPrimary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:layout_marginTop="@dimen/_40dp"
+            android:layout_marginBottom="@dimen/_40dp"
+            android:text="@string/BTN_NEXT"
+            android:layout_marginStart="@dimen/_20sp"
+            android:layout_marginEnd="@dimen/_20sp"
+            />
+    </LinearLayout>
+</LinearLayout>

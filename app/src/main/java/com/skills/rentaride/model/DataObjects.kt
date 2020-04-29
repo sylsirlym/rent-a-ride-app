@@ -46,3 +46,13 @@ data class LendTransactionDTO(
     @SerializedName("lendTransactionStatus")
     val lendTransactionStatus: String
 )
+
+data class UserDTO(
+    val msisdn:String,
+    val fname:String,
+    val otherNames:String,
+    val emailAddress:String,
+    val dateOfBirth:String,
+    val identificationNumber:String,
+    val identificationType:Int
+)

@@ -1,23 +1,45 @@
 package com.skills.rentaride.ui
 
+import android.annotation.SuppressLint
+import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.ArrayAdapter
-import android.widget.AutoCompleteTextView
-import android.widget.EditText
+import android.view.View
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.datepicker.MaterialDatePicker
 import com.skills.rentaride.R
+import com.skills.rentaride.di.DaggerApiComponent
+import com.skills.rentaride.model.ResponseDTO
+import com.skills.rentaride.model.UserDTO
+import com.skills.rentaride.network.service.RentARideService
+import kotlinx.android.synthetic.main.activity_register.*
+import retrofit2.Callback
+import okhttp3.MediaType
+import okhttp3.RequestBody
+import org.json.JSONObject
+import retrofit2.Call
+import retrofit2.Response
+import java.text.SimpleDateFormat
 import java.util.*
+import javax.inject.Inject
 
 
 class RegisterActivity : AppCompatActivity() {
 
-    val TAG = "RegisterActivity"
-    val COUNTRIES =
+    private val TAG = "RegisterActivity"
+    private val COUNTRIES =
         arrayOf("Registration Number", "Staff ID")
+    private var cal = Calendar.getInstance()
 
-    var cal = Calendar.getInstance()
+
+    @Inject
+    lateinit var rentARideService: RentARideService
+
+    init {
+        DaggerApiComponent.create()
+            .inject(this)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,33 +51,91 @@ class RegisterActivity : AppCompatActivity() {
             COUNTRIES
         )
 
+        // DROPDOWN ---------------------------------------------------------------------------------
         val idTypeDropDown: AutoCompleteTextView = findViewById(R.id.idType)
         idTypeDropDown.setAdapter(adapter)
-        try {
-            val dateField = findViewById<EditText>(R.id.date)
-            //Date Picker
-            val builder = MaterialDatePicker.Builder.datePicker()
-            dateField.setOnClickListener{
-                Log.d(TAG, "Date Picker")
 
-                val picker = builder.build()
-
-                picker.show(supportFragmentManager, picker.toString())
-                picker.addOnNegativeButtonClickListener {
-                    Log.d(TAG, "Dialog Negative Button was clicked")
-                }
-
-                picker.addOnPositiveButtonClickListener {
-                    Log.d(TAG, "Date String = ${picker.headerText}:: Date epoch value = ${it}")
-                }
+        // DATE PICKER ------------------------------------------------------------------------------
+        val dateField = this.date
+        // create an OnDateSetListener
+        val dateSetListener =
+            DatePickerDialog.OnDateSetListener {
+                    view,
+                    year,
+                    monthOfYear,
+                    dayOfMonth ->
+                cal.set(Calendar.YEAR, year)
+                cal.set(Calendar.MONTH, monthOfYear)
+                cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+                updateDateInView(dateField)
             }
-        } catch (e: Exception){
-            Log.e(TAG,"Got Error"+e.message)
-            Log.wtf(TAG,e)
+
+        // when you click on the button, show DatePickerDialog that is set with OnDateSetListener
+        dateField!!.setOnClickListener {
+            DatePickerDialog(
+                this@RegisterActivity,
+                dateSetListener,
+                // set DatePickerDialog to point to today's date when it loads up
+                cal.get(Calendar.YEAR),
+                cal.get(Calendar.MONTH),
+                cal.get(Calendar.DAY_OF_MONTH)
+            ).show()
+        }
+
+        val regButton = findViewById<Button>(R.id.button)
+        val fname = findViewById<EditText>(R.id.fname)
+        val lname = findViewById<EditText>(R.id.lname)
+        val email = findViewById<EditText>(R.id.email)
+        val idNumber = findViewById<EditText>(R.id.idNumber)
+//        val idNo = this.idNumber
+        regButton.setOnClickListener{
+            Log.i(TAG,"BUTTON CLICK###############################################")
+            val json = JSONObject()
+            json.put("msisdn",intent.getStringExtra("msisdn")!!)
+            json.put("fname",fname.text.toString())
+            json.put("otherNames",lname.text.toString())
+            json.put("emailAddress",email.text.toString())
+            json.put("dateOfBirth",dateField.text.toString())
+            json.put("identificationNumber",idNumber.text.toString())
+            json.put("identificationType",1)
+           val requestBody: RequestBody = RequestBody.create(MediaType.parse("application/json"), json.toString())
+            val responseDTO = rentARideService.createProfile(requestBody)
+            responseDTO.enqueue(
+                object : Callback<ResponseDTO> {
+                    @SuppressLint("CommitPrefEdits")
+                    override fun onResponse(call: Call<ResponseDTO>?, response: Response<ResponseDTO>?) {
+                        if (response!!.isSuccessful) {
+                            Log.i(TAG,"Succesful")
+
+                        }
+                        navigate(response)
+                    }
+
+                    override fun onFailure(call: Call<ResponseDTO>, t: Throwable) {
+                        Log.i(TAG,"Failed to register")
+                    }
+                })
 
         }
 
+    }
 
+    private fun updateDateInView(dateField: EditText) {
+        val myFormat = "yyyy-MM-dd" // 2003-05-07
+        val sdf = SimpleDateFormat(myFormat, Locale.US)
+        dateField.setText(sdf.format(cal.getTime()))
+    }
+
+    private fun navigate(response: Response<ResponseDTO>){
+        try {
+            val intent = Intent(baseContext, SuccessActivity::class.java)
+            intent.putExtra("response", response.body().toString())
+            Log.i(TAG,"Moving to SuccessActivity")
+            startActivity(intent)
+        } catch (e : Exception){
+            Log.e(TAG,"Exception :"+e.message)
+            Log.wtf(TAG, e)
+        }
     }
 
 }
