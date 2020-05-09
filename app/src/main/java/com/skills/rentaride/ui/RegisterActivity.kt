@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.Gson
 import com.skills.rentaride.R
 import com.skills.rentaride.di.DaggerApiComponent
 import com.skills.rentaride.model.ResponseDTO
@@ -106,13 +107,14 @@ class RegisterActivity : AppCompatActivity() {
                     override fun onResponse(call: Call<ResponseDTO>?, response: Response<ResponseDTO>?) {
                         if (response!!.isSuccessful) {
                             Log.i(TAG,"Succesful")
-
                         }
                         navigate(response)
                     }
 
                     override fun onFailure(call: Call<ResponseDTO>, t: Throwable) {
                         Log.i(TAG,"Failed to register")
+                        Log.e(TAG,"Expection " +t.message)
+                        Toast.makeText(this@RegisterActivity, R.string.LBL_CHECK_CONNECTION, Toast.LENGTH_SHORT).show();
                     }
                 })
 
@@ -129,7 +131,9 @@ class RegisterActivity : AppCompatActivity() {
     private fun navigate(response: Response<ResponseDTO>){
         try {
             val intent = Intent(baseContext, SuccessActivity::class.java)
-            intent.putExtra("response", response.body().toString())
+            val gson = Gson()
+            val jsonString = gson.toJson(response.body())
+            intent.putExtra("response", jsonString)
             Log.i(TAG,"Moving to SuccessActivity")
             startActivity(intent)
         } catch (e : Exception){

@@ -45,4 +45,6 @@
     <string name="LBL_REGISTER">Register</string>
     <string name="LBL_DOB">Date Of Birth</string>
 
+    <string name="LBL_CHECK_CONNECTION">Please Check your internet connection and try again!</string>
+
 </resources>

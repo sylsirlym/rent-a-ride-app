@@ -1,5 +1,6 @@
 package com.skills.rentaride.ui
 
+import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import android.os.StrictMode
@@ -13,6 +14,7 @@ import com.skills.rentaride.R
 import com.skills.rentaride.di.DaggerApiComponent
 import com.skills.rentaride.model.ResponseDTO
 import com.skills.rentaride.network.service.RentARideService
+import com.skills.rentaride.utils.MyApplication
 import io.reactivex.Single
 import java.util.regex.Matcher
 import java.util.regex.Pattern
@@ -48,6 +50,9 @@ class MainActivity : AppCompatActivity() {
         // Setting On Click Listener
         nextBut.setOnClickListener {
             val text = msisdnVar.text.toString()
+            //set value of global var used getApplication
+            var mApp = MyApplication()
+            mApp.setMsisdn(text)
             if (!isValidMsisdn(text)) {
                 msisdnVar.error = "Invalid Mobile Number"
             } else{
