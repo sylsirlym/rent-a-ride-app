@@ -1,5 +1,6 @@
 package com.skills.rentaride.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -10,7 +11,7 @@ import androidx.core.content.ContextCompat
 import com.google.gson.Gson
 import com.skills.rentaride.R
 import com.skills.rentaride.model.ResponseDTO
-import com.skills.rentaride.utils.MyApplication
+import com.skills.rentaride.utils.SharedPrefManager
 import kotlinx.android.synthetic.main.success.*
 
 
@@ -45,11 +46,8 @@ class SuccessActivity : AppCompatActivity() {
                 layout.setBackground(ContextCompat.getDrawable(this, image))
             }
 
-            //get value of global var used getApplication
-            var mApp = MyApplication()
-            var strGlobalVar = mApp.globalVar
-
-            Toast.makeText(this, strGlobalVar, Toast.LENGTH_LONG).show()
+            val intent = Intent(baseContext, HomeActivity::class.java)
+            startActivity(intent)
 
         } catch (ex :Exception){
             Log.e("TAG", "Exception "+ex.message)

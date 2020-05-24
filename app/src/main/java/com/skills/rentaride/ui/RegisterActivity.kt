@@ -14,6 +14,7 @@ import com.skills.rentaride.di.DaggerApiComponent
 import com.skills.rentaride.model.ResponseDTO
 import com.skills.rentaride.model.UserDTO
 import com.skills.rentaride.network.service.RentARideService
+import com.skills.rentaride.utils.SharedPrefManager
 import kotlinx.android.synthetic.main.activity_register.*
 import retrofit2.Callback
 import okhttp3.MediaType
@@ -134,6 +135,10 @@ class RegisterActivity : AppCompatActivity() {
             val gson = Gson()
             val jsonString = gson.toJson(response.body())
             intent.putExtra("response", jsonString)
+
+            val prof = response.body()?.data!![0]
+            SharedPrefManager(this@RegisterActivity).getSharedPrefManager(this@RegisterActivity)!!
+                .setString("profile", prof.toString())
             Log.i(TAG,"Moving to SuccessActivity")
             startActivity(intent)
         } catch (e : Exception){

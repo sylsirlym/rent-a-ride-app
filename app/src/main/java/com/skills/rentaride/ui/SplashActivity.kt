@@ -1,6 +1,5 @@
 package com.skills.rentaride.ui
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -13,6 +12,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import com.skills.rentaride.R
 import com.skills.rentaride.di.DaggerApiComponent
 import com.skills.rentaride.network.service.RentARideService
+import com.skills.rentaride.utils.SharedPrefManager
 import javax.inject.Inject
 
 class SplashActivity : AppCompatActivity() {
@@ -37,7 +37,12 @@ class SplashActivity : AppCompatActivity() {
             override fun run() {
                 try {
                     sleep(3000)
-                    val intent = Intent(baseContext, MainActivity::class.java)
+                    val profile: String = SharedPrefManager(this@SplashActivity).getSharedPrefManager(this@SplashActivity)!!.getString("profile")
+                    var intent = Intent(baseContext, MainActivity::class.java)
+                    if (profile.isNotBlank()){
+                        Log.i(TAG, "Retrieved Profile: $profile");
+                        intent = Intent(baseContext, HomeActivity::class.java)
+                    }
                     startActivity(intent)
                 } catch (e: Exception) {
                     e.printStackTrace()

@@ -19,6 +19,7 @@ import com.skills.rentaride.ui.adapter.LendHistoryListAdapter
 import com.skills.rentaride.viewmodel.ListViewModel
 import androidx.lifecycle.Observer
 import com.skills.rentaride.model.LendTransactionDTO
+import com.skills.rentaride.utils.SharedPrefManager
 import io.reactivex.Single
 import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
@@ -44,7 +45,9 @@ class HomeActivity : AppCompatActivity(){
             this, R.layout.fragment_home)
 
         try {
-            val profile = intent.getStringExtra("profileDetails")
+            val profile: String = SharedPrefManager(this@HomeActivity).getSharedPrefManager(this@HomeActivity)!!.getString("profile")
+
+//            val profile = intent.getStringExtra("profileDetails")
             val gson = Gson()
             val profileDetails = gson.fromJson(profile, ProfileDTO::class.java)
             //Bind Profile Details

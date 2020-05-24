@@ -1,6 +1,5 @@
 package com.skills.rentaride.ui
 
-import android.app.Application
 import android.content.Intent
 import android.os.Bundle
 import android.os.StrictMode
@@ -14,7 +13,7 @@ import com.skills.rentaride.R
 import com.skills.rentaride.di.DaggerApiComponent
 import com.skills.rentaride.model.ResponseDTO
 import com.skills.rentaride.network.service.RentARideService
-import com.skills.rentaride.utils.MyApplication
+import com.skills.rentaride.utils.SharedPrefManager
 import io.reactivex.Single
 import java.util.regex.Matcher
 import java.util.regex.Pattern
@@ -24,6 +23,7 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
 
     private val TAG = "MainActivity"
+
     // Get the countries service.
     @Inject
     lateinit var rentARideService: RentARideService
@@ -50,55 +50,54 @@ class MainActivity : AppCompatActivity() {
         // Setting On Click Listener
         nextBut.setOnClickListener {
             val text = msisdnVar.text.toString()
-            //set value of global var used getApplication
-            var mApp = MyApplication()
-            mApp.setMsisdn(text)
             if (!isValidMsisdn(text)) {
                 msisdnVar.error = "Invalid Mobile Number"
-            } else{
-            val dto : Single<ResponseDTO>
-            // Getting the user input
-            dto = rentARideService.getProfile("254$text")
-            val resp = dto.blockingGet().statusMessage
-            val code = dto.blockingGet().statusCode
-            val data = dto.blockingGet().data
-            //Wahala Here
-            Log.i(TAG, "Got here")
-            val prof = data?.get(0)
-
-
-            if (code == 200 || code ==213){
-                try {
-                Log.i(TAG, "Inside here")
-                val intent = Intent(baseContext, HomeActivity::class.java)
-                Log.i(TAG, "Inside here 1")
-
-                intent.putExtra("profileDetails", prof.toString())
-                Log.i(TAG, "About to call Home Activity")
-
-                startActivity(intent)
-            } catch (e: Exception){
-                    Log.e(TAG,"Got Error"+e.message)
-                    Log.wtf(TAG,e)
-
-        }
             } else {
-                try {
-                    Log.i(TAG, "Use is not registered")
-                    val intent = Intent(baseContext, RegisterActivity::class.java)
-                    Log.i(TAG, "Inside here 1")
+                val msisdn = "254$text"
+                SharedPrefManager(this@MainActivity).getSharedPrefManager(this@MainActivity)!!
+                    .setString("msisdn", msisdn)
+                val dto: Single<ResponseDTO>
+                // Getting the user input
+                dto = rentARideService.getProfile(msisdn)
+                val resp = dto.blockingGet().statusMessage
+                val code = dto.blockingGet().statusCode
+                val data = dto.blockingGet().data
+                //Wahala Here
+                Log.i(TAG, "Got here")
+                val prof = data?.get(0)
 
-                    intent.putExtra("msisdn", text.toString())
-                    Log.i(TAG, "About to call Register Activity")
+                if (code == 200 || code == 213) {
+                    try {
+                        Log.i(TAG, "Inside here")
+                        SharedPrefManager(this@MainActivity).getSharedPrefManager(this@MainActivity)!!
+                            .setString("profile", prof.toString())
+                        val intent = Intent(baseContext, HomeActivity::class.java)
+                        Log.i(TAG, "Inside here 1")
+                        Log.i(TAG, "About to call Home Activity")
 
-                    startActivity(intent)
-                } catch (e: Exception){
-                    Log.e(TAG,"Got Error"+e.message)
-                    Log.wtf(TAG,e)
+                        startActivity(intent)
+                    } catch (e: Exception) {
+                        Log.e(TAG, "Got Error" + e.message)
+                        Log.wtf(TAG, e)
 
+                    }
+                } else {
+                    try {
+                        Log.i(TAG, "Use is not registered")
+                        val intent = Intent(baseContext, RegisterActivity::class.java)
+                        Log.i(TAG, "Inside here 1")
+
+                        intent.putExtra("msisdn", text.toString())
+                        Log.i(TAG, "About to call Register Activity")
+
+                        startActivity(intent)
+                    } catch (e: Exception) {
+                        Log.e(TAG, "Got Error" + e.message)
+                        Log.wtf(TAG, e)
+
+                    }
                 }
             }
-        }
         }
     }
 
