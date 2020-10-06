@@ -47,5 +47,10 @@
 
     <string name="LBL_CHECK_CONNECTION">Please Check your internet connection and try again!</string>
     <string name="shared_pref_name">rentaride</string>
+    <string name="TAB_HOME">Home</string>
+    <string name="TAB_HISTORY">History</string>
+    <string name="TAB_RENT">Rent</string>
+    <string name="TAB_HELP">Help</string>
+    <string name="TAB_MORE">More</string>
 
 </resources>
