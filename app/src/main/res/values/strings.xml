@@ -12,8 +12,8 @@
     <string name="BTN_NEXT">Next</string>
 
     <!--    ##HOME-->
-    <string name="SCR_LBL_HOME_YOUR_RIDES">Your Rides</string>
-    <string name="SCR_LBL_WELCOME_BACK">Welcome back,</string>
+    <string name="SCR_LBL_HOME_YOUR_RIDES">Your Ride Rent History</string>
+    <string name="SCR_LBL_WELCOME_BACK">Nice to have you back. We missed you,</string>
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

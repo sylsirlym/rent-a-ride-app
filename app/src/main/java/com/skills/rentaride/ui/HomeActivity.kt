@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.LinearLayoutManager
 import butterknife.BindView
+import butterknife.ButterKnife
 import butterknife.OnClick
 import com.google.gson.Gson
 import com.skills.rentaride.R
@@ -33,62 +34,67 @@ class HomeActivity : AppCompatActivity(){
     lateinit var rentARideService: RentARideService
 
     @BindView(R.id.lay_tab_home)
-    var mTabHomeLayout: LinearLayout? = null
+    lateinit var mTabHomeLayout: LinearLayout
 
     @BindView(R.id.transaction_history)
-    var mTabTransactionLayout: LinearLayout? = null
+    lateinit var mTabTransactionLayout: LinearLayout
 
     @BindView(R.id.lay_tab_rent)
-    var mTabCardLayout: LinearLayout? = null
+    lateinit var mTabCardLayout: LinearLayout
 
     @BindView(R.id.lay_tab_help)
-    var mTabHelpLayout: LinearLayout? = null
+    lateinit var mTabHelpLayout: LinearLayout
 
     @BindView(R.id.lay_tab_more)
-    var mTabMoreLayout: LinearLayout? = null
+    lateinit var mTabMoreLayout: LinearLayout
 
-//--------------------------------------------------------------------------------------------------
-    var mImgHomeDot: AppCompatImageView? = findViewById(R.id.img_tab_dot_home)
+    //--------------------------------------------------------------------------------------------------
+    lateinit var mImgHomeDot: AppCompatImageView
+//    var mImgHomeDot: AppCompatImageView? = findViewById(R.id.img_tab_dot_home)
 
-    var mImgTransactionDot: AppCompatImageView? = findViewById(R.id.img_transaction_dot_history)
+     lateinit var mImgTransactionDot: AppCompatImageView
+//    var mImgTransactionDot: AppCompatImageView? = findViewById(R.id.img_transaction_dot_history)
 
-    var mImgCardDot: AppCompatImageView? = findViewById(R.id.img_tab_dot_rent)
+     lateinit var mImgCardDot: AppCompatImageView
+//    var mImgCardDot: AppCompatImageView? = findViewById(R.id.img_tab_dot_rent)
 
-    var mImgHelpDot: AppCompatImageView? = findViewById(R.id.img_tab_dot_help)
+     lateinit var mImgHelpDot: AppCompatImageView
+//    var mImgHelpDot: AppCompatImageView? = findViewById(R.id.img_tab_dot_help)
 
-    var mImgMoreDot: AppCompatImageView? = findViewById(R.id.img_tab_dot_more)
+     lateinit var mImgMoreDot: AppCompatImageView
+//    var mImgMoreDot: AppCompatImageView? = findViewById(R.id.img_tab_dot_more)
 
 //--------------------------------------------------------------------------------------------------
     @BindView(R.id.img_tab_home)
-    var mImgHome: AppCompatImageView? = null
+    lateinit var mImgHome: AppCompatImageView
 
     @BindView(R.id.img_transaction_history)
-    var mImgTransactionHistory: AppCompatImageView? = null
+    lateinit var mImgTransactionHistory: AppCompatImageView
 
     @BindView(R.id.img_tab_rent)
-    var mImgRent: AppCompatImageView? = null
+    lateinit var mImgRent: AppCompatImageView
 
     @BindView(R.id.img_tab_help)
-    var mImgHelp: AppCompatImageView? = null
+    lateinit var mImgHelp: AppCompatImageView
 
     @BindView(R.id.img_tab_more)
-    var mImgMore: AppCompatImageView? = null
+    lateinit var mImgMore: AppCompatImageView
 
-//--------------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------------
     @BindView(R.id.txt_tab_home)
-    var mHomeTextView: AppCompatTextView? = null
+    lateinit var mHomeTextView: AppCompatTextView
 
     @BindView(R.id.txt_transaction_history)
-    var mTransactionTextView: AppCompatTextView? = null
+    lateinit var mTransactionTextView: AppCompatTextView
 
     @BindView(R.id.txt_tab_search)
-    var mCardTextView: AppCompatTextView? = null
+    lateinit var mCardTextView: AppCompatTextView
 
     @BindView(R.id.txt_tab_help)
-    var mHelpTextView: AppCompatTextView? = null
+    lateinit var mHelpTextView: AppCompatTextView
 
     @BindView(R.id.txt_tab_more)
-    var mMoreTextView: AppCompatTextView? = null
+    lateinit var mMoreTextView: AppCompatTextView
 
 //--------------------------------------------------------------------------------------------------
 //    @BindView(R.id.txt_tab_notification)
@@ -123,6 +129,14 @@ class HomeActivity : AppCompatActivity(){
 //        setContentView(R.layout.fragment_home)
         val binding: FragmentHomeBinding = DataBindingUtil.setContentView(
             this, R.layout.fragment_home)
+        ButterKnife.bind(this)
+
+        mImgHomeDot = findViewById(R.id.img_tab_dot_home)
+        mImgTransactionDot = findViewById(R.id.img_transaction_dot_history)
+        mImgCardDot = findViewById(R.id.img_tab_dot_rent)
+        mImgHelpDot = findViewById(R.id.img_tab_dot_help)
+        mImgMoreDot = findViewById(R.id.img_tab_dot_more)
+
         changeBottomView(0)
 
         try {
@@ -211,11 +225,11 @@ class HomeActivity : AppCompatActivity(){
     private fun changeBottomView(index: Int) {
         when (index) {
             0 -> {
-                mImgHomeDot!!.visibility = View.INVISIBLE
-                mImgTransactionDot!!.visibility = View.INVISIBLE
-                mImgCardDot!!.visibility = View.INVISIBLE
-                mImgHelpDot!!.visibility = View.INVISIBLE
-                mImgMoreDot!!.visibility = View.INVISIBLE
+                mImgHomeDot.visibility = View.INVISIBLE
+                mImgTransactionDot.visibility = View.INVISIBLE
+                mImgCardDot.visibility = View.INVISIBLE
+                mImgHelpDot.visibility = View.INVISIBLE
+                mImgMoreDot.visibility = View.INVISIBLE
                 mHomeTextView!!.setTextColor(ContextCompat.getColor(this, R.color._0082BB))
                 mTransactionTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
                 mCardTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
@@ -228,11 +242,11 @@ class HomeActivity : AppCompatActivity(){
                 mImgMore!!.setImageResource(R.drawable.ic_more)
             }
             1 -> {
-                mImgHomeDot!!.visibility = View.INVISIBLE
-                mImgTransactionDot!!.visibility = View.INVISIBLE
-                mImgCardDot!!.visibility = View.INVISIBLE
-                mImgHelpDot!!.visibility = View.INVISIBLE
-                mImgMoreDot!!.visibility = View.INVISIBLE
+                mImgHomeDot.visibility = View.INVISIBLE
+                mImgTransactionDot.visibility = View.INVISIBLE
+                mImgCardDot.visibility = View.INVISIBLE
+                mImgHelpDot.visibility = View.INVISIBLE
+                mImgMoreDot.visibility = View.INVISIBLE
                 mHomeTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
                 mTransactionTextView!!.setTextColor(ContextCompat.getColor(this, R.color._0082BB))
                 mCardTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
@@ -245,11 +259,11 @@ class HomeActivity : AppCompatActivity(){
                 mImgMore!!.setImageResource(R.drawable.ic_more)
             }
             2 -> {
-                mImgHomeDot!!.visibility = View.INVISIBLE
-                mImgTransactionDot!!.visibility = View.INVISIBLE
-                mImgCardDot!!.visibility = View.INVISIBLE
-                mImgHelpDot!!.visibility = View.INVISIBLE
-                mImgMoreDot!!.visibility = View.INVISIBLE
+                mImgHomeDot.visibility = View.INVISIBLE
+                mImgTransactionDot.visibility = View.INVISIBLE
+                mImgCardDot.visibility = View.INVISIBLE
+                mImgHelpDot.visibility = View.INVISIBLE
+                mImgMoreDot.visibility = View.INVISIBLE
                 mHomeTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
                 mTransactionTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
                 mCardTextView!!.setTextColor(ContextCompat.getColor(this, R.color._0082BB))
@@ -262,11 +276,11 @@ class HomeActivity : AppCompatActivity(){
                 mImgMore!!.setImageResource(R.drawable.ic_more)
             }
             3 -> {
-                mImgHomeDot!!.visibility = View.INVISIBLE
-                mImgTransactionDot!!.visibility = View.INVISIBLE
-                mImgCardDot!!.visibility = View.INVISIBLE
-                mImgHelpDot!!.visibility = View.INVISIBLE
-                mImgMoreDot!!.visibility = View.INVISIBLE
+                mImgHomeDot.visibility = View.INVISIBLE
+                mImgTransactionDot.visibility = View.INVISIBLE
+                mImgCardDot.visibility = View.INVISIBLE
+                mImgHelpDot.visibility = View.INVISIBLE
+                mImgMoreDot.visibility = View.INVISIBLE
                 mHomeTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
                 mTransactionTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
                 mCardTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
@@ -279,11 +293,11 @@ class HomeActivity : AppCompatActivity(){
                 mImgMore!!.setImageResource(R.drawable.ic_more)
             }
             4 -> {
-                mImgHomeDot!!.visibility = View.INVISIBLE
-                mImgTransactionDot!!.visibility = View.INVISIBLE
-                mImgCardDot!!.visibility = View.INVISIBLE
-                mImgHelpDot!!.visibility = View.INVISIBLE
-                mImgMoreDot!!.visibility = View.INVISIBLE
+                mImgHomeDot.visibility = View.INVISIBLE
+                mImgTransactionDot.visibility = View.INVISIBLE
+                mImgCardDot.visibility = View.INVISIBLE
+                mImgHelpDot.visibility = View.INVISIBLE
+                mImgMoreDot.visibility = View.INVISIBLE
                 mHomeTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
                 mTransactionTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
                 mCardTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))

@@ -8,441 +8,441 @@
     android:elevation="@dimen/_20dp"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
 
-        <LinearLayout
-            android:id="@+id/lay_tab_home"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+<!--        <LinearLayout-->
+<!--            android:id="@+id/lay_tab_home"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_tab_dot_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/half_circle_green" />
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/img_tab_dot_home"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/half_circle_green" />-->
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/_4dp"
-                android:layout_weight="1">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="@dimen/_4dp"-->
+<!--                android:layout_weight="1">-->
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_tab_home"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_4dp"
-                    app:srcCompat="@drawable/ic_home_selected" />
-            </RelativeLayout>
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/img_tab_home"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_4dp"-->
+<!--                    app:srcCompat="@drawable/ic_home_selected" />-->
+<!--            </RelativeLayout>-->
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_tab_home"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="@dimen/_10dp"
-                android:textAllCaps="true"
-                android:fontFamily="@font/gilroy_semibold"
-                android:text="@string/TAB_HOME"
-                android:textColor="@color/_0082BB"
-                android:textSize="@dimen/_10sp" />
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/txt_tab_home"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:layout_marginBottom="@dimen/_10dp"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:fontFamily="@font/gilroy_semibold"-->
+<!--                android:text="@string/TAB_HOME"-->
+<!--                android:textColor="@color/_0082BB"-->
+<!--                android:textSize="@dimen/_10sp" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:id="@+id/transaction_history"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+<!--        <LinearLayout-->
+<!--            android:id="@+id/transaction_history"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_transaction_dot_history"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/half_circle_green" />
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/img_transaction_dot_history"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/half_circle_green" />-->
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/_4dp"
-                android:layout_weight="1">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="@dimen/_4dp"-->
+<!--                android:layout_weight="1">-->
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_transaction_history"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginTop="@dimen/_4dp"
-                    app:srcCompat="@drawable/ic_baseline_history_24" />
-            </RelativeLayout>
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/img_transaction_history"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:layout_marginTop="@dimen/_4dp"-->
+<!--                    app:srcCompat="@drawable/ic_baseline_history_24" />-->
+<!--            </RelativeLayout>-->
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_transaction_history"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="@dimen/_10dp"
-                android:fontFamily="@font/gilroy_semibold"
-                android:text="@string/TAB_HISTORY"
-                android:textAllCaps="true"
-                android:textColor="@color/_8e8e93"
-                android:textSize="@dimen/_10sp" />
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/txt_transaction_history"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:layout_marginBottom="@dimen/_10dp"-->
+<!--                android:fontFamily="@font/gilroy_semibold"-->
+<!--                android:text="@string/TAB_HISTORY"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:textColor="@color/_8e8e93"-->
+<!--                android:textSize="@dimen/_10sp" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:id="@+id/lay_tab_search"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+<!--        <LinearLayout-->
+<!--            android:id="@+id/lay_tab_search"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_tab_dot_search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/half_circle_green" />
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/img_tab_dot_search"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/half_circle_green" />-->
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/_4dp"
-                android:layout_weight="1">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="@dimen/_4dp"-->
+<!--                android:layout_weight="1">-->
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_tab_search"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginTop="@dimen/_4dp"
-                    app:srcCompat="@drawable/ic_search" />
-            </RelativeLayout>
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/img_tab_search"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:layout_marginTop="@dimen/_4dp"-->
+<!--                    app:srcCompat="@drawable/ic_search" />-->
+<!--            </RelativeLayout>-->
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_tab_search"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="@dimen/_10dp"
-                android:fontFamily="@font/gilroy_semibold"
-                android:text="@string/TAB_RENT"
-                android:textAllCaps="true"
-                android:textColor="@color/_8e8e93"
-                android:textSize="@dimen/_10sp" />
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/txt_tab_search"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:layout_marginBottom="@dimen/_10dp"-->
+<!--                android:fontFamily="@font/gilroy_semibold"-->
+<!--                android:text="@string/TAB_RENT"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:textColor="@color/_8e8e93"-->
+<!--                android:textSize="@dimen/_10sp" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:id="@+id/lay_tab_help"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+<!--        <LinearLayout-->
+<!--            android:id="@+id/lay_tab_help"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_tab_dot_help"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/half_circle_green" />
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/img_tab_dot_help"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/half_circle_green" />-->
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/_4dp"
-                android:layout_weight="1">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="@dimen/_4dp"-->
+<!--                android:layout_weight="1">-->
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_tab_help"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_4dp"
-                    app:srcCompat="@drawable/ic_help" />
-            </RelativeLayout>
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/img_tab_help"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_4dp"-->
+<!--                    app:srcCompat="@drawable/ic_help" />-->
+<!--            </RelativeLayout>-->
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_tab_help"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="@dimen/_10dp"
-                android:fontFamily="@font/gilroy_semibold"
-                android:text="@string/TAB_HELP"
-                android:textAllCaps="true"
-                android:textColor="@color/_8e8e93"
-                android:textSize="@dimen/_10sp" />
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/txt_tab_help"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:layout_marginBottom="@dimen/_10dp"-->
+<!--                android:fontFamily="@font/gilroy_semibold"-->
+<!--                android:text="@string/TAB_HELP"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:textColor="@color/_8e8e93"-->
+<!--                android:textSize="@dimen/_10sp" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:id="@+id/lay_tab_more"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
+<!--        <LinearLayout-->
+<!--            android:id="@+id/lay_tab_more"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_tab_dot_more"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/half_circle_green" />
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/img_tab_dot_more"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/half_circle_green" />-->
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/_4dp"
-                android:layout_weight="1">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="@dimen/_4dp"-->
+<!--                android:layout_weight="1">-->
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_tab_more"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/ic_more" />
-            </RelativeLayout>
-
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_tab_more"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="@dimen/_10dp"
-                android:fontFamily="@font/gilroy_semibold"
-                android:textAllCaps="true"
-                android:text="@string/TAB_MORE"
-                android:textColor="@color/_8e8e93"
-                android:textSize="@dimen/_10sp" />
-
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:id="@+id/lay_tab_home1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_tab_dot_home1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/half_circle_green" />
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/_4dp"
-                android:layout_weight="1">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_tab_home1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_4dp"
-                    app:srcCompat="@drawable/ic_home_selected" />
-            </RelativeLayout>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_tab_home1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="@dimen/_10dp"
-                android:textAllCaps="true"
-                android:fontFamily="@font/gilroy_semibold"
-                android:text="@string/TAB_HOME"
-                android:textColor="@color/_0082BB"
-                android:textSize="@dimen/_10sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/transaction_history1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_dot_transaction_history1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/half_circle_green" />
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/_4dp"
-                android:layout_weight="1">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_transaction_history1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginTop="@dimen/_4dp"
-                    app:srcCompat="@drawable/ic_baseline_history_24" />
-            </RelativeLayout>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_transaction_history1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="@dimen/_10dp"
-                android:fontFamily="@font/gilroy_semibold"
-                android:text="@string/TAB_HISTORY"
-                android:textAllCaps="true"
-                android:textColor="@color/_8e8e93"
-                android:textSize="@dimen/_10sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lay_tab_search1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_tab_dot_search1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/half_circle_green" />
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/_4dp"
-                android:layout_weight="1">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_tab_search1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:layout_marginTop="@dimen/_4dp"
-                    app:srcCompat="@drawable/ic_search" />
-            </RelativeLayout>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_tab_search1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="@dimen/_10dp"
-                android:fontFamily="@font/gilroy_semibold"
-                android:text="@string/TAB_RENT"
-                android:textAllCaps="true"
-                android:textColor="@color/_8e8e93"
-                android:textSize="@dimen/_10sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lay_tab_help1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_tab_dot_help1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/half_circle_green" />
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/_4dp"
-                android:layout_weight="1">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_tab_help1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/_4dp"
-                    app:srcCompat="@drawable/ic_help" />
-            </RelativeLayout>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_tab_help1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="@dimen/_10dp"
-                android:fontFamily="@font/gilroy_semibold"
-                android:text="@string/TAB_HELP"
-                android:textAllCaps="true"
-                android:textColor="@color/_8e8e93"
-                android:textSize="@dimen/_10sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lay_tab_more1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/img_tab_dot_more1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/half_circle_green" />
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="0dp"
-                android:layout_marginTop="@dimen/_4dp"
-                android:layout_weight="1">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/img_tab_more1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/ic_more" />
-            </RelativeLayout>
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/img_tab_more"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    app:srcCompat="@drawable/ic_more" />-->
+<!--            </RelativeLayout>-->
 
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/txt_tab_more1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
-                android:layout_marginBottom="@dimen/_10dp"
-                android:fontFamily="@font/gilroy_semibold"
-                android:textAllCaps="true"
-                android:text="@string/TAB_MORE"
-                android:textColor="@color/_8e8e93"
-                android:textSize="@dimen/_10sp" />
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/txt_tab_more"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:layout_marginBottom="@dimen/_10dp"-->
+<!--                android:fontFamily="@font/gilroy_semibold"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:text="@string/TAB_MORE"-->
+<!--                android:textColor="@color/_8e8e93"-->
+<!--                android:textSize="@dimen/_10sp" />-->
 
-        </LinearLayout>
-    </LinearLayout>
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal">-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/lay_tab_home1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/img_tab_dot_home1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/half_circle_green" />-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="@dimen/_4dp"-->
+<!--                android:layout_weight="1">-->
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/img_tab_home1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_4dp"-->
+<!--                    app:srcCompat="@drawable/ic_home_selected" />-->
+<!--            </RelativeLayout>-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/txt_tab_home1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:layout_marginBottom="@dimen/_10dp"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:fontFamily="@font/gilroy_semibold"-->
+<!--                android:text="@string/TAB_HOME"-->
+<!--                android:textColor="@color/_0082BB"-->
+<!--                android:textSize="@dimen/_10sp" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/transaction_history1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/img_dot_transaction_history1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/half_circle_green" />-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="@dimen/_4dp"-->
+<!--                android:layout_weight="1">-->
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/img_transaction_history1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:layout_marginTop="@dimen/_4dp"-->
+<!--                    app:srcCompat="@drawable/ic_baseline_history_24" />-->
+<!--            </RelativeLayout>-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/txt_transaction_history1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:layout_marginBottom="@dimen/_10dp"-->
+<!--                android:fontFamily="@font/gilroy_semibold"-->
+<!--                android:text="@string/TAB_HISTORY"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:textColor="@color/_8e8e93"-->
+<!--                android:textSize="@dimen/_10sp" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/lay_tab_search1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/img_tab_dot_search1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/half_circle_green" />-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="@dimen/_4dp"-->
+<!--                android:layout_weight="1">-->
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/img_tab_search1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:layout_marginTop="@dimen/_4dp"-->
+<!--                    app:srcCompat="@drawable/ic_search" />-->
+<!--            </RelativeLayout>-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/txt_tab_search1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:layout_marginBottom="@dimen/_10dp"-->
+<!--                android:fontFamily="@font/gilroy_semibold"-->
+<!--                android:text="@string/TAB_RENT"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:textColor="@color/_8e8e93"-->
+<!--                android:textSize="@dimen/_10sp" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/lay_tab_help1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/img_tab_dot_help1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/half_circle_green" />-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="@dimen/_4dp"-->
+<!--                android:layout_weight="1">-->
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/img_tab_help1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="@dimen/_4dp"-->
+<!--                    app:srcCompat="@drawable/ic_help" />-->
+<!--            </RelativeLayout>-->
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/txt_tab_help1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:layout_marginBottom="@dimen/_10dp"-->
+<!--                android:fontFamily="@font/gilroy_semibold"-->
+<!--                android:text="@string/TAB_HELP"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:textColor="@color/_8e8e93"-->
+<!--                android:textSize="@dimen/_10sp" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/lay_tab_more1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:id="@+id/img_tab_dot_more1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@drawable/half_circle_green" />-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="@dimen/_4dp"-->
+<!--                android:layout_weight="1">-->
+
+<!--                <androidx.appcompat.widget.AppCompatImageView-->
+<!--                    android:id="@+id/img_tab_more1"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    app:srcCompat="@drawable/ic_more" />-->
+<!--            </RelativeLayout>-->
+
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/txt_tab_more1"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="6dp"-->
+<!--                android:layout_marginBottom="@dimen/_10dp"-->
+<!--                android:fontFamily="@font/gilroy_semibold"-->
+<!--                android:textAllCaps="true"-->
+<!--                android:text="@string/TAB_MORE"-->
+<!--                android:textColor="@color/_8e8e93"-->
+<!--                android:textSize="@dimen/_10sp" />-->
+
+<!--        </LinearLayout>-->
+<!--    </LinearLayout>-->
 
 </LinearLayout>

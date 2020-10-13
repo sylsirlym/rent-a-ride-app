@@ -24,15 +24,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    dataBinding {
-        enabled = true
-    }
+//    dataBinding {
+//        enabled = true
+//    }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    buildFeatures {
+        dataBinding true
+        // for view binding:
+        viewBinding true
     }
 }
 def lifeCycleExtensionVersion = '1.1.1'
@@ -43,6 +48,7 @@ def glideVersion = '4.8.0'
 def mockitoVersion = '2.11.0'
 def rxJavaVersion = '2.0.1'
 def materialDesignVersion = '1.2.0-alpha05'
+def butterKnifeVersion = '10.1.0'
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -93,8 +99,8 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     /*bind view*/
-    implementation 'com.jakewharton:butterknife:10.1.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation "com.jakewharton:butterknife:$butterKnifeVersion"
+    kapt "com.jakewharton:butterknife-compiler:$butterKnifeVersion"
 
     // Mockito testing kit depedencies
     testImplementation "org.mockito:mockito-inline:$mockitoVersion"
