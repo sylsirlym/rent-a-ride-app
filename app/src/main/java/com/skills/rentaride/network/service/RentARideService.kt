@@ -5,6 +5,7 @@ import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 import android.util.Log
+import com.google.gson.Gson
 import com.skills.rentaride.di.DaggerApiComponent
 import com.skills.rentaride.model.ResponseDTO
 import com.skills.rentaride.model.UserDTO
@@ -12,6 +13,7 @@ import com.skills.rentaride.network.RentARideAPI
 import io.reactivex.Single
 import okhttp3.RequestBody
 import retrofit2.Call
+import java.net.URL
 import javax.inject.Inject
 
 
@@ -29,14 +31,18 @@ class RentARideService {
      * This function implements the service and gets the user profile.
      */
     fun getProfile(msisdn: String): Single<ResponseDTO> {
-        return api.getProfile(msisdn)
+        Log.d(TAG, "Inside getProfile. MSISDN:$msisdn")
+        val responseDTO =api.getProfile(msisdn)
+        val outputJson: String = Gson().toJson(responseDTO)
+        Log.d(TAG, "Inside getLendTransactionHistory:$outputJson")
+        return responseDTO
     }
 
     fun getLendTransactionHistory(msisdn: String): Single<ResponseDTO> {
-        val responseDTO: Single<ResponseDTO> = api.getLendTransactionHistory(msisdn)
-        Log.i(TAG, "Inside getLendTransactionHistory Now ##################################################################")
-        Log.i(TAG, "Inside getLendTransactionHistory"+responseDTO.blockingGet().statusMessage)
-        Log.i(TAG, "Inside getLendTransactionHistory"+responseDTO.blockingGet().data.toString())
+        Log.d(TAG, "Inside getLendTransactionHistory. MSISDN:$msisdn")
+        val responseDTO = api.getLendTransactionHistory(msisdn)
+        Log.d(TAG, "Inside getLendTransactionHistory Now ##################################################################")
+        Log.d(TAG, "Inside getLendTransactionHistory:"+responseDTO.blockingGet().data.toString())
         return responseDTO
     }
 

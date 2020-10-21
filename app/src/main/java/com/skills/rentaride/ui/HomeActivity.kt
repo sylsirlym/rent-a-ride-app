@@ -1,6 +1,7 @@
 package com.skills.rentaride.ui
 
 import android.os.Bundle
+import android.os.StrictMode
 import android.util.Log
 import android.view.View
 import android.widget.LinearLayout
@@ -128,8 +129,16 @@ class HomeActivity : AppCompatActivity(){
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.fragment_home)
         val binding: FragmentHomeBinding = DataBindingUtil.setContentView(
-            this, R.layout.fragment_home)
+            this, R.layout.fragment_home
+        )
         ButterKnife.bind(this)
+
+        ///////// Temp Fix For android.os.NetworkOnMainThreadException at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork
+        //Fix = https://stackoverflow.com/questions/6343166/how-to-fix-android-os-networkonmainthreadexception
+        val policy =
+            StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         mImgHomeDot = findViewById(R.id.img_tab_dot_home)
         mImgTransactionDot = findViewById(R.id.img_transaction_dot_history)
@@ -140,7 +149,9 @@ class HomeActivity : AppCompatActivity(){
         changeBottomView(0)
 
         try {
-            val profile: String = SharedPrefManager(this@HomeActivity).getSharedPrefManager(this@HomeActivity)!!.getString("profile")
+            val profile: String = SharedPrefManager(this@HomeActivity).getSharedPrefManager(this@HomeActivity)!!.getString(
+                "profile"
+            )
 
 //            val profile = intent.getStringExtra("profileDetails")
             val gson = Gson()
@@ -149,12 +160,20 @@ class HomeActivity : AppCompatActivity(){
             binding.profile=profileDetails
 
             //Fetch Transaction History
-            val responseDTO:Single<ResponseDTO> = rentARideService.getLendTransactionHistory(profileDetails.msisdn)
-            val histList=responseDTO.blockingGet().data?.filterIsInstance<LendTransactionDTO>()
-            Log.i(TAG, "About to print")
+            val responseDTO:Single<ResponseDTO> = rentARideService.getLendTransactionHistory(
+                profileDetails.msisdn
+            )
+            val histList=responseDTO.blockingGet().data!!
+            Log.i(TAG, "About to print: $histList")
+            val json = gson.toJson(histList)
+            val historyArr = gson.fromJson(json, Array<LendTransactionDTO>::class.java)
+            val historyList= ArrayList<LendTransactionDTO>()
+            historyArr.forEach {
+                historyList.add(it)
+            }
             //Pass to Layout
             transact_grid_view.layoutManager = LinearLayoutManager(this)
-            transact_grid_view.adapter = LendHistoryListAdapter(histList as ArrayList<LendTransactionDTO>)
+            transact_grid_view.adapter = LendHistoryListAdapter(historyList)
 
             val transHist = findViewById<LinearLayout>(R.id.transaction_history)
             transHist.setOnClickListener {
@@ -180,8 +199,8 @@ class HomeActivity : AppCompatActivity(){
 //            this.observeViewModel()
 
         } catch (e: Exception){
-            Log.e(TAG,"Got Error"+e.message)
-            Log.wtf(TAG,e)
+            Log.e(TAG, "Got Error:" + e.message)
+            Log.wtf(TAG, e)
             changeBottomView(0)
         }
 

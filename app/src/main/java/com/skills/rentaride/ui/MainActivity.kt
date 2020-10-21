@@ -87,7 +87,7 @@ class MainActivity : AppCompatActivity() {
                         val intent = Intent(baseContext, RegisterActivity::class.java)
                         Log.i(TAG, "Inside here 1")
 
-                        intent.putExtra("msisdn", text.toString())
+                        intent.putExtra("msisdn", msisdn)
                         Log.i(TAG, "About to call Register Activity")
 
                         startActivity(intent)
@@ -118,8 +118,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun isValidMsisdn(msisdn: String): Boolean {
-        val MSISDN_REGEX = ("^[0-9]{9}?\$")
-        val pattern: Pattern = Pattern.compile(MSISDN_REGEX)
+        val msisdnRegex = ("^[0-9]{9}?\$")
+        val pattern: Pattern = Pattern.compile(msisdnRegex)
         val matcher: Matcher = pattern.matcher(msisdn)
         return matcher.matches()
     }
