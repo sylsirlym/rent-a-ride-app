@@ -29,8 +29,9 @@ import io.reactivex.Single
 import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
 
-class HomeActivity : AppCompatActivity(){
+class HomeActivity : AppCompatActivity() {
     private val TAG = "HomeActivity"
+
     @Inject
     lateinit var rentARideService: RentARideService
 
@@ -53,19 +54,19 @@ class HomeActivity : AppCompatActivity(){
     lateinit var mImgHomeDot: AppCompatImageView
 //    var mImgHomeDot: AppCompatImageView? = findViewById(R.id.img_tab_dot_home)
 
-     lateinit var mImgTransactionDot: AppCompatImageView
+    lateinit var mImgTransactionDot: AppCompatImageView
 //    var mImgTransactionDot: AppCompatImageView? = findViewById(R.id.img_transaction_dot_history)
 
-     lateinit var mImgCardDot: AppCompatImageView
+    lateinit var mImgCardDot: AppCompatImageView
 //    var mImgCardDot: AppCompatImageView? = findViewById(R.id.img_tab_dot_rent)
 
-     lateinit var mImgHelpDot: AppCompatImageView
+    lateinit var mImgHelpDot: AppCompatImageView
 //    var mImgHelpDot: AppCompatImageView? = findViewById(R.id.img_tab_dot_help)
 
-     lateinit var mImgMoreDot: AppCompatImageView
+    lateinit var mImgMoreDot: AppCompatImageView
 //    var mImgMoreDot: AppCompatImageView? = findViewById(R.id.img_tab_dot_more)
 
-//--------------------------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------------------------
     @BindView(R.id.img_tab_home)
     lateinit var mImgHome: AppCompatImageView
 
@@ -149,29 +150,34 @@ class HomeActivity : AppCompatActivity(){
         changeBottomView(0)
 
         try {
-            val profile: String = SharedPrefManager(this@HomeActivity).getSharedPrefManager(this@HomeActivity)!!.getString(
-                "profile"
-            )
+            val profile: String =
+                SharedPrefManager(this@HomeActivity).getSharedPrefManager(this@HomeActivity)!!
+                    .getString(
+                        "profile"
+                    )
 
 //            val profile = intent.getStringExtra("profileDetails")
             val gson = Gson()
             val profileDetails = gson.fromJson(profile, ProfileDTO::class.java)
             //Bind Profile Details
-            binding.profile=profileDetails
+            binding.profile = profileDetails
 
             //Fetch Transaction History
-            val responseDTO:Single<ResponseDTO> = rentARideService.getLendTransactionHistory(
+            val responseDTO: Single<ResponseDTO> = rentARideService.getLendTransactionHistory(
                 profileDetails.msisdn
             )
-            val histList=responseDTO.blockingGet().data!!
+            val histList = responseDTO.blockingGet().data!!
             Log.i(TAG, "About to print: $histList")
             val json = gson.toJson(histList)
             val historyArr = gson.fromJson(json, Array<LendTransactionDTO>::class.java)
-            val historyList= ArrayList<LendTransactionDTO>()
+            val historyList = ArrayList<LendTransactionDTO>()
             historyArr.forEach {
                 historyList.add(it)
             }
             //Pass to Layout
+            if (historyList.size > 0) {
+                loading_view.visibility = View.GONE
+            }
             transact_grid_view.layoutManager = LinearLayoutManager(this)
             transact_grid_view.adapter = LendHistoryListAdapter(historyList)
 
@@ -198,7 +204,7 @@ class HomeActivity : AppCompatActivity(){
 //
 //            this.observeViewModel()
 
-        } catch (e: Exception){
+        } catch (e: Exception) {
             Log.e(TAG, "Got Error:" + e.message)
             Log.wtf(TAG, e)
             changeBottomView(0)
