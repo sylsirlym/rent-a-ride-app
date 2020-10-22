@@ -46,6 +46,13 @@ class RentARideService {
         return responseDTO
     }
 
+    fun getRentItems(): Single<ResponseDTO> {
+        Log.d(TAG, "Inside Rent Items.")
+        val responseDTO = api.getRentItems()
+        Log.d(TAG, "Inside Rent Items:"+responseDTO.blockingGet().data.toString())
+        return responseDTO
+    }
+
     fun createProfile(requestBody: RequestBody): Call<ResponseDTO> {
         Log.i(TAG, "Inside createProfile ############################################# $requestBody")
         return api.createUser(requestBody)

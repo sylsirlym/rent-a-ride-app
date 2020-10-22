@@ -3,12 +3,12 @@ package com.skills.rentaride.ui.adapter
 import android.annotation.SuppressLint
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.skills.rentaride.model.LendTransactionDTO
+import com.skills.rentaride.model.RentItemDTO
 import com.skills.rentaride.utils.getProgressDrawable
 import com.skills.rentaride.utils.loadImage
 import kotlinx.android.synthetic.main.item_history.view.*
 
-class LendHistoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+class RentItemViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
     // Get the country name.
     private val itemType = view.itemType
@@ -25,11 +25,11 @@ class LendHistoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
 
     @SuppressLint("SetTextI18n")
-    fun bindItems(lendTransactionDTO: LendTransactionDTO) {
-        itemType.text = lendTransactionDTO.lendItemTypeName
-        serialNumber.text = lendTransactionDTO.serialNumber
-        itemCost.text = "KES: "+lendTransactionDTO.lendItemCost.toString()+"0"
-        itemStatus.text = lendTransactionDTO.lendTransactionStatus
+    fun bindItems(rentItemDTO: RentItemDTO) {
+        itemType.text = rentItemDTO.itemTypeEntity.lendItemTypeName
+        serialNumber.text = rentItemDTO.serialNumber
+        itemCost.text = "KES: "+rentItemDTO.itemTypeEntity.lendItemCost.toString()+"0"
+        itemStatus.text = rentItemDTO.dateCreated
         imageView.loadImage("https://cdn.onlinewebfonts.com/svg/img_570325.png", progressDrawable)
     }
 }

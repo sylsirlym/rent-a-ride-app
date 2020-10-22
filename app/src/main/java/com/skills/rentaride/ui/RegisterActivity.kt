@@ -5,14 +5,12 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import com.skills.rentaride.R
 import com.skills.rentaride.di.DaggerApiComponent
 import com.skills.rentaride.model.ResponseDTO
-import com.skills.rentaride.model.UserDTO
 import com.skills.rentaride.network.service.RentARideService
 import com.skills.rentaride.utils.SharedPrefManager
 import kotlinx.android.synthetic.main.activity_register.*
@@ -30,7 +28,7 @@ import javax.inject.Inject
 class RegisterActivity : AppCompatActivity() {
 
     private val TAG = "RegisterActivity"
-    private val COUNTRIES =
+    private val idDocs =
         arrayOf("Registration Number", "Staff ID")
     private var cal = Calendar.getInstance()
 
@@ -50,7 +48,7 @@ class RegisterActivity : AppCompatActivity() {
         val adapter: ArrayAdapter<String> = ArrayAdapter<String>(
             this,
             R.layout.list_id_types,
-            COUNTRIES
+            idDocs
         )
 
         // DROPDOWN ---------------------------------------------------------------------------------

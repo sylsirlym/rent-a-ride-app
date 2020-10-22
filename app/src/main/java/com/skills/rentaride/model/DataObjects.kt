@@ -3,7 +3,7 @@ package com.skills.rentaride.model
 import com.google.gson.annotations.SerializedName
 import io.reactivex.Single
 
-data class ResponseDTO (
+data class ResponseDTO(
     @SerializedName("statusCode")
     val statusCode: Int,
     @SerializedName("statusMessage")
@@ -12,7 +12,7 @@ data class ResponseDTO (
     val data: MutableList<Any>?
 )
 
-data class Responses (
+data class Responses(
     @SerializedName("statusCode")
     val statusCode: Int,
     @SerializedName("statusMessage")
@@ -47,12 +47,70 @@ data class LendTransactionDTO(
     val lendTransactionStatus: String
 )
 
+data class ItemTypeEntity (
+    @SerializedName("lendItemTypeID")
+    val lendItemTypeID: Int,
+    @SerializedName("lendItemTypeName")
+    val lendItemTypeName: String,
+    @SerializedName("lendItemCost")
+    val lendItemCost: Double,
+    @SerializedName("dateCreated")
+    val dateCreated: String,
+    @SerializedName("dateModified")
+    val dateModified: Any
+)
+
+data class ItemOwnerProfileEntity (
+    @SerializedName("lendItemOwnerProfileID")
+    val lendItemOwnerProfileID: Int,
+    @SerializedName("idNumber")
+    val idNumber: String,
+    @SerializedName("mobileNumber")
+    val mobileNumber: String,
+    @SerializedName("dateCreated")
+    val dateCreated: String,
+    @SerializedName("dateModified")
+    val dateModified: Any,
+    @SerializedName("customersEntity")
+    val customersEntity: CustomersEntity
+)
+
+data class RentItemDTO (
+    @SerializedName("lendItemID")
+    val lendItemID: Int,
+    @SerializedName("serialNumber")
+    val serialNumber: String,
+    @SerializedName("dateCreated")
+    val dateCreated: String,
+    @SerializedName("dateModified")
+    val dateModified: Any,
+    @SerializedName("itemTypeEntity")
+    val itemTypeEntity: ItemTypeEntity,
+    @SerializedName("itemOwnerProfileEntity")
+    val itemOwnerProfileEntity: ItemOwnerProfileEntity
+)
+data class CustomersEntity (
+    @SerializedName("customerID")
+    val customerID: Int,
+    @SerializedName("otherNames")
+    val otherNames: String,
+    @SerializedName("emailAddress")
+    val emailAddress: String,
+    @SerializedName("dateOfBirth")
+    val dateOfBirth: String,
+    @SerializedName("dateCreated")
+    val dateCreated: String,
+    @SerializedName("dateModified")
+    val dateModified: String,
+    @SerializedName("fname")
+    val fname: String
+)
 data class UserDTO(
-    val msisdn:String,
-    val fname:String,
-    val otherNames:String,
-    val emailAddress:String,
-    val dateOfBirth:String,
-    val identificationNumber:String,
-    val identificationType:Int
+    val msisdn: String,
+    val fname: String,
+    val otherNames: String,
+    val emailAddress: String,
+    val dateOfBirth: String,
+    val identificationNumber: String,
+    val identificationType: Int
 )

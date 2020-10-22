@@ -21,4 +21,7 @@ interface RentARideAPI {
 
     @POST("customer/create")
     fun createUser(@Body request: RequestBody): Call<ResponseDTO>
+
+    @GET("items/fetch")
+    abstract fun getRentItems(): Single<ResponseDTO>
 }

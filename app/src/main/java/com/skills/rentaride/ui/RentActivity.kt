@@ -17,22 +17,20 @@ import butterknife.ButterKnife
 import butterknife.OnClick
 import com.google.gson.Gson
 import com.skills.rentaride.R
-import com.skills.rentaride.databinding.FragmentHomeBinding
+import com.skills.rentaride.databinding.FragmentRentBinding
 import com.skills.rentaride.di.DaggerApiComponent
-import com.skills.rentaride.model.LendTransactionDTO
 import com.skills.rentaride.model.ProfileDTO
+import com.skills.rentaride.model.RentItemDTO
 import com.skills.rentaride.model.ResponseDTO
 import com.skills.rentaride.network.service.RentARideService
-import com.skills.rentaride.ui.adapter.LendHistoryListAdapter
+import com.skills.rentaride.ui.adapter.RentItemListAdapter
 import com.skills.rentaride.utils.SharedPrefManager
-import com.skills.rentaride.viewmodel.ListViewModel
 import io.reactivex.Single
 import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
 
-class HomeActivity : AppCompatActivity() {
-    private val TAG = "HomeActivity"
-
+class RentActivity : AppCompatActivity() {
+    private val TAG = "RentActivity"
     @Inject
     lateinit var rentARideService: RentARideService
 
@@ -98,40 +96,16 @@ class HomeActivity : AppCompatActivity() {
 
     @BindView(R.id.txt_tab_more)
     lateinit var mMoreTextView: AppCompatTextView
-
-//--------------------------------------------------------------------------------------------------
-//    @BindView(R.id.txt_tab_notification)
-//    var mNotificationTextView: AppCompatTextView? = null
-//
-//    @BindView(R.id.rl_toolbar)
-//    var mHeaderToolBar: RelativeLayout? = null
-//
-//    @BindView(R.id.user_image)
-//    var mUserImage: CircleImageView? = null
-//
-//    @BindView(R.id.appc_imv_flag)
-//    var mLangImage: AppCompatImageView? = null
-//
-//    @BindView(R.id.img_option_arrow)
-//    var mLangImageArrow: AppCompatImageView? = null
-//
-//    @BindView(R.id.iv_notification_dot)
-//    var mNotificationDot: AppCompatImageView? = null
-
     init {
         DaggerApiComponent.create()
             .inject(this)
     }
 
-    private lateinit var viewModel: ListViewModel
-
-    private val lendHistoryListAdapter = LendHistoryListAdapter(arrayListOf())
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.fragment_home)
-        val binding: FragmentHomeBinding = DataBindingUtil.setContentView(
-            this, R.layout.fragment_home
+        val binding: FragmentRentBinding = DataBindingUtil.setContentView(
+            this, R.layout.fragment_rent
         )
         ButterKnife.bind(this)
 
@@ -148,11 +122,11 @@ class HomeActivity : AppCompatActivity() {
         mImgHelpDot = findViewById(R.id.img_tab_dot_help)
         mImgMoreDot = findViewById(R.id.img_tab_dot_more)
 
-        changeBottomView(0)
+        changeBottomView(2)
 
         try {
             val profile: String =
-                SharedPrefManager(this@HomeActivity).getSharedPrefManager(this@HomeActivity)!!
+                SharedPrefManager(this@RentActivity).getSharedPrefManager(this@RentActivity)!!
                     .getString(
                         "profile"
                     )
@@ -164,14 +138,12 @@ class HomeActivity : AppCompatActivity() {
             binding.profile = profileDetails
 
             //Fetch Transaction History
-            val responseDTO: Single<ResponseDTO> = rentARideService.getLendTransactionHistory(
-                profileDetails.msisdn
-            )
-            val histList = responseDTO.blockingGet().data!!
-            Log.i(TAG, "About to print: $histList")
-            val json = gson.toJson(histList)
-            val historyArr = gson.fromJson(json, Array<LendTransactionDTO>::class.java)
-            val historyList = ArrayList<LendTransactionDTO>()
+            val responseDTO: Single<ResponseDTO> = rentARideService.getRentItems()
+            val rentItemsList = responseDTO.blockingGet().data!!
+            Log.i(TAG, "About to print: $rentItemsList")
+            val json = gson.toJson(rentItemsList)
+            val historyArr = gson.fromJson(json, Array<RentItemDTO>::class.java)
+            val historyList = ArrayList<RentItemDTO>()
             historyArr.forEach {
                 historyList.add(it)
             }
@@ -180,7 +152,7 @@ class HomeActivity : AppCompatActivity() {
                 loading_view.visibility = View.GONE
             }
             transact_grid_view.layoutManager = LinearLayoutManager(this)
-            transact_grid_view.adapter = LendHistoryListAdapter(historyList)
+            transact_grid_view.adapter = RentItemListAdapter(historyList)
 
             val transHist = findViewById<LinearLayout>(R.id.transaction_history)
             transHist.setOnClickListener {
@@ -225,30 +197,8 @@ class HomeActivity : AppCompatActivity() {
             R.id.lay_tab_more -> changeBottomView(4)
         }
     }
-
-//    private fun observeViewModel() {
-//        viewModel.transactionHistory.observe(this, Observer { lendTransaction ->
-//            lendTransaction?.let {
-//                transact_grid_view.visibility = View.VISIBLE
-//                lendHistoryListAdapter.updateLendTransactionHistory(it) }
-//        })
-//        viewModel.transactionHistoryError.observe(this, Observer { isError ->
-//            isError?.let {
-//                list_error.visibility = if(it) View.VISIBLE else View.GONE
-//            }
-//        })
-//        viewModel.loading.observe(this, Observer {isLoading ->
-//            isLoading?.let{
-//                loading_view.visibility = if(it) View.VISIBLE else View.GONE
-//                if(it){
-//                    list_error.visibility = View.GONE
-//                    transact_grid_view.visibility = View.GONE
-//                }
-//            }
-//        })
-//    }
-
     private fun changeBottomView(index: Int) {
+        Log.i(TAG, "Inside changeBottomView with::$index")
         when (index) {
             0 -> {
                 mImgHomeDot.visibility = View.INVISIBLE
@@ -256,16 +206,19 @@ class HomeActivity : AppCompatActivity() {
                 mImgCardDot.visibility = View.INVISIBLE
                 mImgHelpDot.visibility = View.INVISIBLE
                 mImgMoreDot.visibility = View.INVISIBLE
-                mHomeTextView!!.setTextColor(ContextCompat.getColor(this, R.color._0082BB))
+                mHomeTextView.setTextColor(ContextCompat.getColor(this, R.color._0082BB))
                 mTransactionTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mCardTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mHelpTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mMoreTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mImgHome!!.setImageResource(R.drawable.ic_home_selected)
-                mImgTransactionHistory!!.setImageResource(R.drawable.ic_baseline_history_24)
-                mImgRent!!.setImageResource(R.drawable.ic_baseline_directions_bike_24)
-                mImgHelp!!.setImageResource(R.drawable.ic_help)
-                mImgMore!!.setImageResource(R.drawable.ic_more)
+                mCardTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mHelpTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mMoreTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mImgHome.setImageResource(R.drawable.ic_home_selected)
+                mImgTransactionHistory.setImageResource(R.drawable.ic_baseline_history_24)
+                mImgRent.setImageResource(R.drawable.ic_baseline_directions_bike_24)
+                mImgHelp.setImageResource(R.drawable.ic_help)
+                mImgMore.setImageResource(R.drawable.ic_more)
+                val intent = Intent(baseContext, HomeActivity::class.java)
+                Log.d(TAG, "Navigate to Home")
+                startActivity(intent)
             }
             1 -> {
                 mImgHomeDot.visibility = View.INVISIBLE
@@ -273,16 +226,16 @@ class HomeActivity : AppCompatActivity() {
                 mImgCardDot.visibility = View.INVISIBLE
                 mImgHelpDot.visibility = View.INVISIBLE
                 mImgMoreDot.visibility = View.INVISIBLE
-                mHomeTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mHomeTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
                 mTransactionTextView!!.setTextColor(ContextCompat.getColor(this, R.color._0082BB))
-                mCardTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mHelpTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mMoreTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mImgHome!!.setImageResource(R.drawable.ic_home_unselected)
-                mImgTransactionHistory!!.setImageResource(R.drawable.ic_baseline_history_24_selected)
-                mImgRent!!.setImageResource(R.drawable.ic_baseline_directions_bike_24)
-                mImgHelp!!.setImageResource(R.drawable.ic_help)
-                mImgMore!!.setImageResource(R.drawable.ic_more)
+                mCardTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mHelpTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mMoreTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mImgHome.setImageResource(R.drawable.ic_home_unselected)
+                mImgTransactionHistory.setImageResource(R.drawable.ic_baseline_history_24_selected)
+                mImgRent.setImageResource(R.drawable.ic_baseline_directions_bike_24)
+                mImgHelp.setImageResource(R.drawable.ic_help)
+                mImgMore.setImageResource(R.drawable.ic_more)
             }
             2 -> {
                 mImgHomeDot.visibility = View.INVISIBLE
@@ -290,19 +243,16 @@ class HomeActivity : AppCompatActivity() {
                 mImgCardDot.visibility = View.INVISIBLE
                 mImgHelpDot.visibility = View.INVISIBLE
                 mImgMoreDot.visibility = View.INVISIBLE
-                mHomeTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mTransactionTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mCardTextView!!.setTextColor(ContextCompat.getColor(this, R.color._0082BB))
-                mHelpTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mMoreTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mImgHome!!.setImageResource(R.drawable.ic_home_unselected)
-                mImgTransactionHistory!!.setImageResource(R.drawable.ic_baseline_history_24)
-                mImgRent!!.setImageResource(R.drawable.ic_baseline_directions_bike_24_selected)
-                mImgHelp!!.setImageResource(R.drawable.ic_help)
-                mImgMore!!.setImageResource(R.drawable.ic_more)
-                val intent = Intent(baseContext, RentActivity::class.java)
-                Log.d(TAG, "Navigate to Rent")
-                startActivity(intent)
+                mHomeTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mTransactionTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mCardTextView.setTextColor(ContextCompat.getColor(this, R.color._0082BB))
+                mHelpTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mMoreTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mImgHome.setImageResource(R.drawable.ic_home_unselected)
+                mImgTransactionHistory.setImageResource(R.drawable.ic_baseline_history_24)
+                mImgRent.setImageResource(R.drawable.ic_baseline_directions_bike_24_selected)
+                mImgHelp.setImageResource(R.drawable.ic_help)
+                mImgMore.setImageResource(R.drawable.ic_more)
             }
             3 -> {
                 mImgHomeDot.visibility = View.INVISIBLE
@@ -310,16 +260,16 @@ class HomeActivity : AppCompatActivity() {
                 mImgCardDot.visibility = View.INVISIBLE
                 mImgHelpDot.visibility = View.INVISIBLE
                 mImgMoreDot.visibility = View.INVISIBLE
-                mHomeTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mTransactionTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mCardTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mHelpTextView!!.setTextColor(ContextCompat.getColor(this, R.color._0082BB))
-                mMoreTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mImgHome!!.setImageResource(R.drawable.ic_home_unselected)
-                mImgTransactionHistory!!.setImageResource(R.drawable.ic_baseline_history_24)
-                mImgRent!!.setImageResource(R.drawable.ic_baseline_directions_bike_24)
-                mImgHelp!!.setImageResource(R.drawable.ic_help_selected)
-                mImgMore!!.setImageResource(R.drawable.ic_more)
+                mHomeTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mTransactionTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mCardTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mHelpTextView.setTextColor(ContextCompat.getColor(this, R.color._0082BB))
+                mMoreTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mImgHome.setImageResource(R.drawable.ic_home_unselected)
+                mImgTransactionHistory.setImageResource(R.drawable.ic_baseline_history_24)
+                mImgRent.setImageResource(R.drawable.ic_baseline_directions_bike_24)
+                mImgHelp.setImageResource(R.drawable.ic_help_selected)
+                mImgMore.setImageResource(R.drawable.ic_more)
             }
             4 -> {
                 mImgHomeDot.visibility = View.INVISIBLE
@@ -327,17 +277,17 @@ class HomeActivity : AppCompatActivity() {
                 mImgCardDot.visibility = View.INVISIBLE
                 mImgHelpDot.visibility = View.INVISIBLE
                 mImgMoreDot.visibility = View.INVISIBLE
-                mHomeTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mTransactionTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mCardTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mHelpTextView!!.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
-                mMoreTextView!!.setTextColor(ContextCompat.getColor(this, R.color._0082BB))
-                mImgHome!!.setImageResource(R.drawable.ic_home_unselected)
-                mImgTransactionHistory!!.setImageResource(R.drawable.ic_baseline_history_24)
-                mImgRent!!.setImageResource(R.drawable.ic_baseline_directions_bike_24)
-                mImgHelp!!.setImageResource(R.drawable.ic_help)
-                mImgMore!!.setImageResource(R.drawable.ic_more_selected)
+                mHomeTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mTransactionTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mCardTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mHelpTextView.setTextColor(ContextCompat.getColor(this, R.color._8e8e93))
+                mMoreTextView.setTextColor(ContextCompat.getColor(this, R.color._0082BB))
+                mImgHome.setImageResource(R.drawable.ic_home_unselected)
+                mImgTransactionHistory.setImageResource(R.drawable.ic_baseline_history_24)
+                mImgRent.setImageResource(R.drawable.ic_baseline_directions_bike_24)
+                mImgHelp.setImageResource(R.drawable.ic_help)
+                mImgMore.setImageResource(R.drawable.ic_more_selected)
             }
         }
     }
-}
+    }
