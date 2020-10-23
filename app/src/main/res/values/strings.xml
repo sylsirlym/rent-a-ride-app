@@ -61,5 +61,7 @@
     <string name="SCR_LBL_SERIAL_NO">Serial No:%s</string>
     <string name="SCR_LBL_ITEM_OWNER">Item Owner:%s</string>
     <string name="SCR_LBL_DATE_ADDED">Date Added:%s</string>
+    <string name="SCR_LBL_CONTINUE">CONTINUE</string>
+    <string name="item_image">Item Image</string>
 
 </resources>
