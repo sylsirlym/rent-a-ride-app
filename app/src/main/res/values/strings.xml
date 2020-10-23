@@ -57,4 +57,9 @@
     <string name="SCR_LBL_RENT_SELECT_RIDE">Select A Ride</string>
     <string name="SCR_LBL_RIDE_AWAY">About to Ride your way out!</string>
 
+    <string name="SCR_LBL_ITEM_TYPE">Item Type:%s</string>
+    <string name="SCR_LBL_SERIAL_NO">Serial No:%s</string>
+    <string name="SCR_LBL_ITEM_OWNER">Item Owner:%s</string>
+    <string name="SCR_LBL_DATE_ADDED">Date Added:%s</string>
+
 </resources>

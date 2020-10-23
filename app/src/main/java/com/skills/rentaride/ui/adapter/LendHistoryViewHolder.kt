@@ -30,6 +30,12 @@ class LendHistoryViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         serialNumber.text = lendTransactionDTO.serialNumber
         itemCost.text = "KES: "+lendTransactionDTO.lendItemCost.toString()+"0"
         itemStatus.text = lendTransactionDTO.lendTransactionStatus
-        imageView.loadImage("https://cdn.onlinewebfonts.com/svg/img_570325.png", progressDrawable)
+
+        var image: String = if (lendTransactionDTO.lendTransactionStatus.equals("Paid", true))
+            "https://i.pinimg.com/originals/c7/75/fc/c775fc6d3433da085d8f579f54b7c758.jpg"
+        else
+            "https://cdn4.iconfinder.com/data/icons/time-24/24/bellalarmpending_ic_name_of_icon_24px-512.png"
+
+        imageView.loadImage(image, progressDrawable)
     }
 }

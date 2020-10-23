@@ -6,6 +6,7 @@ import android.os.StrictMode
 import android.util.Log
 import android.view.View
 import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
@@ -23,14 +24,18 @@ import com.skills.rentaride.model.ProfileDTO
 import com.skills.rentaride.model.RentItemDTO
 import com.skills.rentaride.model.ResponseDTO
 import com.skills.rentaride.network.service.RentARideService
+import com.skills.rentaride.ui.adapter.OnItemClickListener
 import com.skills.rentaride.ui.adapter.RentItemListAdapter
+import com.skills.rentaride.ui.adapter.RentItemViewHolder
 import com.skills.rentaride.utils.SharedPrefManager
 import io.reactivex.Single
 import kotlinx.android.synthetic.main.fragment_home.*
 import javax.inject.Inject
 
-class RentActivity : AppCompatActivity() {
+class RentActivity : AppCompatActivity(), OnItemClickListener {
     private val TAG = "RentActivity"
+    var selectedItemPos = -1
+    var lastItemSelectedPos = -1
     @Inject
     lateinit var rentARideService: RentARideService
 
@@ -101,6 +106,15 @@ class RentActivity : AppCompatActivity() {
             .inject(this)
     }
 
+    override fun onItemClicked(rentItemDTO: RentItemDTO) {
+        Toast.makeText(this,"Selected Item Serial No: ${rentItemDTO.serialNumber}",Toast.LENGTH_LONG).show()
+        val intent = Intent(baseContext, ViewItemActivity::class.java)
+        val gson = Gson()
+        val jsonString = gson.toJson(rentItemDTO)
+        intent.putExtra("item", jsonString)
+        startActivity(intent)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.fragment_home)
@@ -152,30 +166,12 @@ class RentActivity : AppCompatActivity() {
                 loading_view.visibility = View.GONE
             }
             transact_grid_view.layoutManager = LinearLayoutManager(this)
-            transact_grid_view.adapter = RentItemListAdapter(historyList)
+            transact_grid_view.adapter = RentItemListAdapter(historyList, this)
 
             val transHist = findViewById<LinearLayout>(R.id.transaction_history)
             transHist.setOnClickListener {
                 changeBottomView(1)
             }
-
-//            Log.i(TAG, "Before View Model")
-//            viewModel = ViewModelProviders.of(this).get(ListViewModel::class.java)
-//            viewModel.refresh(profileDetails.msisdn)
-//
-//            Log.i(TAG, "Before apply")
-//            transact_grid_view.apply {
-//                layoutManager = LinearLayoutManager(context)
-//                adapter = lendHistoryListAdapter
-//            }
-//            Log.i(TAG, "Before setOnRefreshListener")
-//            swiperefresh.setOnRefreshListener {
-//                swiperefresh.isRefreshing = false
-//                viewModel.refresh(profileDetails.msisdn)
-//            }
-//            Log.i(TAG, "Before observeViewModel")
-//
-//            this.observeViewModel()
 
         } catch (e: Exception) {
             Log.e(TAG, "Got Error:" + e.message)
