@@ -14,6 +14,7 @@ interface ApiComponent {
     fun inject(homeActivity: HomeActivity)
     fun inject(registerActivity: RegisterActivity)
     fun inject(rentActivity: RentActivity)
+    fun inject(viewItemActivity: ViewItemActivity)
     fun inject(viewModel: ListViewModel)
 
 }

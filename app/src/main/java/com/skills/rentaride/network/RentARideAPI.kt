@@ -24,4 +24,7 @@ interface RentARideAPI {
 
     @GET("items/fetch")
     abstract fun getRentItems(): Single<ResponseDTO>
+
+    @POST("rent-item/request")
+    fun rentItem(@Body request: RequestBody): Call<ResponseDTO>
 }

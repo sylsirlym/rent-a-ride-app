@@ -43,11 +43,15 @@ class SuccessActivity : AppCompatActivity() {
             if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
                 layout.setBackgroundDrawable(ContextCompat.getDrawable(this, image))
             } else {
-                layout.setBackground(ContextCompat.getDrawable(this, image))
+                layout.background = ContextCompat.getDrawable(this, image)
             }
 
-            val intent = Intent(baseContext, HomeActivity::class.java)
-            startActivity(intent)
+            val btn = this.nextButton
+            btn.setOnClickListener {
+                Log.i("Success","Success Button Clicked")
+                val intent = Intent(baseContext, HomeActivity::class.java)
+                startActivity(intent) }
+
 
         } catch (ex :Exception){
             Log.e("TAG", "Exception "+ex.message)

@@ -64,4 +64,9 @@ class RentARideService {
         val activeNetwork: NetworkInfo? = cm.activeNetworkInfo
         return activeNetwork?.isConnectedOrConnecting == true;
     }
+
+    fun rentItem(requestBody: RequestBody): Call<ResponseDTO> {
+        Log.i(TAG, "Inside Rent Item ############################################# $requestBody")
+        return api.rentItem(requestBody)
+    }
 }

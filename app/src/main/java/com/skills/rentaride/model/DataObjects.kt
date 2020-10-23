@@ -22,6 +22,8 @@ data class Responses(
 )
 
 data class ProfileDTO(
+    @SerializedName("profileID")
+    val profileID: Int,
     @SerializedName("pinStatus")
     val pinStatus: Int,
     @SerializedName("msisdn")
